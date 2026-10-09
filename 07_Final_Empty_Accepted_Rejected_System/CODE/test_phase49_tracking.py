@@ -375,6 +375,15 @@ check("wiring: the held box (another pallet, missed>0) stays '? CHECKING'", any(
 csv_files = list((wire_dir / "out").glob("phase49_*.csv"))
 check("wiring: evidence CSV written with both reads", csv_files and len(csv_files[0].read_text().splitlines()) == 3, csv_files)
 
+# two boxes on top of each other (duplicate Phase 40 box) count as ONE candidate
+dup_hist = P49.TrackHistory()
+dup_ident = P49.PhysicalIdentities(dup_hist)
+dup_resolver = P49.EventResolver(dup_hist, dup_ident, P49.ReadZone())
+for i in range(6):
+    dup_hist.update(500 + i * 0.1, [{"id": 1, "box": box(1288, 545)}, {"id": 2, "box": box(1290, 548)}])
+cands = dup_resolver.candidates(500.3, 700.0)
+check("duplicate boxes at the same spot are ONE candidate", len(cands) == 1, len(cands))
+
 # ---------------------------------------------------------------- 4. misc
 check("label: identified -> '3 ACCEPTED', unknown -> '? ACCEPTED'",
       P49.pallet_label(3, "ACCEPTED") == "3 ACCEPTED" and P49.pallet_label(None, "ACCEPTED") == "? ACCEPTED")

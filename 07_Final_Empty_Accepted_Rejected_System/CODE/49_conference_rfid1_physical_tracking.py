@@ -650,7 +650,10 @@ class EventResolver:
                     (item["cx"] - other["cx"]) ** 2 + (item["cy"] - other["cy"]) ** 2
                 ) ** 0.5
                 disjoint = item["first"] >= other["last"] - 0.1 or other["first"] >= item["last"] - 0.1
-                if disjoint and distance < 0.6 * min(item["w"], other["w"]):
+                smaller = min(item["w"], other["w"])
+                # two boxes almost on top of each other are ONE pallet (pallets cannot
+                # overlap - Phase 40 sometimes keeps a duplicate box for a moment)
+                if distance < 0.45 * smaller or (disjoint and distance < 0.6 * smaller):
                     twin = other
                     break
             if twin is None:
