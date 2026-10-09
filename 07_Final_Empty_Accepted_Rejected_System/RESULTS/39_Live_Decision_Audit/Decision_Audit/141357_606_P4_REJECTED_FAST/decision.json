@@ -1,0 +1,151 @@
+{
+  "time": "2026-10-08 14:13:57",
+  "track": "P4",
+  "kind": "FIRST",
+  "decision": "REJECTED",
+  "mode": "FAST",
+  "clean_view_ready_at_commit": false,
+  "gate_reason_at_commit": "STABILIZE-3/5",
+  "votes": {
+    "X": 3,
+    "NO_X": 0,
+    "observations": 3
+  },
+  "object_state": "OBJECT_PRESENT",
+  "object_confidence": 0.9981,
+  "box": [
+    892,
+    490,
+    1055,
+    594
+  ],
+  "center": [
+    973.5,
+    542.0
+  ],
+  "detector_confidence": 0.3422,
+  "ring_overlap": 1.0,
+  "vx": -20.0239,
+  "vy": 0.5433,
+  "tracker_lineage": "P4",
+  "seconds_since_id_first_seen": 1.25,
+  "seconds_since_last_bridge_into_id": null,
+  "samples_used": [
+    {
+      "clean_view": false,
+      "gate_reason": "STABILIZE-4/5",
+      "vx": -18.5681,
+      "vy": 0.0863,
+      "detector_confidence": 0.2798,
+      "ring_overlap": 1.0,
+      "stable_frames": 4,
+      "box_iou_vs_prev_frame": 0.8022,
+      "size_ratio_vs_prev_frame": 0.9342,
+      "center_h_ratio": 0.0962,
+      "center_v_ratio": 0.0049,
+      "time": 1791494037.1026268,
+      "time_text": "14:13:57",
+      "center": [
+        1051.5,
+        537.0
+      ],
+      "diagonal": 182.8,
+      "box": [
+        975,
+        487,
+        1128,
+        587
+      ],
+      "state": "X",
+      "confidence": 0.9999,
+      "p_x": 0.9999,
+      "p_no_x": 0.0001,
+      "mode": "FAST",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-RECOVER",
+      "vx": -18.4413,
+      "vy": 1.4102,
+      "detector_confidence": 0.2185,
+      "ring_overlap": 1.0,
+      "stable_frames": 1,
+      "box_iou_vs_prev_frame": 0.7525,
+      "size_ratio_vs_prev_frame": 0.9461,
+      "center_h_ratio": 0.1323,
+      "center_v_ratio": 0.0103,
+      "time": 1791494037.3437526,
+      "time_text": "14:13:57",
+      "center": [
+        1016.5,
+        542.5
+      ],
+      "diagonal": 193.1,
+      "box": [
+        933,
+        494,
+        1100,
+        591
+      ],
+      "state": "X",
+      "confidence": 0.9985,
+      "p_x": 0.9985,
+      "p_no_x": 0.0015,
+      "mode": "FAST",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "STABILIZE-3/5",
+      "vx": -20.0239,
+      "vy": 0.5433,
+      "detector_confidence": 0.3422,
+      "ring_overlap": 1.0,
+      "stable_frames": 3,
+      "box_iou_vs_prev_frame": 0.7658,
+      "size_ratio_vs_prev_frame": 0.9053,
+      "center_h_ratio": 0.1282,
+      "center_v_ratio": 0.0048,
+      "time": 1791494037.5964792,
+      "time_text": "14:13:57",
+      "center": [
+        973.5,
+        542.0
+      ],
+      "diagonal": 193.4,
+      "box": [
+        892,
+        490,
+        1055,
+        594
+      ],
+      "state": "X",
+      "confidence": 1.0,
+      "p_x": 1.0,
+      "p_no_x": 0.0,
+      "mode": "FAST",
+      "stored_as_vote": true
+    }
+  ],
+  "sample_crop_files": [
+    "141357_606_P4_REJECTED_FAST_obs1.jpg",
+    "141357_606_P4_REJECTED_FAST_obs2.jpg",
+    "141357_606_P4_REJECTED_FAST_obs3.jpg"
+  ],
+  "movement_between_samples": [
+    {
+      "px": 35.4,
+      "ratio_of_diagonal": 0.189,
+      "seconds": 0.241
+    },
+    {
+      "px": 43.0,
+      "ratio_of_diagonal": 0.223,
+      "seconds": 0.253
+    }
+  ],
+  "total_movement_px_first_to_last": 78.2,
+  "samples_NOT_stored_unsafe_view_NO_X": [],
+  "RULE_VIOLATION_unsafe_NO_X_counted": []
+}

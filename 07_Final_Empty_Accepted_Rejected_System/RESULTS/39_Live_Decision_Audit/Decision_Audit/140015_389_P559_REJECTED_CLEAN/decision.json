@@ -1,0 +1,151 @@
+{
+  "time": "2026-10-08 14:00:15",
+  "track": "P559",
+  "kind": "CHANGE ACCEPTED->REJECTED",
+  "decision": "REJECTED",
+  "mode": "CLEAN",
+  "clean_view_ready_at_commit": true,
+  "gate_reason_at_commit": "CLEAN",
+  "votes": {
+    "X": 3,
+    "NO_X": 0,
+    "observations": 3
+  },
+  "object_state": "OBJECT_PRESENT",
+  "object_confidence": 1.0,
+  "box": [
+    616,
+    499,
+    772,
+    604
+  ],
+  "center": [
+    694.0,
+    551.5
+  ],
+  "detector_confidence": 0.8247,
+  "ring_overlap": 1.0,
+  "vx": -15.7214,
+  "vy": 0.763,
+  "tracker_lineage": "P2 -> P11 -> P2 -> P11 -> P2 -> P11 -> P42 -> P11 -> P60 -> P11 -> P42 -> P88 -> P42 -> P88 -> P106 -> P88 -> P129 -> P132 -> P129 -> P132 -> P129 -> P132 -> P148 -> P132 -> P148 -> P172 -> P148 -> P172 -> P148 -> P172 -> P148 -> P225 -> P148 -> P225 -> P237 -> P225 -> P250 -> P225 -> P250 -> P225 -> P281 -> P225 -> P281 -> P225 -> P294 -> P225 -> P294 -> P281 -> P294 -> P324 -> P294 -> P324 -> P343 -> P324 -> P343 -> P324 -> P357 -> P324 -> P374 -> P324 -> P355 -> P324 -> P355 -> P324 -> P421 -> P437 -> P438 -> P461 -> P438 -> P461 -> P476 -> P482 -> P476 -> P482 -> P500 -> P512 -> P500 -> P516 -> P512 -> P516 -> P526 -> P542 -> P559 -> P516 -> P559",
+  "seconds_since_id_first_seen": 4.93,
+  "seconds_since_last_bridge_into_id": 2.42,
+  "samples_used": [
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": -20.7414,
+      "vy": 0.5851,
+      "detector_confidence": 0.6577,
+      "ring_overlap": 1.0,
+      "stable_frames": 7,
+      "box_iou_vs_prev_frame": 0.7284,
+      "size_ratio_vs_prev_frame": 0.941,
+      "center_h_ratio": 0.1529,
+      "center_v_ratio": 0.0049,
+      "time": 1791493212.4026647,
+      "time_text": "14:00:12",
+      "center": [
+        1140.5,
+        535.0
+      ],
+      "diagonal": 190.6,
+      "box": [
+        1060,
+        484,
+        1221,
+        586
+      ],
+      "state": "X",
+      "confidence": 0.7907,
+      "p_x": 0.7907,
+      "p_no_x": 0.2093,
+      "mode": "CLEAN",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": -18.2433,
+      "vy": -0.0149,
+      "detector_confidence": 0.7529,
+      "ring_overlap": 1.0,
+      "stable_frames": 5,
+      "box_iou_vs_prev_frame": 0.7611,
+      "size_ratio_vs_prev_frame": 0.9849,
+      "center_h_ratio": 0.1234,
+      "center_v_ratio": 0.0047,
+      "time": 1791493214.456714,
+      "time_text": "14:00:14",
+      "center": [
+        826.5,
+        544.0
+      ],
+      "diagonal": 187.3,
+      "box": [
+        750,
+        490,
+        903,
+        598
+      ],
+      "state": "X",
+      "confidence": 0.9992,
+      "p_x": 0.9992,
+      "p_no_x": 0.0008,
+      "mode": "CLEAN",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": -15.7214,
+      "vy": 0.763,
+      "detector_confidence": 0.8247,
+      "ring_overlap": 1.0,
+      "stable_frames": 5,
+      "box_iou_vs_prev_frame": 0.7968,
+      "size_ratio_vs_prev_frame": 0.9901,
+      "center_h_ratio": 0.1003,
+      "center_v_ratio": 0.0142,
+      "time": 1791493215.3788564,
+      "time_text": "14:00:15",
+      "center": [
+        694.0,
+        551.5
+      ],
+      "diagonal": 188.0,
+      "box": [
+        616,
+        499,
+        772,
+        604
+      ],
+      "state": "X",
+      "confidence": 0.8604,
+      "p_x": 0.8604,
+      "p_no_x": 0.1396,
+      "mode": "CLEAN",
+      "stored_as_vote": true
+    }
+  ],
+  "sample_crop_files": [
+    "140015_389_P559_REJECTED_CLEAN_obs1.jpg",
+    "140015_389_P559_REJECTED_CLEAN_obs2.jpg",
+    "140015_389_P559_REJECTED_CLEAN_obs3.jpg"
+  ],
+  "movement_between_samples": [
+    {
+      "px": 314.1,
+      "ratio_of_diagonal": 1.662,
+      "seconds": 2.054
+    },
+    {
+      "px": 132.7,
+      "ratio_of_diagonal": 0.707,
+      "seconds": 0.922
+    }
+  ],
+  "total_movement_px_first_to_last": 446.8,
+  "samples_NOT_stored_unsafe_view_NO_X": [],
+  "RULE_VIOLATION_unsafe_NO_X_counted": []
+}

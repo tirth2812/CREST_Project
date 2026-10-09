@@ -1,0 +1,306 @@
+{
+  "time": "2026-10-08 13:57:55",
+  "track": "P35",
+  "kind": "FIRST",
+  "decision": "ACCEPTED",
+  "mode": "CLEAN",
+  "clean_view_ready_at_commit": true,
+  "gate_reason_at_commit": "CLEAN",
+  "votes": {
+    "X": 0,
+    "NO_X": 3,
+    "observations": 3
+  },
+  "object_state": "OBJECT_PRESENT",
+  "object_confidence": 1.0,
+  "box": [
+    747,
+    795,
+    943,
+    945
+  ],
+  "center": [
+    845.0,
+    870.0
+  ],
+  "detector_confidence": 0.3557,
+  "ring_overlap": 1.0,
+  "vx": 19.149,
+  "vy": -0.0521,
+  "tracker_lineage": "P1 -> P13 -> P24 -> P13 -> P27 -> P13 -> P27 -> P35",
+  "seconds_since_id_first_seen": 1.69,
+  "seconds_since_last_bridge_into_id": 1.69,
+  "samples_used": [
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": 18.0297,
+      "vy": -0.1005,
+      "detector_confidence": 0.7727,
+      "ring_overlap": 1.0,
+      "stable_frames": 5,
+      "box_iou_vs_prev_frame": 0.8444,
+      "size_ratio_vs_prev_frame": 0.9815,
+      "center_h_ratio": 0.0781,
+      "center_v_ratio": 0.0,
+      "time": 1791493074.176021,
+      "time_text": "13:57:54",
+      "center": [
+        625.5,
+        868.0
+      ],
+      "diagonal": 248.0,
+      "box": [
+        526,
+        794,
+        725,
+        942
+      ],
+      "state": "NO_X",
+      "confidence": 0.9952,
+      "p_x": 0.0048,
+      "p_no_x": 0.9952,
+      "mode": "CLEAN",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": 19.149,
+      "vy": -0.0521,
+      "detector_confidence": 0.3557,
+      "ring_overlap": 1.0,
+      "stable_frames": 5,
+      "box_iou_vs_prev_frame": 0.8203,
+      "size_ratio_vs_prev_frame": 0.975,
+      "center_h_ratio": 0.0895,
+      "center_v_ratio": 0.0034,
+      "time": 1791493075.4093192,
+      "time_text": "13:57:55",
+      "center": [
+        845.0,
+        870.0
+      ],
+      "diagonal": 246.8,
+      "box": [
+        747,
+        795,
+        943,
+        945
+      ],
+      "state": "NO_X",
+      "confidence": 0.8755,
+      "p_x": 0.1245,
+      "p_no_x": 0.8755,
+      "mode": "CLEAN",
+      "stored_as_vote": true
+    }
+  ],
+  "sample_crop_files": [
+    "135755_420_P35_ACCEPTED_CLEAN_obs1.jpg",
+    "135755_420_P35_ACCEPTED_CLEAN_obs2.jpg"
+  ],
+  "movement_between_samples": [
+    {
+      "px": 219.5,
+      "ratio_of_diagonal": 0.887,
+      "seconds": 1.233
+    }
+  ],
+  "total_movement_px_first_to_last": 219.5,
+  "samples_NOT_stored_unsafe_view_NO_X": [
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-RECOVER",
+      "vx": -12.9352,
+      "vy": 3.7201,
+      "detector_confidence": 0.3393,
+      "ring_overlap": 1.0,
+      "stable_frames": 2,
+      "box_iou_vs_prev_frame": 0.8007,
+      "size_ratio_vs_prev_frame": 0.976,
+      "center_h_ratio": 0.0909,
+      "center_v_ratio": 0.0217,
+      "time": 1791493070.045536,
+      "time_text": "13:57:50",
+      "center": [
+        445.5,
+        590.0
+      ],
+      "diagonal": 216.6,
+      "box": [
+        362,
+        521,
+        529,
+        659
+      ],
+      "state": "NO_X",
+      "confidence": 0.9994,
+      "p_x": 0.0006,
+      "p_no_x": 0.9994,
+      "mode": "FAST",
+      "stored_as_vote": false
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-RECOVER",
+      "vx": -13.6464,
+      "vy": 8.458,
+      "detector_confidence": 0.477,
+      "ring_overlap": 1.0,
+      "stable_frames": 1,
+      "box_iou_vs_prev_frame": 0.6961,
+      "size_ratio_vs_prev_frame": 0.9766,
+      "center_h_ratio": 0.0811,
+      "center_v_ratio": 0.1067,
+      "time": 1791493070.287576,
+      "time_text": "13:57:50",
+      "center": [
+        416.0,
+        613.0
+      ],
+      "diagonal": 195.7,
+      "box": [
+        342,
+        549,
+        490,
+        677
+      ],
+      "state": "NO_X",
+      "confidence": 0.6972,
+      "p_x": 0.3028,
+      "p_no_x": 0.6972,
+      "mode": "FAST",
+      "stored_as_vote": false
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-TURN",
+      "vx": -10.4468,
+      "vy": 11.8773,
+      "detector_confidence": 0.2302,
+      "ring_overlap": 1.0,
+      "stable_frames": 0,
+      "box_iou_vs_prev_frame": 0.7587,
+      "size_ratio_vs_prev_frame": 0.8488,
+      "center_h_ratio": 0.0533,
+      "center_v_ratio": 0.0872,
+      "time": 1791493070.5162282,
+      "time_text": "13:57:50",
+      "center": [
+        400.0,
+        642.5
+      ],
+      "diagonal": 227.0,
+      "box": [
+        318,
+        564,
+        482,
+        721
+      ],
+      "state": "NO_X",
+      "confidence": 0.9922,
+      "p_x": 0.0078,
+      "p_no_x": 0.9922,
+      "mode": "FAST",
+      "stored_as_vote": false
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-TURN",
+      "vx": -9.9088,
+      "vy": 11.5631,
+      "detector_confidence": 0.527,
+      "ring_overlap": 1.0,
+      "stable_frames": 0,
+      "box_iou_vs_prev_frame": 0.7363,
+      "size_ratio_vs_prev_frame": 0.8685,
+      "center_h_ratio": 0.0654,
+      "center_v_ratio": 0.0915,
+      "time": 1791493070.7985258,
+      "time_text": "13:57:50",
+      "center": [
+        381.5,
+        664.0
+      ],
+      "diagonal": 210.1,
+      "box": [
+        305,
+        592,
+        458,
+        736
+      ],
+      "state": "NO_X",
+      "confidence": 1.0,
+      "p_x": 0.0,
+      "p_no_x": 1.0,
+      "mode": "FAST",
+      "stored_as_vote": false
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-TURN",
+      "vx": -4.659,
+      "vy": 13.3554,
+      "detector_confidence": 0.2833,
+      "ring_overlap": 1.0,
+      "stable_frames": 0,
+      "box_iou_vs_prev_frame": 0.7527,
+      "size_ratio_vs_prev_frame": 0.973,
+      "center_h_ratio": 0.0126,
+      "center_v_ratio": 0.1301,
+      "time": 1791493071.0420253,
+      "time_text": "13:57:51",
+      "center": [
+        380.5,
+        691.0
+      ],
+      "diagonal": 214.5,
+      "box": [
+        301,
+        619,
+        460,
+        763
+      ],
+      "state": "NO_X",
+      "confidence": 0.9998,
+      "p_x": 0.0002,
+      "p_no_x": 0.9998,
+      "mode": "FAST",
+      "stored_as_vote": false
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-TURN",
+      "vx": -6.1716,
+      "vy": 12.251,
+      "detector_confidence": 0.2981,
+      "ring_overlap": 1.0,
+      "stable_frames": 0,
+      "box_iou_vs_prev_frame": 0.8205,
+      "size_ratio_vs_prev_frame": 0.8633,
+      "center_h_ratio": 0.0034,
+      "center_v_ratio": 0.0561,
+      "time": 1791493071.286117,
+      "time_text": "13:57:51",
+      "center": [
+        360.5,
+        716.0
+      ],
+      "diagonal": 219.9,
+      "box": [
+        283,
+        638,
+        438,
+        794
+      ],
+      "state": "NO_X",
+      "confidence": 1.0,
+      "p_x": 0.0,
+      "p_no_x": 1.0,
+      "mode": "FAST",
+      "stored_as_vote": false
+    }
+  ],
+  "RULE_VIOLATION_unsafe_NO_X_counted": []
+}

@@ -1,0 +1,78 @@
+CREST YOLO26 - FINAL INDEPENDENT EXTERNAL TEST
+========================================================================================
+
+FROZEN MODEL
+----------------------------------------------------------------------------------------
+C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\MODELS\x_no_x_yolo26n_medium_focus_best.pt
+
+FROZEN REPRESENTATION
+----------------------------------------------------------------------------------------
+Medium focus: x=[0.15,0.85], y=[0.00,0.67]
+Then aspect-preserving resize + padding to 640x640.
+
+EXTERNAL DATA
+----------------------------------------------------------------------------------------
+X complete passes:    10
+NO_X complete passes: 10
+Views per pass:         3
+Total external images:  60
+
+IMAGE-LEVEL RESULT
+----------------------------------------------------------------------------------------
+Correct:     58/60
+Accuracy:    96.67%
+X:           29/30 correct
+NO_X:        29/30 correct
+
+X treated as positive class:
+TP=29 FN=1 TN=29 FP=1
+Precision:   96.67%
+Recall:      96.67%
+Specificity: 96.67%
+F1:          96.67%
+
+PHYSICAL-PASS MAJORITY RESULT
+----------------------------------------------------------------------------------------
+Correct passes: 20/20
+Pass accuracy:  100.00%
+X passes:       10/10 correct
+NO_X passes:    10/10 correct
+
+PER-PASS RESULTS
+----------------------------------------------------------------------------------------
+NO_X | EXT_NO_X_PASS_20260916_134036_566 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0000 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134040_715 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0000 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134042_298 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0008 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134044_985 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0001 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134047_172 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0010 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134049_486 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0002 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134051_870 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0009 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134055_653 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0848 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134058_485 | views correct=3/3 | votes X=0 NO_X=3 | majority=NO_X | mean P(X)=0.0968 | CORRECT
+NO_X | EXT_NO_X_PASS_20260916_134101_103 | views correct=2/3 | votes X=1 NO_X=2 | majority=NO_X | mean P(X)=0.2907 | CORRECT
+X    | EXT_X_PASS_20260916_134135_511 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9997 | CORRECT
+X    | EXT_X_PASS_20260916_134137_115 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9994 | CORRECT
+X    | EXT_X_PASS_20260916_134138_951 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.8564 | CORRECT
+X    | EXT_X_PASS_20260916_134141_466 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9999 | CORRECT
+X    | EXT_X_PASS_20260916_134143_718 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9995 | CORRECT
+X    | EXT_X_PASS_20260916_134145_731 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9998 | CORRECT
+X    | EXT_X_PASS_20260916_134147_449 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9795 | CORRECT
+X    | EXT_X_PASS_20260916_134149_160 | views correct=2/3 | votes X=2 NO_X=1 | majority=X | mean P(X)=0.6041 | CORRECT
+X    | EXT_X_PASS_20260916_134151_576 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9999 | CORRECT
+X    | EXT_X_PASS_20260916_134153_374 | views correct=3/3 | votes X=3 NO_X=0 | majority=X | mean P(X)=0.9978 | CORRECT
+
+ARTIFACTS
+----------------------------------------------------------------------------------------
+Prepared external images: C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\RESULTS\14_YOLO26_Medium_Focus_External_Test\PREPARED_EXTERNAL
+Image predictions:        C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\RESULTS\14_YOLO26_Medium_Focus_External_Test\external_image_predictions.csv
+Pass summary:             C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\RESULTS\14_YOLO26_Medium_Focus_External_Test\external_pass_summary.csv
+All predictions sheet:    C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\RESULTS\14_YOLO26_Medium_Focus_External_Test\external_all_predictions.jpg
+Failed predictions sheet: C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\RESULTS\14_YOLO26_Medium_Focus_External_Test\external_failed_predictions.jpg
+
+IMPORTANT
+----------------------------------------------------------------------------------------
+This external set was collected after the medium-focus model/representation were frozen and was not used for training.
+Do not tune the model on this external set if this result is intended to remain the final unbiased evaluation.
+
+NO MODEL WAS TRAINED OR MODIFIED.
+NO ORIGINAL EXTERNAL IMAGE WAS MODIFIED.

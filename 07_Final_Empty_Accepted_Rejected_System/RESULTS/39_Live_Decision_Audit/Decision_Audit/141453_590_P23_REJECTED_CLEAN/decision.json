@@ -1,0 +1,184 @@
+{
+  "time": "2026-10-08 14:14:53",
+  "track": "P23",
+  "kind": "FIRST",
+  "decision": "REJECTED",
+  "mode": "CLEAN",
+  "clean_view_ready_at_commit": false,
+  "gate_reason_at_commit": "HOLD-TURN",
+  "votes": {
+    "X": 2,
+    "NO_X": 1,
+    "observations": 3
+  },
+  "object_state": "OBJECT_PRESENT",
+  "object_confidence": 0.9994,
+  "box": [
+    1703,
+    619,
+    1893,
+    797
+  ],
+  "center": [
+    1798.0,
+    708.0
+  ],
+  "detector_confidence": 0.1316,
+  "ring_overlap": 0.9977,
+  "vx": -1.2772,
+  "vy": -15.1457,
+  "tracker_lineage": "P11 -> P23",
+  "seconds_since_id_first_seen": 1.15,
+  "seconds_since_last_bridge_into_id": 1.15,
+  "samples_used": [
+    {
+      "clean_view": true,
+      "gate_reason": "CLEAN",
+      "vx": 25.2118,
+      "vy": -3.5548,
+      "detector_confidence": 0.3129,
+      "ring_overlap": 1.0,
+      "stable_frames": 6,
+      "box_iou_vs_prev_frame": 0.8098,
+      "size_ratio_vs_prev_frame": 0.9801,
+      "center_h_ratio": 0.0854,
+      "center_v_ratio": 0.0222,
+      "time": 1791494091.9663103,
+      "time_text": "14:14:51",
+      "center": [
+        1681.0,
+        857.0
+      ],
+      "diagonal": 324.0,
+      "box": [
+        1545,
+        769,
+        1817,
+        945
+      ],
+      "state": "NO_X",
+      "confidence": 0.9359,
+      "p_x": 0.0641,
+      "p_no_x": 0.9359,
+      "mode": "FAST",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-RECOVER",
+      "vx": 12.6126,
+      "vy": -8.2125,
+      "detector_confidence": 0.2942,
+      "ring_overlap": 0.9988,
+      "stable_frames": 3,
+      "box_iou_vs_prev_frame": 0.837,
+      "size_ratio_vs_prev_frame": 0.9685,
+      "center_h_ratio": 0.0224,
+      "center_v_ratio": 0.0679,
+      "time": 1791494092.7121415,
+      "time_text": "14:14:52",
+      "center": [
+        1766.0,
+        817.5
+      ],
+      "diagonal": 328.4,
+      "box": [
+        1641,
+        711,
+        1891,
+        924
+      ],
+      "state": "X",
+      "confidence": 0.8619,
+      "p_x": 0.8619,
+      "p_no_x": 0.1381,
+      "mode": "FAST",
+      "stored_as_vote": true
+    },
+    {
+      "clean_view": false,
+      "gate_reason": "HOLD-TURN",
+      "vx": 7.0316,
+      "vy": -10.3102,
+      "detector_confidence": 0.284,
+      "ring_overlap": 0.9974,
+      "stable_frames": 0,
+      "box_iou_vs_prev_frame": 0.8581,
+      "size_ratio_vs_prev_frame": 0.9473,
+      "center_h_ratio": 0.0269,
+      "center_v_ratio": 0.0508,
+      "time": 1791494093.1577077,
+      "time_text": "14:14:53",
+      "center": [
+        1797.0,
+        770.0
+      ],
+      "diagonal": 280.0,
+      "box": [
+        1697,
+        672,
+        1897,
+        868
+      ],
+      "state": "X",
+      "confidence": 0.9979,
+      "p_x": 0.9979,
+      "p_no_x": 0.0021,
+      "mode": "FAST",
+      "stored_as_vote": true
+    }
+  ],
+  "sample_crop_files": [
+    "141453_590_P23_REJECTED_CLEAN_obs1.jpg",
+    "141453_590_P23_REJECTED_CLEAN_obs2.jpg",
+    "141453_590_P23_REJECTED_CLEAN_obs3.jpg"
+  ],
+  "movement_between_samples": [
+    {
+      "px": 93.7,
+      "ratio_of_diagonal": 0.287,
+      "seconds": 0.746
+    },
+    {
+      "px": 56.7,
+      "ratio_of_diagonal": 0.186,
+      "seconds": 0.446
+    }
+  ],
+  "total_movement_px_first_to_last": 145.0,
+  "samples_NOT_stored_unsafe_view_NO_X": [
+    {
+      "clean_view": false,
+      "gate_reason": "WARMUP",
+      "vx": 21.2576,
+      "vy": -6.6183,
+      "detector_confidence": 0.6135,
+      "ring_overlap": 0.999,
+      "stable_frames": 1,
+      "box_iou_vs_prev_frame": null,
+      "size_ratio_vs_prev_frame": null,
+      "center_h_ratio": null,
+      "center_v_ratio": null,
+      "time": 1791494092.4828818,
+      "time_text": "14:14:52",
+      "center": [
+        1753.0,
+        833.5
+      ],
+      "diagonal": 333.7,
+      "box": [
+        1628,
+        723,
+        1878,
+        944
+      ],
+      "state": "NO_X",
+      "confidence": 0.8737,
+      "p_x": 0.1263,
+      "p_no_x": 0.8737,
+      "mode": "FAST",
+      "stored_as_vote": false
+    }
+  ],
+  "RULE_VIOLATION_unsafe_NO_X_counted": []
+}

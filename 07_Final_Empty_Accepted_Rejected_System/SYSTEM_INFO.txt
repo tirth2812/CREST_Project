@@ -1,0 +1,224 @@
+﻿CREST FINAL YOLO26 VISION SYSTEM
+================================
+
+FINAL PROJECT FOLDER
+--------------------
+C:\Do_Not_Delete_PLC\YOLO26_Final_System
+
+
+MAIN FINAL CODE
+---------------
+C:\Do_Not_Delete_PLC\YOLO26_Final_System\07_Final_Empty_Accepted_Rejected_System\CODE\live_final_crest_yolo26.py
+
+
+PALLET TRACKER
+--------------
+C:\Do_Not_Delete_PLC\YOLO26_Final_System\07_Final_Empty_Accepted_Rejected_System\CODE\dynamic_live_pallet_detection.py
+
+
+FINAL MODELS
+------------
+
+1. Pallet Detection
+   pallet_yolo26n_best.pt
+
+2. EMPTY / OBJECT_PRESENT Classification
+   empty_object_yolo26n_cls_best.pt
+
+3. X / NO_X Classification
+   x_no_x_yolo26n_medium_focus_final_hard_best.pt
+
+
+FINAL DECISION LOGIC
+--------------------
+
+EMPTY pallet
+-> EMPTY
+
+OBJECT_PRESENT + X
+-> REJECTED
+
+OBJECT_PRESENT + NO_X
+-> ACCEPTED
+
+
+PALLET TRACKING
+---------------
+
+The pallet tracker operates in 2D camera image coordinates.
+
+Each pallet has:
+
+- software track ID
+- bounding box
+- center_x
+- center_y
+- approximate motion information
+- current classification state
+
+Pallet center:
+
+center_x = (x1 + x2) / 2
+center_y = (y1 + y2) / 2
+
+Current camera resolution:
+
+1920 x 1080
+
+Coordinate system:
+
+(0,0) = top-left corner
+
+X increases toward the right.
+Y increases toward the bottom.
+
+The current pallet coordinates are image pixels, not physical millimeters.
+
+
+FINAL LIVE BEHAVIOR
+-------------------
+
+The system supports:
+
+- continuous pallet tracking
+- EMPTY detection
+- new-object detection while conveyor is running
+- fast ACCEPTED / REJECTED classification
+- temporary occlusion handling
+- holding the previous reliable result through hand/wire obstruction
+- real object-removal detection
+- updating ACCEPTED to REJECTED when the object changes
+- updating REJECTED to ACCEPTED when the object changes
+
+
+FINAL X / NO_X REPRESENTATION
+-----------------------------
+
+Medium-focus pallet crop:
+
+Horizontal:
+15% to 85% of pallet width
+
+Vertical:
+0% to 67% of pallet height
+
+The crop is resized with aspect-ratio-preserving padding to 640 x 640.
+
+
+FINAL VALIDATION
+----------------
+
+Independent External Validation:
+
+Image level:
+58 / 60 correct
+96.67%
+
+Physical-pass majority:
+20 / 20 correct
+100.00%
+
+
+Final Hard Locked Test:
+
+Image level:
+23 / 24 correct
+95.83%
+
+X:
+11 / 12 correct
+
+NO_X:
+12 / 12 correct
+
+Precision:
+100%
+
+Recall:
+91.67%
+
+Specificity:
+100%
+
+F1:
+95.65%
+
+Physical-pass majority:
+8 / 8 correct
+100.00%
+
+
+CONFIGURATION
+-------------
+
+Conveyor boundary:
+
+C:\Do_Not_Delete_PLC\YOLO26_Final_System\07_Final_Empty_Accepted_Rejected_System\CONFIG\conveyor_boundary.json
+
+
+SOFTWARE ENVIRONMENT
+--------------------
+
+Python:
+3.12.13
+
+PyTorch:
+2.11.0+cu128
+
+CUDA:
+12.8
+
+Ultralytics:
+8.4.129
+
+GPU used during development:
+NVIDIA GeForce RTX 5090
+
+
+CAMERA SETTINGS
+---------------
+
+Resolution:
+1920 x 1080
+
+Frame rate:
+approximately 30 FPS
+
+Exposure:
+-7.0
+
+Auto exposure:
+0.25
+
+
+HOW TO RUN
+----------
+
+Recommended:
+
+Double-click:
+
+C:\Do_Not_Delete_PLC\YOLO26_Final_System\RUN_FINAL_YOLO26.bat
+
+
+Manual command:
+
+cd /d C:\VLM_Finetune
+
+vlm_env\Scripts\activate
+
+python "C:\Do_Not_Delete_PLC\YOLO26_Final_System\07_Final_Empty_Accepted_Rejected_System\CODE\live_final_crest_yolo26.py"
+
+
+IMPORTANT
+---------
+
+The complete development history and experimental files remain in:
+
+C:\Do_Not_Delete_PLC\CREST_YOLO26
+
+Do not delete that folder.
+
+The YOLO26_Final_System folder contains the finalized runtime system and important final evidence.
+
+

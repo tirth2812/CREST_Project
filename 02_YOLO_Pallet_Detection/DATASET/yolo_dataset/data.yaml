@@ -1,0 +1,6 @@
+path: C:/Do_Not_Delete_PLC/CREST_YOLO26/02_YOLO_Pallet_Detection/DATASET/yolo_dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: pallet

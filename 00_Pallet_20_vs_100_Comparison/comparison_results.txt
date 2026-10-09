@@ -1,0 +1,19 @@
+CREST PALLET DETECTION COMPARISON
+=======================================================
+Dataset: 10 common held-out test images
+Evaluation image size: 960
+
+Metric          Original20    New100    Difference
+precision          0.9386    0.7729   -0.1657
+recall             0.8667    0.6571   -0.2095
+map50              0.9601    0.7701   -0.1900
+map50_95           0.9598    0.7254   -0.2344
+
+This is a model-level test comparison.
+Visual annotation and split audits are
+required before reporting final conclusions.
+
+Original model: C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\MODELS\pallet_yolo26n_best.pt
+Conference model: C:\Do_Not_Delete_PLC\Conference\00_Pallet_100_YOLO26_Training\pallet_yolo26_100_v2\weights\best.pt
+
+Neither model was modified.

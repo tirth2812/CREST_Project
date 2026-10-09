@@ -1,0 +1,1642 @@
+
+DECISION COMMIT  2026-10-08 13:38:36  track=P6  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-3/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1160, 795, 1366, 949) center=(1263,872) det_conf=0.4475 ring=1.0 vx=25.3024 vy=-0.5142
+  lineage=P5 -> P6  id_age=0.51s  since_bridge=0.51s
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=STABILIZE-4/5 center=(1108.0, 871.0) t=13:38:35 stable=4 iou=0.8648 size=0.944
+  sample 2: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=HOLD-RECOVER center=(1211.5, 874.5) t=13:38:36 stable=1 iou=0.8411 size=0.9751
+  sample 3: X conf=0.9992 p_x=0.9992 p_no_x=0.0008 mode=FAST clean=False gate=STABILIZE-3/5 center=(1263.0, 872.0) t=13:38:36 stable=3 iou=0.7354 size=0.9954
+  movement=[{'px': 103.6, 'ratio_of_diagonal': 0.406, 'seconds': 0.533}, {'px': 51.6, 'ratio_of_diagonal': 0.199, 'seconds': 0.242}]  total=155.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['133836_263_P6_REJECTED_FAST_obs1.jpg', '133836_263_P6_REJECTED_FAST_obs2.jpg', '133836_263_P6_REJECTED_FAST_obs3.jpg']  folder: 133836_263_P6_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:38:36  track=P15  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.98
+  box=(1348, 469, 1526, 584) center=(1437,526) det_conf=0.8343 ring=1.0 vx=-22.0322 vy=0.9097
+  lineage=P8 -> P15  id_age=1.14s  since_bridge=1.14s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1532.0, 522.5) t=13:38:35 stable=6 iou=0.7383 size=0.9515
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1484.0, 522.5) t=13:38:36 stable=8 iou=0.8472 size=0.944
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1437.0, 526.5) t=13:38:36 stable=10 iou=0.7509 size=0.9673
+  movement=[{'px': 48.0, 'ratio_of_diagonal': 0.22, 'seconds': 0.266}, {'px': 47.2, 'ratio_of_diagonal': 0.222, 'seconds': 0.255}]  total=95.1px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['133836_295_P15_ACCEPTED_FAST_obs1.jpg', '133836_295_P15_ACCEPTED_FAST_obs2.jpg', '133836_295_P15_ACCEPTED_FAST_obs3.jpg']  folder: 133836_295_P15_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 13:38:36  track=P11  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(585, 501, 740, 600) center=(662,550) det_conf=0.6501 ring=1.0 vx=-17.8524 vy=0.431
+  lineage=P11  id_age=1.47s  since_bridge=Nones
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(733.0, 550.5) t=13:38:35 stable=6 iou=0.7335 size=0.9974
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(697.0, 550.5) t=13:38:36 stable=8 iou=0.76 size=0.9778
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(662.5, 550.5) t=13:38:36 stable=10 iou=0.7594 size=0.928
+  movement=[{'px': 36.0, 'ratio_of_diagonal': 0.195, 'seconds': 0.259}, {'px': 34.5, 'ratio_of_diagonal': 0.186, 'seconds': 0.277}]  total=70.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['133836_422_P11_ACCEPTED_FAST_obs1.jpg', '133836_422_P11_ACCEPTED_FAST_obs2.jpg', '133836_422_P11_ACCEPTED_FAST_obs3.jpg']  folder: 133836_422_P11_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 13:38:37  track=P16  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.98
+  box=(287, 748, 458, 912) center=(372,830) det_conf=0.4108 ring=1.0 vx=4.3725 vy=11.7877
+  lineage=P4 -> P16 -> P20 -> P16  id_age=2.14s  since_bridge=0.28s
+  sample 1: X conf=0.9655 p_x=0.9655 p_no_x=0.0345 mode=FAST clean=False gate=HOLD-TURN center=(348.0, 779.0) t=13:38:36 stable=0 iou=0.6472 size=0.8952
+  sample 2: X conf=0.9799 p_x=0.9799 p_no_x=0.0201 mode=FAST clean=False gate=HOLD-DIRECTION center=(355.0, 802.5) t=13:38:36 stable=0 iou=0.818 size=0.9728
+  sample 3: X conf=0.9278 p_x=0.9278 p_no_x=0.0722 mode=FAST clean=False gate=HOLD-TURN center=(372.5, 830.0) t=13:38:37 stable=0 iou=0.805 size=0.9069
+  movement=[{'px': 24.5, 'ratio_of_diagonal': 0.119, 'seconds': 0.237}, {'px': 32.6, 'ratio_of_diagonal': 0.146, 'seconds': 0.356}]  total=56.6px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['133837_304_P16_REJECTED_FAST_obs1.jpg', '133837_304_P16_REJECTED_FAST_obs2.jpg', '133837_304_P16_REJECTED_FAST_obs3.jpg']  folder: 133837_304_P16_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:38:38  track=P13  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(818, 795, 1012, 942) center=(915,868) det_conf=0.7511 ring=1.0 vx=18.7378 vy=-0.1421
+  lineage=P2 -> P13  id_age=2.72s  since_bridge=2.72s
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=FAST clean=True gate=CLEAN center=(592.0, 869.0) t=13:38:36 stable=5 iou=0.8323 size=0.9713
+  sample 2: NO_X conf=0.9126 p_x=0.0874 p_no_x=0.9126 mode=CLEAN clean=True gate=CLEAN center=(860.0, 869.5) t=13:38:37 stable=5 iou=0.822 size=0.9639
+  sample 3: NO_X conf=0.999 p_x=0.001 p_no_x=0.999 mode=CLEAN clean=True gate=CLEAN center=(915.0, 868.5) t=13:38:38 stable=8 iou=0.8383 size=0.9983
+  movement=[{'px': 268.0, 'ratio_of_diagonal': 1.091, 'seconds': 1.405}, {'px': 55.0, 'ratio_of_diagonal': 0.223, 'seconds': 0.336}]  total=323.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['133838_188_P13_ACCEPTED_CLEAN_obs1.jpg', '133838_188_P13_ACCEPTED_CLEAN_obs2.jpg', '133838_188_P13_ACCEPTED_CLEAN_obs3.jpg']  folder: 133838_188_P13_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 13:38:43  track=P7  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(735, 489, 894, 599) center=(814,544) det_conf=0.8173 ring=1.0 vx=-17.9556 vy=0.0344
+  lineage=P3 -> P12 -> P19 -> P3 -> P7 -> P3 -> P7  id_age=5.47s  since_bridge=1.26s
+  sample 1: NO_X conf=0.9995 p_x=0.0005 p_no_x=0.9995 mode=CLEAN clean=True gate=CLEAN center=(919.0, 542.5) t=13:38:42 stable=5 iou=0.8231 size=0.9841
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(866.0, 543.0) t=13:38:43 stable=8 iou=0.7562 size=0.9814
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(814.5, 544.0) t=13:38:43 stable=11 iou=0.7758 size=0.9971
+  movement=[{'px': 53.0, 'ratio_of_diagonal': 0.281, 'seconds': 0.346}, {'px': 51.5, 'ratio_of_diagonal': 0.269, 'seconds': 0.356}]  total=104.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['133843_642_P7_ACCEPTED_CLEAN_obs1.jpg', '133843_642_P7_ACCEPTED_CLEAN_obs2.jpg', '133843_642_P7_ACCEPTED_CLEAN_obs3.jpg']  folder: 133843_642_P7_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 13:39:35  track=P3  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1130, 795, 1335, 954) center=(1232,874) det_conf=0.4027 ring=1.0 vx=23.1496 vy=0.2501
+  lineage=P3  id_age=1.42s  since_bridge=Nones
+  sample 1: X conf=0.9994 p_x=0.9994 p_no_x=0.0006 mode=FAST clean=False gate=STABILIZE-4/5 center=(1090.0, 871.0) t=13:39:34 stable=4 iou=0.8329 size=0.9916
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=True gate=CLEAN center=(1141.5, 871.0) t=13:39:34 stable=6 iou=0.7478 size=0.9268
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-RECOVER center=(1232.5, 874.5) t=13:39:35 stable=1 iou=0.7874 size=0.9902
+  movement=[{'px': 51.5, 'ratio_of_diagonal': 0.203, 'seconds': 0.252}, {'px': 91.1, 'ratio_of_diagonal': 0.353, 'seconds': 0.478}]  total=142.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['133935_453_P3_REJECTED_FAST_obs1.jpg', '133935_453_P3_REJECTED_FAST_obs2.jpg', '133935_453_P3_REJECTED_FAST_obs3.jpg']  folder: 133935_453_P3_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:39:35  track=P17  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(281, 654, 434, 811) center=(358,732) det_conf=0.2419 ring=1.0 vx=-5.2287 vy=15.1892
+  lineage=P1 -> P7 -> P17  id_age=0.3s  since_bridge=0.3s
+  sample 1: X conf=0.9716 p_x=0.9716 p_no_x=0.0284 mode=FAST clean=False gate=HOLD-TURN center=(381.5, 673.5) t=13:39:35 stable=0 iou=0.813 size=0.907
+  sample 2: X conf=0.9979 p_x=0.9979 p_no_x=0.0021 mode=FAST clean=False gate=WARMUP center=(364.5, 702.5) t=13:39:35 stable=0 iou=None size=None
+  sample 3: X conf=0.9359 p_x=0.9359 p_no_x=0.0641 mode=FAST clean=False gate=HOLD-TURN center=(357.5, 732.5) t=13:39:35 stable=0 iou=0.7037 size=0.8749
+  movement=[{'px': 33.6, 'ratio_of_diagonal': 0.16, 'seconds': 0.288}, {'px': 30.8, 'ratio_of_diagonal': 0.147, 'seconds': 0.225}]  total=63.7px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['133935_734_P17_REJECTED_FAST_obs1.jpg', '133935_734_P17_REJECTED_FAST_obs2.jpg', '133935_734_P17_REJECTED_FAST_obs3.jpg']  folder: 133935_734_P17_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:39:35  track=P15  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(537, 502, 701, 603) center=(619,552) det_conf=0.9406 ring=1.0 vx=-18.6054 vy=0.5539
+  lineage=P15  id_age=1.92s  since_bridge=Nones
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(762.5, 547.0) t=13:39:35 stable=6 iou=0.7333 size=0.9873
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(652.5, 551.0) t=13:39:35 stable=5 iou=0.712 size=0.9743
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(619.0, 552.5) t=13:39:35 stable=7 iou=0.7637 size=0.9573
+  movement=[{'px': 110.1, 'ratio_of_diagonal': 0.585, 'seconds': 0.695}, {'px': 33.5, 'ratio_of_diagonal': 0.176, 'seconds': 0.244}]  total=143.6px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['133935_953_P15_ACCEPTED_FAST_obs1.jpg', '133935_953_P15_ACCEPTED_FAST_obs2.jpg', '133935_953_P15_ACCEPTED_FAST_obs3.jpg']  folder: 133935_953_P15_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 13:39:36  track=P16  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(608, 793, 809, 946) center=(708,870) det_conf=0.6957 ring=1.0 vx=18.6552 vy=0.4109
+  lineage=P12 -> P16  id_age=1.3s  since_bridge=1.3s
+  sample 1: NO_X conf=0.9879 p_x=0.0121 p_no_x=0.9879 mode=FAST clean=True gate=CLEAN center=(635.0, 869.0) t=13:39:35 stable=8 iou=0.781 size=0.9881
+  sample 2: NO_X conf=0.9894 p_x=0.0106 p_no_x=0.9894 mode=FAST clean=True gate=CLEAN center=(672.0, 868.0) t=13:39:36 stable=10 iou=0.7985 size=0.9444
+  sample 3: NO_X conf=0.999 p_x=0.001 p_no_x=0.999 mode=FAST clean=True gate=CLEAN center=(708.5, 869.5) t=13:39:36 stable=12 iou=0.8288 size=0.959
+  movement=[{'px': 37.0, 'ratio_of_diagonal': 0.151, 'seconds': 0.217}, {'px': 36.5, 'ratio_of_diagonal': 0.145, 'seconds': 0.212}]  total=73.5px
+  deferred unsafe NO_X samples (not counted): 4  RULE_VIOLATION=none
+  files: ['133936_404_P16_ACCEPTED_FAST_obs1.jpg', '133936_404_P16_ACCEPTED_FAST_obs2.jpg', '133936_404_P16_ACCEPTED_FAST_obs3.jpg']  folder: 133936_404_P16_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 13:57:49  track=P9  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(391, 800, 596, 940) center=(494,870) det_conf=0.4859 ring=1.0 vx=17.9117 vy=3.1512
+  lineage=P10 -> P9  id_age=0.26s  since_bridge=0.26s
+  sample 1: X conf=0.9448 p_x=0.9448 p_no_x=0.0552 mode=FAST clean=False gate=HOLD-RECOVER center=(416.5, 860.5) t=13:57:49 stable=1 iou=0.9009 size=0.9488
+  sample 2: X conf=0.9949 p_x=0.9949 p_no_x=0.0051 mode=FAST clean=False gate=WARMUP center=(456.0, 867.5) t=13:57:49 stable=1 iou=None size=None
+  sample 3: X conf=0.9981 p_x=0.9981 p_no_x=0.0019 mode=FAST clean=False gate=HOLD-RECOVER center=(493.5, 870.0) t=13:57:49 stable=3 iou=0.7738 size=0.9357
+  movement=[{'px': 40.1, 'ratio_of_diagonal': 0.155, 'seconds': 0.275}, {'px': 37.6, 'ratio_of_diagonal': 0.148, 'seconds': 0.219}]  total=77.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['135749_659_P9_REJECTED_FAST_obs1.jpg', '135749_659_P9_REJECTED_FAST_obs2.jpg', '135749_659_P9_REJECTED_FAST_obs3.jpg']  folder: 135749_659_P9_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:57:50  track=P12  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1075, 485, 1233, 585) center=(1154,535) det_conf=0.7978 ring=1.0 vx=-18.7038 vy=0.5762
+  lineage=P4 -> P5 -> P12  id_age=1.75s  since_bridge=1.75s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1229.0, 533.0) t=13:57:50 stable=5 iou=0.7418 size=0.9754
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1189.5, 533.0) t=13:57:50 stable=7 iou=0.7446 size=0.9815
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1154.0, 535.0) t=13:57:50 stable=9 iou=0.8054 size=0.9587
+  movement=[{'px': 39.5, 'ratio_of_diagonal': 0.206, 'seconds': 0.242}, {'px': 35.6, 'ratio_of_diagonal': 0.188, 'seconds': 0.243}]  total=75.0px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['135750_652_P12_ACCEPTED_FAST_obs1.jpg', '135750_652_P12_ACCEPTED_FAST_obs2.jpg', '135750_652_P12_ACCEPTED_FAST_obs3.jpg']  folder: 135750_652_P12_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 13:57:50  track=P11  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(611, 497, 761, 602) center=(686,550) det_conf=0.7546 ring=1.0 vx=-17.3322 vy=0.2366
+  lineage=P2 -> P11  id_age=0.28s  since_bridge=0.28s
+  sample 1: X conf=0.7571 p_x=0.7571 p_no_x=0.2429 mode=FAST clean=True gate=CLEAN center=(791.5, 547.0) t=13:57:50 stable=8 iou=0.7233 size=0.9759
+  sample 2: X conf=0.839 p_x=0.839 p_no_x=0.161 mode=FAST clean=False gate=WARMUP center=(719.5, 549.5) t=13:57:50 stable=1 iou=None size=None
+  sample 3: X conf=0.9956 p_x=0.9956 p_no_x=0.0044 mode=FAST clean=False gate=HOLD-RECOVER center=(686.0, 549.5) t=13:57:50 stable=3 iou=0.8057 size=0.9287
+  movement=[{'px': 72.0, 'ratio_of_diagonal': 0.379, 'seconds': 0.513}, {'px': 33.5, 'ratio_of_diagonal': 0.179, 'seconds': 0.232}]  total=105.5px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['135750_779_P11_REJECTED_FAST_obs1.jpg', '135750_779_P11_REJECTED_FAST_obs2.jpg', '135750_779_P11_REJECTED_FAST_obs3.jpg']  folder: 135750_779_P11_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 13:57:55  track=P35  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(747, 795, 943, 945) center=(845,870) det_conf=0.3557 ring=1.0 vx=19.149 vy=-0.0521
+  lineage=P1 -> P13 -> P24 -> P13 -> P27 -> P13 -> P27 -> P35  id_age=1.69s  since_bridge=1.69s
+  sample 1: NO_X conf=0.9952 p_x=0.0048 p_no_x=0.9952 mode=CLEAN clean=True gate=CLEAN center=(625.5, 868.0) t=13:57:54 stable=5 iou=0.8444 size=0.9815
+  sample 2: NO_X conf=0.8755 p_x=0.1245 p_no_x=0.8755 mode=CLEAN clean=True gate=CLEAN center=(845.0, 870.0) t=13:57:55 stable=5 iou=0.8203 size=0.975
+  movement=[{'px': 219.5, 'ratio_of_diagonal': 0.887, 'seconds': 1.233}]  total=219.5px
+  deferred unsafe NO_X samples (not counted): 6  RULE_VIOLATION=none
+  files: ['135755_420_P35_ACCEPTED_CLEAN_obs1.jpg', '135755_420_P35_ACCEPTED_CLEAN_obs2.jpg']  folder: 135755_420_P35_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 13:59:29  track=P324  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1321, 472, 1499, 582) center=(1410,527) det_conf=0.8056 ring=1.0 vx=-18.4681 vy=0.4182
+  lineage=P2 -> P11 -> P2 -> P11 -> P2 -> P11 -> P42 -> P11 -> P60 -> P11 -> P42 -> P88 -> P42 -> P88 -> P106 -> P88 -> P129 -> P132 -> P129 -> P132 -> P129 -> P132 -> P148 -> P132 -> P148 -> P172 -> P148 -> P172 -> P148 -> P172 -> P148 -> P225 -> P148 -> P225 -> P237 -> P225 -> P250 -> P225 -> P250 -> P225 -> P281 -> P225 -> P281 -> P225 -> P294 -> P225 -> P294 -> P281 -> P294 -> P324 -> P294 -> P324 -> P343 -> P324 -> P343 -> P324 -> P357 -> P324 -> P374 -> P324 -> P355 -> P324  id_age=19.45s  since_bridge=0.46s
+  sample 1: NO_X conf=0.9917 p_x=0.0083 p_no_x=0.9917 mode=CLEAN clean=True gate=CLEAN center=(1547.0, 874.0) t=13:59:24 stable=5 iou=0.8286 size=0.9935
+  sample 2: NO_X conf=0.6823 p_x=0.3177 p_no_x=0.6823 mode=CLEAN clean=True gate=CLEAN center=(1508.5, 522.0) t=13:59:29 stable=5 iou=0.7623 size=0.8742
+  sample 3: NO_X conf=0.995 p_x=0.005 p_no_x=0.995 mode=CLEAN clean=True gate=CLEAN center=(1410.0, 527.0) t=13:59:29 stable=5 iou=0.8285 size=0.9839
+  movement=[{'px': 354.1, 'ratio_of_diagonal': 1.473, 'seconds': 4.75}, {'px': 98.6, 'ratio_of_diagonal': 0.472, 'seconds': 0.566}]  total=373.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['135929_637_P324_ACCEPTED_CLEAN_obs1.jpg', '135929_637_P324_ACCEPTED_CLEAN_obs2.jpg', '135929_637_P324_ACCEPTED_CLEAN_obs3.jpg']  folder: 135929_637_P324_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 13:59:32  track=P324  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(850, 493, 1001, 594) center=(926,544) det_conf=0.5944 ring=1.0 vx=-17.9107 vy=0.6384
+  lineage=P2 -> P11 -> P2 -> P11 -> P2 -> P11 -> P42 -> P11 -> P60 -> P11 -> P42 -> P88 -> P42 -> P88 -> P106 -> P88 -> P129 -> P132 -> P129 -> P132 -> P129 -> P132 -> P148 -> P132 -> P148 -> P172 -> P148 -> P172 -> P148 -> P172 -> P148 -> P225 -> P148 -> P225 -> P237 -> P225 -> P250 -> P225 -> P250 -> P225 -> P281 -> P225 -> P281 -> P225 -> P294 -> P225 -> P294 -> P281 -> P294 -> P324 -> P294 -> P324 -> P343 -> P324 -> P343 -> P324 -> P357 -> P324 -> P374 -> P324 -> P355 -> P324 -> P355 -> P324  id_age=22.4s  since_bridge=0.58s
+  sample 1: X conf=0.9417 p_x=0.9417 p_no_x=0.0583 mode=CLEAN clean=True gate=CLEAN center=(1178.0, 534.5) t=13:59:30 stable=5 iou=0.7013 size=0.9741
+  sample 2: X conf=0.6587 p_x=0.6587 p_no_x=0.3413 mode=CLEAN clean=True gate=CLEAN center=(1135.5, 536.0) t=13:59:31 stable=7 iou=0.713 size=0.9041
+  sample 3: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=CLEAN clean=True gate=CLEAN center=(925.5, 543.5) t=13:59:32 stable=5 iou=0.7664 size=0.9165
+  movement=[{'px': 42.5, 'ratio_of_diagonal': 0.221, 'seconds': 0.236}, {'px': 210.1, 'ratio_of_diagonal': 1.114, 'seconds': 1.37}]  total=252.7px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['135932_587_P324_REJECTED_CLEAN_obs1.jpg', '135932_587_P324_REJECTED_CLEAN_obs2.jpg', '135932_587_P324_REJECTED_CLEAN_obs3.jpg']  folder: 135932_587_P324_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:00:12  track=P516  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1105, 482, 1263, 585) center=(1184,534) det_conf=0.6131 ring=1.0 vx=-18.7103 vy=0.7221
+  lineage=P2 -> P11 -> P2 -> P11 -> P2 -> P11 -> P42 -> P11 -> P60 -> P11 -> P42 -> P88 -> P42 -> P88 -> P106 -> P88 -> P129 -> P132 -> P129 -> P132 -> P129 -> P132 -> P148 -> P132 -> P148 -> P172 -> P148 -> P172 -> P148 -> P172 -> P148 -> P225 -> P148 -> P225 -> P237 -> P225 -> P250 -> P225 -> P250 -> P225 -> P281 -> P225 -> P281 -> P225 -> P294 -> P225 -> P294 -> P281 -> P294 -> P324 -> P294 -> P324 -> P343 -> P324 -> P343 -> P324 -> P357 -> P324 -> P374 -> P324 -> P355 -> P324 -> P355 -> P324 -> P421 -> P437 -> P438 -> P461 -> P438 -> P461 -> P476 -> P482 -> P476 -> P482 -> P500 -> P512 -> P500 -> P516 -> P512 -> P516 -> P526 -> P542 -> P559 -> P516  id_age=12.0s  since_bridge=0.67s
+  sample 1: NO_X conf=0.9823 p_x=0.0177 p_no_x=0.9823 mode=CLEAN clean=True gate=CLEAN center=(1395.5, 527.5) t=14:00:10 stable=5 iou=0.8231 size=0.9966
+  sample 2: NO_X conf=0.9565 p_x=0.0435 p_no_x=0.9565 mode=CLEAN clean=True gate=CLEAN center=(1332.5, 529.5) t=14:00:11 stable=8 iou=0.7474 size=0.9675
+  sample 3: NO_X conf=0.6552 p_x=0.3448 p_no_x=0.6552 mode=CLEAN clean=True gate=CLEAN center=(1184.0, 533.5) t=14:00:12 stable=5 iou=0.7556 size=0.9627
+  movement=[{'px': 63.0, 'ratio_of_diagonal': 0.307, 'seconds': 0.342}, {'px': 148.6, 'ratio_of_diagonal': 0.762, 'seconds': 0.874}]  total=211.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140012_168_P516_ACCEPTED_CLEAN_obs1.jpg', '140012_168_P516_ACCEPTED_CLEAN_obs2.jpg', '140012_168_P516_ACCEPTED_CLEAN_obs3.jpg']  folder: 140012_168_P516_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:00:15  track=P559  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(616, 499, 772, 604) center=(694,552) det_conf=0.8247 ring=1.0 vx=-15.7214 vy=0.763
+  lineage=P2 -> P11 -> P2 -> P11 -> P2 -> P11 -> P42 -> P11 -> P60 -> P11 -> P42 -> P88 -> P42 -> P88 -> P106 -> P88 -> P129 -> P132 -> P129 -> P132 -> P129 -> P132 -> P148 -> P132 -> P148 -> P172 -> P148 -> P172 -> P148 -> P172 -> P148 -> P225 -> P148 -> P225 -> P237 -> P225 -> P250 -> P225 -> P250 -> P225 -> P281 -> P225 -> P281 -> P225 -> P294 -> P225 -> P294 -> P281 -> P294 -> P324 -> P294 -> P324 -> P343 -> P324 -> P343 -> P324 -> P357 -> P324 -> P374 -> P324 -> P355 -> P324 -> P355 -> P324 -> P421 -> P437 -> P438 -> P461 -> P438 -> P461 -> P476 -> P482 -> P476 -> P482 -> P500 -> P512 -> P500 -> P516 -> P512 -> P516 -> P526 -> P542 -> P559 -> P516 -> P559  id_age=4.93s  since_bridge=2.42s
+  sample 1: X conf=0.7907 p_x=0.7907 p_no_x=0.2093 mode=CLEAN clean=True gate=CLEAN center=(1140.5, 535.0) t=14:00:12 stable=7 iou=0.7284 size=0.941
+  sample 2: X conf=0.9992 p_x=0.9992 p_no_x=0.0008 mode=CLEAN clean=True gate=CLEAN center=(826.5, 544.0) t=14:00:14 stable=5 iou=0.7611 size=0.9849
+  sample 3: X conf=0.8604 p_x=0.8604 p_no_x=0.1396 mode=CLEAN clean=True gate=CLEAN center=(694.0, 551.5) t=14:00:15 stable=5 iou=0.7968 size=0.9901
+  movement=[{'px': 314.1, 'ratio_of_diagonal': 1.662, 'seconds': 2.054}, {'px': 132.7, 'ratio_of_diagonal': 0.707, 'seconds': 0.922}]  total=446.8px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140015_389_P559_REJECTED_CLEAN_obs1.jpg', '140015_389_P559_REJECTED_CLEAN_obs2.jpg', '140015_389_P559_REJECTED_CLEAN_obs3.jpg']  folder: 140015_389_P559_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:04:41  track=P1  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(869, 492, 1027, 595) center=(948,544) det_conf=0.5201 ring=1.0 vx=-18.7376 vy=0.8297
+  lineage=P1 -> P14 -> P1  id_age=1.19s  since_bridge=0.51s
+  sample 1: X conf=0.9988 p_x=0.9988 p_no_x=0.0012 mode=FAST clean=False gate=HOLD-RECOVER center=(1043.0, 539.0) t=14:04:41 stable=3 iou=0.7784 size=0.9686
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-RECOVER center=(984.0, 542.0) t=14:04:41 stable=1 iou=0.7977 size=0.8752
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-RECOVER center=(948.0, 543.5) t=14:04:41 stable=1 iou=0.773 size=0.9875
+  movement=[{'px': 59.1, 'ratio_of_diagonal': 0.317, 'seconds': 0.351}, {'px': 36.0, 'ratio_of_diagonal': 0.192, 'seconds': 0.252}]  total=95.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140441_698_P1_REJECTED_FAST_obs1.jpg', '140441_698_P1_REJECTED_FAST_obs2.jpg', '140441_698_P1_REJECTED_FAST_obs3.jpg']  folder: 140441_698_P1_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:04:41  track=P12  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(305, 784, 498, 931) center=(402,858) det_conf=0.2351 ring=1.0 vx=7.2976 vy=8.5272
+  lineage=P6 -> P12  id_age=0.79s  since_bridge=0.79s
+  sample 1: X conf=0.9916 p_x=0.9916 p_no_x=0.0084 mode=FAST clean=False gate=HOLD-TURN center=(369.5, 825.0) t=14:04:41 stable=0 iou=0.8187 size=0.9516
+  sample 2: X conf=0.9869 p_x=0.9869 p_no_x=0.0131 mode=FAST clean=False gate=HOLD-TURN center=(386.5, 842.0) t=14:04:41 stable=0 iou=0.7999 size=0.9064
+  sample 3: X conf=0.9989 p_x=0.9989 p_no_x=0.0011 mode=FAST clean=False gate=HOLD-TURN center=(401.5, 857.5) t=14:04:41 stable=0 iou=0.8215 size=0.9496
+  movement=[{'px': 24.0, 'ratio_of_diagonal': 0.1, 'seconds': 0.247}, {'px': 21.6, 'ratio_of_diagonal': 0.087, 'seconds': 0.259}]  total=45.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140441_727_P12_REJECTED_FAST_obs1.jpg', '140441_727_P12_REJECTED_FAST_obs2.jpg', '140441_727_P12_REJECTED_FAST_obs3.jpg']  folder: 140441_727_P12_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:04:44  track=P17  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(846, 492, 1003, 595) center=(924,544) det_conf=0.3345 ring=1.0 vx=-16.1318 vy=0.5867
+  lineage=P8 -> P17  id_age=3.14s  since_bridge=3.14s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1207.5, 531.5) t=14:04:43 stable=5 iou=0.7632 size=0.9578
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1169.0, 534.5) t=14:04:43 stable=7 iou=0.7517 size=0.9655
+  sample 3: NO_X conf=0.9975 p_x=0.0025 p_no_x=0.9975 mode=CLEAN clean=True gate=CLEAN center=(924.5, 543.5) t=14:04:44 stable=5 iou=0.823 size=0.984
+  movement=[{'px': 38.6, 'ratio_of_diagonal': 0.202, 'seconds': 0.227}, {'px': 244.7, 'ratio_of_diagonal': 1.294, 'seconds': 1.553}]  total=283.3px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140444_823_P17_ACCEPTED_CLEAN_obs1.jpg', '140444_823_P17_ACCEPTED_CLEAN_obs2.jpg', '140444_823_P17_ACCEPTED_CLEAN_obs3.jpg']  folder: 140444_823_P17_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:04:48  track=P35  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(721, 797, 917, 945) center=(819,871) det_conf=0.3696 ring=1.0 vx=19.6669 vy=0.2445
+  lineage=P2 -> P10 -> P21 -> P32 -> P21 -> P35 -> P21 -> P35  id_age=2.94s  since_bridge=0.49s
+  sample 1: NO_X conf=0.9206 p_x=0.0794 p_no_x=0.9206 mode=CLEAN clean=True gate=CLEAN center=(576.0, 868.5) t=14:04:46 stable=5 iou=0.8016 size=0.9767
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(819.0, 871.0) t=14:04:48 stable=5 iou=0.818 size=0.9605
+  movement=[{'px': 243.0, 'ratio_of_diagonal': 0.991, 'seconds': 1.382}]  total=243.0px
+  deferred unsafe NO_X samples (not counted): 6  RULE_VIOLATION=none
+  files: ['140448_089_P35_ACCEPTED_CLEAN_obs1.jpg', '140448_089_P35_ACCEPTED_CLEAN_obs2.jpg']  folder: 140448_089_P35_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:06:55  track=P6  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(925, 796, 1121, 947) center=(1023,872) det_conf=0.633 ring=1.0 vx=24.3029 vy=-0.2461
+  lineage=P6  id_age=1.35s  since_bridge=Nones
+  sample 1: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=HOLD-RECOVER center=(924.5, 872.5) t=14:06:54 stable=1 iou=0.8327 size=0.9512
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=STABILIZE-3/5 center=(972.0, 872.5) t=14:06:54 stable=3 iou=0.8031 size=0.9982
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-RECOVER center=(1023.0, 871.5) t=14:06:55 stable=1 iou=0.7285 size=0.9816
+  movement=[{'px': 47.5, 'ratio_of_diagonal': 0.193, 'seconds': 0.249}, {'px': 51.0, 'ratio_of_diagonal': 0.205, 'seconds': 0.244}]  total=98.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140655_163_P6_REJECTED_FAST_obs1.jpg', '140655_163_P6_REJECTED_FAST_obs2.jpg', '140655_163_P6_REJECTED_FAST_obs3.jpg']  folder: 140655_163_P6_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:06:56  track=P7  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(625, 796, 822, 942) center=(724,869) det_conf=0.7638 ring=1.0 vx=21.7327 vy=-0.1607
+  lineage=P7 -> P11 -> P7  id_age=2.6s  since_bridge=1.27s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(637.0, 872.0) t=14:06:55 stable=5 iou=0.7722 size=0.9344
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(680.5, 869.0) t=14:06:56 stable=7 iou=0.7892 size=0.9907
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(723.5, 869.0) t=14:06:56 stable=9 iou=0.7951 size=0.9832
+  movement=[{'px': 43.6, 'ratio_of_diagonal': 0.177, 'seconds': 0.252}, {'px': 43.0, 'ratio_of_diagonal': 0.173, 'seconds': 0.232}]  total=86.6px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140656_411_P7_ACCEPTED_FAST_obs1.jpg', '140656_411_P7_ACCEPTED_FAST_obs2.jpg', '140656_411_P7_ACCEPTED_FAST_obs3.jpg']  folder: 140656_411_P7_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:06:56  track=P19  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.94
+  box=(1359, 469, 1543, 580) center=(1451,524) det_conf=0.7567 ring=1.0 vx=-21.837 vy=0.0433
+  lineage=P2 -> P19  id_age=1.79s  since_bridge=1.79s
+  sample 1: X conf=0.8977 p_x=0.8977 p_no_x=0.1023 mode=FAST clean=False gate=WARMUP center=(1725.5, 587.0) t=14:06:54 stable=0 iou=None size=None
+  sample 2: X conf=0.9964 p_x=0.9964 p_no_x=0.0036 mode=FAST clean=False gate=HOLD-RECOVER center=(1497.5, 523.0) t=14:06:56 stable=1 iou=0.8054 size=0.9699
+  sample 3: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=HOLD-RECOVER center=(1451.0, 524.5) t=14:06:56 stable=1 iou=0.7585 size=0.9425
+  movement=[{'px': 236.8, 'ratio_of_diagonal': 0.971, 'seconds': 1.492}, {'px': 46.5, 'ratio_of_diagonal': 0.217, 'seconds': 0.257}]  total=281.5px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['140656_556_P19_REJECTED_FAST_obs1.jpg', '140656_556_P19_REJECTED_FAST_obs2.jpg', '140656_556_P19_REJECTED_FAST_obs3.jpg']  folder: 140656_556_P19_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:07:00  track=P21  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.98
+  box=(1342, 471, 1518, 582) center=(1430,526) det_conf=0.8372 ring=1.0 vx=-18.1781 vy=0.9071
+  lineage=P5 -> P21  id_age=2.33s  since_bridge=2.33s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1576.5, 869.5) t=14:06:55 stable=5 iou=0.7392 size=0.9708
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1485.0, 523.0) t=14:07:00 stable=5 iou=0.8099 size=0.9765
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1430.0, 526.5) t=14:07:00 stable=8 iou=0.8043 size=0.9499
+  movement=[{'px': 358.4, 'ratio_of_diagonal': 1.484, 'seconds': 4.737}, {'px': 55.1, 'ratio_of_diagonal': 0.262, 'seconds': 0.337}]  total=373.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140700_864_P21_ACCEPTED_CLEAN_obs1.jpg', '140700_864_P21_ACCEPTED_CLEAN_obs2.jpg', '140700_864_P21_ACCEPTED_CLEAN_obs3.jpg']  folder: 140700_864_P21_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:07:49  track=P18  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-4/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(540, 502, 700, 604) center=(620,553) det_conf=0.9289 ring=1.0 vx=-17.8118 vy=0.4644
+  lineage=P2 -> P18  id_age=0.4s  since_bridge=0.4s
+  sample 1: X conf=0.9989 p_x=0.9989 p_no_x=0.0011 mode=FAST clean=False gate=STABILIZE-3/5 center=(692.0, 552.0) t=14:07:48 stable=3 iou=0.7429 size=0.9805
+  sample 2: X conf=0.9997 p_x=0.9997 p_no_x=0.0003 mode=FAST clean=False gate=HOLD-RECOVER center=(655.0, 552.0) t=14:07:48 stable=2 iou=0.7312 size=0.9433
+  sample 3: X conf=0.9985 p_x=0.9985 p_no_x=0.0015 mode=FAST clean=False gate=STABILIZE-4/5 center=(620.0, 553.0) t=14:07:49 stable=4 iou=0.7931 size=0.95
+  movement=[{'px': 37.0, 'ratio_of_diagonal': 0.199, 'seconds': 0.259}, {'px': 35.0, 'ratio_of_diagonal': 0.188, 'seconds': 0.249}]  total=72.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140749_225_P18_REJECTED_FAST_obs1.jpg', '140749_225_P18_REJECTED_FAST_obs2.jpg', '140749_225_P18_REJECTED_FAST_obs3.jpg']  folder: 140749_225_P18_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:07:49  track=P8  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(684, 796, 884, 945) center=(784,870) det_conf=0.5948 ring=1.0 vx=22.1154 vy=0.4267
+  lineage=P8  id_age=1.38s  since_bridge=Nones
+  sample 1: X conf=0.7877 p_x=0.7877 p_no_x=0.2123 mode=FAST clean=False gate=HOLD-RECOVER center=(688.0, 871.0) t=14:07:48 stable=1 iou=0.8465 size=0.9422
+  sample 2: X conf=0.9997 p_x=0.9997 p_no_x=0.0003 mode=FAST clean=False gate=STABILIZE-3/5 center=(739.0, 868.0) t=14:07:49 stable=3 iou=0.7961 size=0.9897
+  sample 3: X conf=0.8804 p_x=0.8804 p_no_x=0.1196 mode=FAST clean=False gate=HOLD-RECOVER center=(784.0, 870.5) t=14:07:49 stable=1 iou=0.7882 size=0.9394
+  movement=[{'px': 51.1, 'ratio_of_diagonal': 0.206, 'seconds': 0.25}, {'px': 45.1, 'ratio_of_diagonal': 0.181, 'seconds': 0.254}]  total=96.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140749_348_P8_REJECTED_FAST_obs1.jpg', '140749_348_P8_REJECTED_FAST_obs2.jpg', '140749_348_P8_REJECTED_FAST_obs3.jpg']  folder: 140749_348_P8_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:07:49  track=P13  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(965, 486, 1120, 591) center=(1042,538) det_conf=0.3064 ring=1.0 vx=-20.8255 vy=0.3912
+  lineage=P13  id_age=1.4s  since_bridge=Nones
+  sample 1: NO_X conf=0.9897 p_x=0.0103 p_no_x=0.9897 mode=FAST clean=True gate=CLEAN center=(1104.5, 537.5) t=14:07:48 stable=6 iou=0.6977 size=0.9568
+  sample 2: NO_X conf=0.9967 p_x=0.0033 p_no_x=0.9967 mode=FAST clean=True gate=CLEAN center=(1064.0, 539.0) t=14:07:49 stable=8 iou=0.7402 size=0.9747
+  sample 3: NO_X conf=0.9995 p_x=0.0005 p_no_x=0.9995 mode=FAST clean=True gate=CLEAN center=(1042.5, 538.5) t=14:07:49 stable=9 iou=0.7493 size=0.9841
+  movement=[{'px': 40.5, 'ratio_of_diagonal': 0.215, 'seconds': 0.249}, {'px': 21.5, 'ratio_of_diagonal': 0.115, 'seconds': 0.161}]  total=62.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['140749_372_P13_ACCEPTED_FAST_obs1.jpg', '140749_372_P13_ACCEPTED_FAST_obs2.jpg', '140749_372_P13_ACCEPTED_FAST_obs3.jpg']  folder: 140749_372_P13_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:08:07  track=P17  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(291, 763, 468, 917) center=(380,840) det_conf=0.4723 ring=1.0 vx=5.6 vy=11.7438
+  lineage=P16 -> P17 -> P16 -> P17  id_age=1.33s  since_bridge=0.52s
+  sample 1: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=WARMUP center=(353.5, 796.0) t=14:08:06 stable=0 iou=0.3126 size=0.8862
+  sample 2: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=HOLD-TURN center=(364.0, 818.5) t=14:08:07 stable=0 iou=0.8235 size=0.8572
+  sample 3: X conf=0.8824 p_x=0.8824 p_no_x=0.1176 mode=FAST clean=False gate=HOLD-TURN center=(379.5, 840.0) t=14:08:07 stable=0 iou=0.7897 size=0.972
+  movement=[{'px': 24.8, 'ratio_of_diagonal': 0.117, 'seconds': 0.231}, {'px': 26.5, 'ratio_of_diagonal': 0.117, 'seconds': 0.24}]  total=51.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140807_344_P17_REJECTED_FAST_obs1.jpg', '140807_344_P17_REJECTED_FAST_obs2.jpg', '140807_344_P17_REJECTED_FAST_obs3.jpg']  folder: 140807_344_P17_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:08:07  track=P11  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(889, 489, 1041, 593) center=(965,541) det_conf=0.6918 ring=1.0 vx=-19.1775 vy=-0.1
+  lineage=P11  id_age=1.72s  since_bridge=Nones
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=STABILIZE-3/5 center=(1125.0, 537.0) t=14:08:06 stable=3 iou=0.7924 size=0.9586
+  sample 2: X conf=0.9887 p_x=0.9887 p_no_x=0.0113 mode=FAST clean=True gate=CLEAN center=(1065.0, 539.0) t=14:08:06 stable=6 iou=0.8158 size=0.9907
+  sample 3: X conf=0.9994 p_x=0.9994 p_no_x=0.0006 mode=FAST clean=False gate=HOLD-RECOVER center=(965.0, 541.0) t=14:08:07 stable=1 iou=0.7526 size=0.9937
+  movement=[{'px': 60.0, 'ratio_of_diagonal': 0.315, 'seconds': 0.38}, {'px': 100.0, 'ratio_of_diagonal': 0.534, 'seconds': 0.632}]  total=160.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140807_468_P11_REJECTED_FAST_obs1.jpg', '140807_468_P11_REJECTED_FAST_obs2.jpg', '140807_468_P11_REJECTED_FAST_obs3.jpg']  folder: 140807_468_P11_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:08:11  track=P25  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(688, 497, 838, 598) center=(763,548) det_conf=0.2717 ring=1.0 vx=-16.7429 vy=0.3523
+  lineage=P5 -> P7 -> P10 -> P5 -> P25  id_age=3.08s  since_bridge=3.08s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1486.0, 523.5) t=14:08:07 stable=5 iou=0.8107 size=0.9947
+  sample 2: NO_X conf=0.9975 p_x=0.0025 p_no_x=0.9975 mode=CLEAN clean=True gate=CLEAN center=(1062.0, 538.0) t=14:08:09 stable=5 iou=0.7931 size=0.95
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(763.0, 547.5) t=14:08:11 stable=5 iou=0.7484 size=0.9614
+  movement=[{'px': 424.2, 'ratio_of_diagonal': 2.106, 'seconds': 2.526}, {'px': 299.2, 'ratio_of_diagonal': 1.639, 'seconds': 1.955}]  total=723.4px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140811_809_P25_ACCEPTED_CLEAN_obs1.jpg', '140811_809_P25_ACCEPTED_CLEAN_obs2.jpg', '140811_809_P25_ACCEPTED_CLEAN_obs3.jpg']  folder: 140811_809_P25_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:08:43  track=P15  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(692, 498, 848, 600) center=(770,549) det_conf=0.9033 ring=1.0 vx=-19.3935 vy=1.2035
+  lineage=P15  id_age=1.51s  since_bridge=Nones
+  sample 1: X conf=0.8601 p_x=0.8601 p_no_x=0.1399 mode=FAST clean=True gate=CLEAN center=(844.5, 545.5) t=14:08:43 stable=6 iou=0.7416 size=0.981
+  sample 2: X conf=0.9232 p_x=0.9232 p_no_x=0.0768 mode=FAST clean=True gate=CLEAN center=(809.0, 544.0) t=14:08:43 stable=8 iou=0.7221 size=0.9846
+  sample 3: X conf=0.9026 p_x=0.9026 p_no_x=0.0974 mode=FAST clean=True gate=CLEAN center=(770.0, 549.0) t=14:08:43 stable=10 iou=0.7388 size=0.9869
+  movement=[{'px': 35.5, 'ratio_of_diagonal': 0.191, 'seconds': 0.253}, {'px': 39.3, 'ratio_of_diagonal': 0.212, 'seconds': 0.237}]  total=74.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['140843_772_P15_REJECTED_FAST_obs1.jpg', '140843_772_P15_REJECTED_FAST_obs2.jpg', '140843_772_P15_REJECTED_FAST_obs3.jpg']  folder: 140843_772_P15_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:08:46  track=P14  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(982, 487, 1135, 589) center=(1058,538) det_conf=0.2747 ring=1.0 vx=-16.4872 vy=0.543
+  lineage=P5 -> P14  id_age=3.76s  since_bridge=3.76s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1482.5, 523.0) t=14:08:43 stable=5 iou=0.76 size=0.9868
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1213.0, 531.0) t=14:08:45 stable=5 iou=0.7383 size=0.9665
+  sample 3: NO_X conf=0.996 p_x=0.004 p_no_x=0.996 mode=CLEAN clean=True gate=CLEAN center=(1058.5, 538.0) t=14:08:46 stable=6 iou=0.7925 size=0.8977
+  movement=[{'px': 269.6, 'ratio_of_diagonal': 1.329, 'seconds': 1.55}, {'px': 154.7, 'ratio_of_diagonal': 0.819, 'seconds': 0.993}]  total=424.3px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140846_186_P14_ACCEPTED_CLEAN_obs1.jpg', '140846_186_P14_ACCEPTED_CLEAN_obs2.jpg', '140846_186_P14_ACCEPTED_CLEAN_obs3.jpg']  folder: 140846_186_P14_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:08:47  track=P6  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1102, 484, 1260, 585) center=(1181,534) det_conf=0.6954 ring=1.0 vx=-17.9082 vy=0.7373
+  lineage=P6 -> P17 -> P6 -> P27 -> P6  id_age=5.12s  since_bridge=1.21s
+  sample 1: X conf=0.9971 p_x=0.9971 p_no_x=0.0029 mode=FAST clean=False gate=HOLD-TURN center=(1794.0, 663.5) t=14:08:43 stable=0 iou=0.771 size=0.9406
+  sample 2: X conf=0.9613 p_x=0.9613 p_no_x=0.0387 mode=FAST clean=False gate=WARMUP center=(1617.5, 526.5) t=14:08:44 stable=1 iou=0.0066 size=0.5455
+  sample 3: X conf=0.8909 p_x=0.8909 p_no_x=0.1091 mode=CLEAN clean=True gate=CLEAN center=(1181.0, 534.5) t=14:08:47 stable=5 iou=0.7404 size=0.9683
+  movement=[{'px': 223.4, 'ratio_of_diagonal': 1.0, 'seconds': 1.482}, {'px': 436.6, 'ratio_of_diagonal': 2.273, 'seconds': 2.633}]  total=626.4px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['140847_380_P6_REJECTED_CLEAN_obs1.jpg', '140847_380_P6_REJECTED_CLEAN_obs2.jpg', '140847_380_P6_REJECTED_CLEAN_obs3.jpg']  folder: 140847_380_P6_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:08:50  track=P20  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1005, 486, 1164, 589) center=(1084,538) det_conf=0.3934 ring=1.0 vx=-18.1167 vy=0.6233
+  lineage=P4 -> P10 -> P20 -> P4 -> P20 -> P4 -> P20 -> P34 -> P20  id_age=6.22s  since_bridge=0.71s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1671.5, 861.0) t=14:08:44 stable=5 iou=0.8216 size=0.9025
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1348.5, 530.0) t=14:08:49 stable=5 iou=0.8105 size=0.9887
+  sample 3: NO_X conf=0.7252 p_x=0.2748 p_no_x=0.7252 mode=CLEAN clean=True gate=CLEAN center=(1084.5, 537.5) t=14:08:50 stable=5 iou=0.8044 size=0.9967
+  movement=[{'px': 462.5, 'ratio_of_diagonal': 1.781, 'seconds': 5.069}, {'px': 264.1, 'ratio_of_diagonal': 1.324, 'seconds': 1.606}]  total=670.2px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140850_925_P20_ACCEPTED_CLEAN_obs1.jpg', '140850_925_P20_ACCEPTED_CLEAN_obs2.jpg', '140850_925_P20_ACCEPTED_CLEAN_obs3.jpg']  folder: 140850_925_P20_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:11:40  track=P1  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(362, 519, 529, 657) center=(446,588) det_conf=0.3914 ring=1.0 vx=-16.3193 vy=4.7059
+  lineage=P1  id_age=1.51s  since_bridge=Nones
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(511.0, 568.0) t=14:11:39 stable=6 iou=0.7185 size=0.9868
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(476.5, 578.0) t=14:11:39 stable=8 iou=0.7148 size=0.8358
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(445.5, 588.0) t=14:11:40 stable=10 iou=0.7572 size=0.9095
+  movement=[{'px': 35.9, 'ratio_of_diagonal': 0.183, 'seconds': 0.245}, {'px': 32.6, 'ratio_of_diagonal': 0.153, 'seconds': 0.256}]  total=68.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['141140_058_P1_ACCEPTED_FAST_obs1.jpg', '141140_058_P1_ACCEPTED_FAST_obs2.jpg', '141140_058_P1_ACCEPTED_FAST_obs3.jpg']  folder: 141140_058_P1_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:11:40  track=P16  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-2/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(313, 785, 531, 936) center=(422,860) det_conf=0.4327 ring=1.0 vx=8.6093 vy=5.5346
+  lineage=P4 -> P11 -> P16  id_age=0.69s  since_bridge=0.69s
+  sample 1: X conf=0.9766 p_x=0.9766 p_no_x=0.0234 mode=FAST clean=False gate=HOLD-TURN center=(367.5, 825.5) t=14:11:39 stable=0 iou=0.855 size=0.956
+  sample 2: X conf=0.868 p_x=0.868 p_no_x=0.132 mode=FAST clean=False gate=HOLD-TURN center=(391.0, 844.0) t=14:11:39 stable=0 iou=0.8715 size=0.8715
+  sample 3: X conf=0.988 p_x=0.988 p_no_x=0.012 mode=FAST clean=False gate=STABILIZE-2/5 center=(422.0, 860.5) t=14:11:40 stable=2 iou=0.8927 size=0.9812
+  movement=[{'px': 29.9, 'ratio_of_diagonal': 0.123, 'seconds': 0.366}, {'px': 35.1, 'ratio_of_diagonal': 0.134, 'seconds': 0.416}]  total=64.8px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['141140_110_P16_REJECTED_FAST_obs1.jpg', '141140_110_P16_REJECTED_FAST_obs2.jpg', '141140_110_P16_REJECTED_FAST_obs3.jpg']  folder: 141140_110_P16_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:11:40  track=P10  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1573, 765, 1832, 952) center=(1702,858) det_conf=0.3372 ring=1.0 vx=28.2262 vy=-2.5793
+  lineage=P10  id_age=1.79s  since_bridge=Nones
+  sample 1: X conf=0.9848 p_x=0.9848 p_no_x=0.0152 mode=FAST clean=False gate=STABILIZE-2/5 center=(1485.5, 873.0) t=14:11:39 stable=2 iou=0.7702 size=0.8969
+  sample 2: X conf=0.8457 p_x=0.8457 p_no_x=0.1543 mode=FAST clean=False gate=STABILIZE-4/5 center=(1537.0, 869.5) t=14:11:39 stable=4 iou=0.7046 size=0.9605
+  sample 3: X conf=0.984 p_x=0.984 p_no_x=0.016 mode=FAST clean=False gate=HOLD-RECOVER center=(1702.5, 858.5) t=14:11:40 stable=1 iou=0.7196 size=0.8758
+  movement=[{'px': 51.6, 'ratio_of_diagonal': 0.187, 'seconds': 0.256}, {'px': 165.9, 'ratio_of_diagonal': 0.557, 'seconds': 0.766}]  total=217.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['141140_337_P10_REJECTED_FAST_obs1.jpg', '141140_337_P10_REJECTED_FAST_obs2.jpg', '141140_337_P10_REJECTED_FAST_obs3.jpg']  folder: 141140_337_P10_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:11:41  track=P19  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(903, 797, 1097, 946) center=(1000,872) det_conf=0.7572 ring=1.0 vx=21.5117 vy=0.1791
+  lineage=P13 -> P19  id_age=1.05s  since_bridge=1.05s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(917.5, 869.0) t=14:11:41 stable=6 iou=0.8242 size=0.9863
+  sample 2: NO_X conf=0.9683 p_x=0.0317 p_no_x=0.9683 mode=FAST clean=True gate=CLEAN center=(957.0, 872.5) t=14:11:41 stable=8 iou=0.8063 size=0.9847
+  sample 3: NO_X conf=0.9986 p_x=0.0014 p_no_x=0.9986 mode=FAST clean=True gate=CLEAN center=(1000.0, 871.5) t=14:11:41 stable=10 iou=0.7621 size=0.9524
+  movement=[{'px': 39.7, 'ratio_of_diagonal': 0.163, 'seconds': 0.235}, {'px': 43.0, 'ratio_of_diagonal': 0.175, 'seconds': 0.215}]  total=82.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['141141_513_P19_ACCEPTED_FAST_obs1.jpg', '141141_513_P19_ACCEPTED_FAST_obs2.jpg', '141141_513_P19_ACCEPTED_FAST_obs3.jpg']  folder: 141141_513_P19_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:11:42  track=P8  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1697, 588, 1887, 758) center=(1792,673) det_conf=0.3479 ring=1.0 vx=-2.3083 vy=-15.7285
+  lineage=P12 -> P8  id_age=3.54s  since_bridge=0.93s
+  sample 1: X conf=0.9892 p_x=0.9892 p_no_x=0.0108 mode=FAST clean=False gate=HOLD-TURN center=(1795.5, 778.0) t=14:11:41 stable=0 iou=0.8713 size=0.8713
+  sample 2: X conf=0.7364 p_x=0.7364 p_no_x=0.2636 mode=FAST clean=False gate=HOLD-TURN center=(1802.5, 706.0) t=14:11:41 stable=0 iou=0.8532 size=0.9101
+  sample 3: X conf=0.7541 p_x=0.7541 p_no_x=0.2459 mode=FAST clean=False gate=HOLD-TURN center=(1792.0, 673.0) t=14:11:42 stable=0 iou=0.8305 size=0.9501
+  movement=[{'px': 72.3, 'ratio_of_diagonal': 0.264, 'seconds': 0.581}, {'px': 34.6, 'ratio_of_diagonal': 0.136, 'seconds': 0.228}]  total=105.1px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['141142_085_P8_REJECTED_FAST_obs1.jpg', '141142_085_P8_REJECTED_FAST_obs2.jpg', '141142_085_P8_REJECTED_FAST_obs3.jpg']  folder: 141142_085_P8_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:13:57  track=P4  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-3/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(892, 490, 1055, 594) center=(974,542) det_conf=0.3422 ring=1.0 vx=-20.0239 vy=0.5433
+  lineage=P4  id_age=1.25s  since_bridge=Nones
+  sample 1: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=STABILIZE-4/5 center=(1051.5, 537.0) t=14:13:57 stable=4 iou=0.8022 size=0.9342
+  sample 2: X conf=0.9985 p_x=0.9985 p_no_x=0.0015 mode=FAST clean=False gate=HOLD-RECOVER center=(1016.5, 542.5) t=14:13:57 stable=1 iou=0.7525 size=0.9461
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=STABILIZE-3/5 center=(973.5, 542.0) t=14:13:57 stable=3 iou=0.7658 size=0.9053
+  movement=[{'px': 35.4, 'ratio_of_diagonal': 0.189, 'seconds': 0.241}, {'px': 43.0, 'ratio_of_diagonal': 0.223, 'seconds': 0.253}]  total=78.2px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['141357_606_P4_REJECTED_FAST_obs1.jpg', '141357_606_P4_REJECTED_FAST_obs2.jpg', '141357_606_P4_REJECTED_FAST_obs3.jpg']  folder: 141357_606_P4_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:13:57  track=P5  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(307, 784, 519, 937) center=(413,860) det_conf=0.3769 ring=1.0 vx=7.1554 vy=6.105
+  lineage=P5  id_age=1.28s  since_bridge=Nones
+  sample 1: X conf=0.9944 p_x=0.9944 p_no_x=0.0056 mode=FAST clean=False gate=HOLD-TURN center=(380.0, 837.0) t=14:13:57 stable=0 iou=0.866 size=0.9633
+  sample 2: X conf=0.9893 p_x=0.9893 p_no_x=0.0107 mode=FAST clean=False gate=HOLD-TURN center=(400.5, 850.5) t=14:13:57 stable=0 iou=0.8173 size=0.9076
+  sample 3: X conf=0.8944 p_x=0.8944 p_no_x=0.1056 mode=FAST clean=False gate=HOLD-TURN center=(413.0, 860.5) t=14:13:57 stable=0 iou=0.8445 size=0.9104
+  movement=[{'px': 24.5, 'ratio_of_diagonal': 0.1, 'seconds': 0.241}, {'px': 16.0, 'ratio_of_diagonal': 0.063, 'seconds': 0.265}]  total=40.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['141357_631_P5_REJECTED_FAST_obs1.jpg', '141357_631_P5_REJECTED_FAST_obs2.jpg', '141357_631_P5_REJECTED_FAST_obs3.jpg']  folder: 141357_631_P5_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:13:58  track=P14  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(470, 511, 622, 611) center=(546,561) det_conf=0.4081 ring=1.0 vx=-16.9102 vy=2.0229
+  lineage=P3 -> P14  id_age=1.0s  since_bridge=1.0s
+  sample 1: NO_X conf=0.9984 p_x=0.0016 p_no_x=0.9984 mode=FAST clean=True gate=CLEAN center=(614.0, 553.0) t=14:13:58 stable=5 iou=0.8007 size=0.9488
+  sample 2: NO_X conf=0.9525 p_x=0.0475 p_no_x=0.9525 mode=FAST clean=True gate=CLEAN center=(577.5, 557.5) t=14:13:58 stable=7 iou=0.7085 size=0.9359
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(546.0, 561.0) t=14:13:58 stable=9 iou=0.7395 size=0.9347
+  movement=[{'px': 36.8, 'ratio_of_diagonal': 0.203, 'seconds': 0.241}, {'px': 31.7, 'ratio_of_diagonal': 0.175, 'seconds': 0.241}]  total=68.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['141358_977_P14_ACCEPTED_FAST_obs1.jpg', '141358_977_P14_ACCEPTED_FAST_obs2.jpg', '141358_977_P14_ACCEPTED_FAST_obs3.jpg']  folder: 141358_977_P14_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:13:59  track=P11  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 0.98
+  box=(1003, 486, 1163, 590) center=(1083,538) det_conf=0.4094 ring=1.0 vx=-18.753 vy=0.6992
+  lineage=P7 -> P11  id_age=2.96s  since_bridge=2.96s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1452.0, 525.5) t=14:13:57 stable=5 iou=0.7597 size=0.9946
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1221.5, 532.0) t=14:13:58 stable=5 iou=0.7653 size=0.9907
+  sample 3: X conf=0.6809 p_x=0.6809 p_no_x=0.3191 mode=CLEAN clean=True gate=CLEAN center=(1083.0, 538.0) t=14:13:59 stable=5 iou=0.7966 size=0.9875
+  movement=[{'px': 230.6, 'ratio_of_diagonal': 1.116, 'seconds': 1.309}, {'px': 138.6, 'ratio_of_diagonal': 0.72, 'seconds': 0.844}]  total=369.2px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['141359_808_P11_ACCEPTED_CLEAN_obs1.jpg', '141359_808_P11_ACCEPTED_CLEAN_obs2.jpg', '141359_808_P11_ACCEPTED_CLEAN_obs3.jpg']  folder: 141359_808_P11_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:14:52  track=P18  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=WARMUP
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(948, 495, 1092, 589) center=(1020,542) det_conf=0.2013 ring=1.0 vx=-21.6743 vy=1.3898
+  lineage=P1 -> P16 -> P18  id_age=0.03s  since_bridge=0.03s
+  sample 1: X conf=0.9481 p_x=0.9481 p_no_x=0.0519 mode=FAST clean=False gate=STABILIZE-3/5 center=(1165.5, 535.5) t=14:14:51 stable=3 iou=0.7878 size=0.9658
+  sample 2: X conf=0.9168 p_x=0.9168 p_no_x=0.0832 mode=FAST clean=False gate=HOLD-RECOVER center=(1102.0, 538.5) t=14:14:51 stable=1 iou=0.7559 size=0.9806
+  sample 3: X conf=0.9989 p_x=0.9989 p_no_x=0.0011 mode=FAST clean=False gate=WARMUP center=(1020.0, 542.0) t=14:14:52 stable=1 iou=None size=None
+  movement=[{'px': 63.6, 'ratio_of_diagonal': 0.344, 'seconds': 0.352}, {'px': 82.1, 'ratio_of_diagonal': 0.459, 'seconds': 0.473}]  total=145.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['141452_467_P18_REJECTED_FAST_obs1.jpg', '141452_467_P18_REJECTED_FAST_obs2.jpg', '141452_467_P18_REJECTED_FAST_obs3.jpg']  folder: 141452_467_P18_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:14:53  track=P23  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=False  gate=HOLD-TURN
+  votes X=2 NO_X=1 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1703, 619, 1893, 797) center=(1798,708) det_conf=0.1316 ring=0.9977 vx=-1.2772 vy=-15.1457
+  lineage=P11 -> P23  id_age=1.15s  since_bridge=1.15s
+  sample 1: NO_X conf=0.9359 p_x=0.0641 p_no_x=0.9359 mode=FAST clean=True gate=CLEAN center=(1681.0, 857.0) t=14:14:51 stable=6 iou=0.8098 size=0.9801
+  sample 2: X conf=0.8619 p_x=0.8619 p_no_x=0.1381 mode=FAST clean=False gate=HOLD-RECOVER center=(1766.0, 817.5) t=14:14:52 stable=3 iou=0.837 size=0.9685
+  sample 3: X conf=0.9979 p_x=0.9979 p_no_x=0.0021 mode=FAST clean=False gate=HOLD-TURN center=(1797.0, 770.0) t=14:14:53 stable=0 iou=0.8581 size=0.9473
+  movement=[{'px': 93.7, 'ratio_of_diagonal': 0.287, 'seconds': 0.746}, {'px': 56.7, 'ratio_of_diagonal': 0.186, 'seconds': 0.446}]  total=145.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['141453_590_P23_REJECTED_CLEAN_obs1.jpg', '141453_590_P23_REJECTED_CLEAN_obs2.jpg', '141453_590_P23_REJECTED_CLEAN_obs3.jpg']  folder: 141453_590_P23_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:14:54  track=P8  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1472, 792, 1696, 949) center=(1584,870) det_conf=0.5203 ring=1.0 vx=22.511 vy=-0.4614
+  lineage=P8 -> P12 -> P8  id_age=3.68s  since_bridge=0.45s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1249.0, 872.5) t=14:14:52 stable=5 iou=0.7876 size=0.9969
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1296.5, 873.5) t=14:14:53 stable=7 iou=0.714 size=0.8712
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1584.0, 870.5) t=14:14:54 stable=5 iou=0.8052 size=0.9972
+  movement=[{'px': 47.5, 'ratio_of_diagonal': 0.178, 'seconds': 0.208}, {'px': 287.5, 'ratio_of_diagonal': 1.047, 'seconds': 1.43}]  total=335.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['141454_462_P8_ACCEPTED_CLEAN_obs1.jpg', '141454_462_P8_ACCEPTED_CLEAN_obs2.jpg', '141454_462_P8_ACCEPTED_CLEAN_obs3.jpg']  folder: 141454_462_P8_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:14:58  track=P14  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(830, 491, 987, 596) center=(908,544) det_conf=0.7982 ring=1.0 vx=-17.0237 vy=0.4766
+  lineage=P5 -> P14 -> P19 -> P5 -> P14 -> P5 -> P14  id_age=6.4s  since_bridge=0.77s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1179.0, 535.5) t=14:14:56 stable=5 iou=0.6725 size=0.9281
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1125.0, 536.5) t=14:14:56 stable=8 iou=0.7319 size=0.9405
+  sample 3: NO_X conf=0.9875 p_x=0.0125 p_no_x=0.9875 mode=CLEAN clean=True gate=CLEAN center=(908.5, 543.5) t=14:14:58 stable=6 iou=0.7583 size=0.9915
+  movement=[{'px': 54.0, 'ratio_of_diagonal': 0.278, 'seconds': 0.341}, {'px': 216.6, 'ratio_of_diagonal': 1.139, 'seconds': 1.406}]  total=270.6px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['141458_258_P14_ACCEPTED_CLEAN_obs1.jpg', '141458_258_P14_ACCEPTED_CLEAN_obs2.jpg', '141458_258_P14_ACCEPTED_CLEAN_obs3.jpg']  folder: 141458_258_P14_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:15:07  track=P56  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1702, 581, 1888, 752) center=(1795,666) det_conf=0.4294 ring=0.9998 vx=-2.3272 vy=-17.2839
+  lineage=P37 -> P56  id_age=1.06s  since_bridge=1.06s
+  sample 1: X conf=0.7288 p_x=0.7288 p_no_x=0.2712 mode=FAST clean=False gate=HOLD-TURN center=(1797.5, 774.0) t=14:15:07 stable=0 iou=0.8578 size=0.8578
+  sample 2: X conf=0.832 p_x=0.832 p_no_x=0.168 mode=FAST clean=False gate=HOLD-TURN center=(1804.0, 749.0) t=14:15:07 stable=0 iou=0.7846 size=0.9837
+  sample 3: X conf=0.8335 p_x=0.8335 p_no_x=0.1665 mode=FAST clean=False gate=HOLD-TURN center=(1795.0, 666.5) t=14:15:07 stable=0 iou=0.7824 size=0.9631
+  movement=[{'px': 25.8, 'ratio_of_diagonal': 0.094, 'seconds': 0.223}, {'px': 83.0, 'ratio_of_diagonal': 0.319, 'seconds': 0.577}]  total=107.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['141507_959_P56_REJECTED_FAST_obs1.jpg', '141507_959_P56_REJECTED_FAST_obs2.jpg', '141507_959_P56_REJECTED_FAST_obs3.jpg']  folder: 141507_959_P56_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:23:53  track=P5  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(280, 715, 417, 864) center=(348,790) det_conf=0.2329 ring=1.0 vx=-4.0186 vy=19.4059
+  lineage=P5  id_age=2.45s  since_bridge=Nones
+  sample 1: X conf=0.9337 p_x=0.9337 p_no_x=0.0663 mode=FAST clean=False gate=STABILIZE-2/5 center=(441.5, 595.0) t=14:23:52 stable=2 iou=0.8012 size=0.9214
+  sample 2: X conf=0.905 p_x=0.905 p_no_x=0.095 mode=FAST clean=False gate=HOLD-TURN center=(354.5, 748.5) t=14:23:53 stable=0 iou=0.687 size=0.8535
+  sample 3: X conf=0.9991 p_x=0.9991 p_no_x=0.0009 mode=FAST clean=False gate=HOLD-TURN center=(348.5, 789.5) t=14:23:53 stable=0 iou=0.7263 size=0.9794
+  movement=[{'px': 176.4, 'ratio_of_diagonal': 0.845, 'seconds': 1.373}, {'px': 41.4, 'ratio_of_diagonal': 0.206, 'seconds': 0.285}]  total=215.6px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['142353_688_P5_REJECTED_FAST_obs1.jpg', '142353_688_P5_REJECTED_FAST_obs2.jpg', '142353_688_P5_REJECTED_FAST_obs3.jpg']  folder: 142353_688_P5_REJECTED_FAST
+
+DECISION COMMIT  2026-10-08 14:23:54  track=P13  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(802, 491, 955, 596) center=(878,544) det_conf=0.6512 ring=1.0 vx=-21.8635 vy=0.2257
+  lineage=P12 -> P13 -> P12 -> P13  id_age=2.36s  since_bridge=1.01s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1162.0, 536.0) t=14:23:52 stable=5 iou=0.7239 size=0.9488
+  sample 2: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=FAST clean=True gate=CLEAN center=(1115.0, 536.5) t=14:23:52 stable=7 iou=0.8062 size=0.9737
+  sample 3: NO_X conf=0.9989 p_x=0.0011 p_no_x=0.9989 mode=FAST clean=True gate=CLEAN center=(878.5, 543.5) t=14:23:54 stable=6 iou=0.7484 size=0.9682
+  movement=[{'px': 47.0, 'ratio_of_diagonal': 0.245, 'seconds': 0.242}, {'px': 236.6, 'ratio_of_diagonal': 1.253, 'seconds': 1.536}]  total=283.6px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['142354_104_P13_ACCEPTED_FAST_obs1.jpg', '142354_104_P13_ACCEPTED_FAST_obs2.jpg', '142354_104_P13_ACCEPTED_FAST_obs3.jpg']  folder: 142354_104_P13_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-08 14:23:55  track=P6  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(847, 491, 1006, 596) center=(926,544) det_conf=0.5031 ring=1.0 vx=-18.1568 vy=0.7162
+  lineage=P6  id_age=4.03s  since_bridge=Nones
+  sample 1: X conf=0.9985 p_x=0.9985 p_no_x=0.0015 mode=FAST clean=False gate=STABILIZE-3/5 center=(1442.0, 526.0) t=14:23:52 stable=3 iou=0.7674 size=0.9832
+  sample 2: X conf=0.8348 p_x=0.8348 p_no_x=0.1652 mode=FAST clean=True gate=CLEAN center=(1180.5, 535.0) t=14:23:53 stable=5 iou=0.6537 size=0.8803
+  sample 3: X conf=0.9915 p_x=0.9915 p_no_x=0.0085 mode=CLEAN clean=True gate=CLEAN center=(926.5, 543.5) t=14:23:55 stable=5 iou=0.771 size=0.9317
+  movement=[{'px': 261.7, 'ratio_of_diagonal': 1.282, 'seconds': 1.531}, {'px': 254.1, 'ratio_of_diagonal': 1.3, 'seconds': 1.554}]  total=515.8px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['142355_266_P6_REJECTED_CLEAN_obs1.jpg', '142355_266_P6_REJECTED_CLEAN_obs2.jpg', '142355_266_P6_REJECTED_CLEAN_obs3.jpg']  folder: 142355_266_P6_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:23:58  track=P17  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(707, 493, 866, 600) center=(786,546) det_conf=0.6612 ring=1.0 vx=-18.705 vy=0.6521
+  lineage=P4 -> P17 -> P4 -> P17 -> P19 -> P17  id_age=6.28s  since_bridge=1.75s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1188.5, 533.0) t=14:23:56 stable=5 iou=0.7534 size=0.9688
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(840.5, 545.0) t=14:23:58 stable=5 iou=0.7469 size=0.9538
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(786.5, 546.5) t=14:23:58 stable=8 iou=0.7724 size=0.9969
+  movement=[{'px': 348.2, 'ratio_of_diagonal': 1.868, 'seconds': 2.207}, {'px': 54.0, 'ratio_of_diagonal': 0.286, 'seconds': 0.374}]  total=402.2px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['142358_706_P17_ACCEPTED_CLEAN_obs1.jpg', '142358_706_P17_ACCEPTED_CLEAN_obs2.jpg', '142358_706_P17_ACCEPTED_CLEAN_obs3.jpg']  folder: 142358_706_P17_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:24:18  track=P52  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(415, 514, 571, 637) center=(493,576) det_conf=0.6761 ring=1.0 vx=-16.2614 vy=3.8705
+  lineage=P6 -> P31 -> P6 -> P31 -> P6 -> P31 -> P6 -> P33 -> P52 -> P63 -> P49 -> P52 -> P49 -> P52  id_age=15.95s  since_bridge=3.65s
+  sample 1: NO_X conf=0.8434 p_x=0.1566 p_no_x=0.8434 mode=CLEAN clean=True gate=CLEAN center=(645.0, 552.0) t=14:24:17 stable=19 iou=0.7997 size=0.9908
+  sample 2: NO_X conf=0.9525 p_x=0.0475 p_no_x=0.9525 mode=CLEAN clean=True gate=CLEAN center=(545.5, 562.5) t=14:24:18 stable=5 iou=0.8195 size=0.9894
+  sample 3: NO_X conf=0.9171 p_x=0.0829 p_no_x=0.9171 mode=CLEAN clean=True gate=CLEAN center=(493.0, 575.5) t=14:24:18 stable=8 iou=0.7559 size=0.9082
+  movement=[{'px': 100.1, 'ratio_of_diagonal': 0.548, 'seconds': 0.734}, {'px': 54.1, 'ratio_of_diagonal': 0.285, 'seconds': 0.384}]  total=153.8px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['142418_948_P52_ACCEPTED_CLEAN_obs1.jpg', '142418_948_P52_ACCEPTED_CLEAN_obs2.jpg', '142418_948_P52_ACCEPTED_CLEAN_obs3.jpg']  folder: 142418_948_P52_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-08 14:24:24  track=P103  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(626, 797, 828, 945) center=(727,871) det_conf=0.5786 ring=1.0 vx=21.2629 vy=0.2291
+  lineage=P6 -> P31 -> P6 -> P31 -> P6 -> P31 -> P6 -> P33 -> P52 -> P63 -> P49 -> P52 -> P49 -> P52 -> P96 -> P52 -> P103  id_age=3.21s  since_bridge=3.21s
+  sample 1: X conf=0.993 p_x=0.993 p_no_x=0.007 mode=CLEAN clean=True gate=CLEAN center=(514.5, 870.5) t=14:24:22 stable=5 iou=0.7604 size=0.9701
+  sample 2: X conf=0.9969 p_x=0.9969 p_no_x=0.0031 mode=CLEAN clean=True gate=CLEAN center=(661.5, 870.5) t=14:24:23 stable=5 iou=0.8036 size=0.9536
+  sample 3: X conf=0.9667 p_x=0.9667 p_no_x=0.0333 mode=CLEAN clean=True gate=CLEAN center=(727.0, 871.0) t=14:24:24 stable=8 iou=0.8038 size=0.9785
+  movement=[{'px': 147.0, 'ratio_of_diagonal': 0.594, 'seconds': 0.849}, {'px': 65.5, 'ratio_of_diagonal': 0.263, 'seconds': 0.375}]  total=212.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['142424_016_P103_REJECTED_CLEAN_obs1.jpg', '142424_016_P103_REJECTED_CLEAN_obs2.jpg', '142424_016_P103_REJECTED_CLEAN_obs3.jpg']  folder: 142424_016_P103_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:02:43  track=P8  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1107, 797, 1319, 952) center=(1213,874) det_conf=0.7813 ring=1.0 vx=26.3656 vy=0.9881
+  lineage=P8  id_age=1.54s  since_bridge=Nones
+  sample 1: NO_X conf=0.995 p_x=0.005 p_no_x=0.995 mode=FAST clean=True gate=CLEAN center=(1106.5, 869.0) t=12:02:43 stable=5 iou=0.7249 size=0.9898
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1162.0, 872.0) t=12:02:43 stable=7 iou=0.7142 size=0.9823
+  sample 3: NO_X conf=0.9905 p_x=0.0095 p_no_x=0.9905 mode=FAST clean=True gate=CLEAN center=(1213.0, 874.5) t=12:02:43 stable=9 iou=0.6977 size=0.9344
+  movement=[{'px': 55.6, 'ratio_of_diagonal': 0.222, 'seconds': 0.259}, {'px': 51.1, 'ratio_of_diagonal': 0.197, 'seconds': 0.261}]  total=106.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['120243_909_P8_ACCEPTED_FAST_obs1.jpg', '120243_909_P8_ACCEPTED_FAST_obs2.jpg', '120243_909_P8_ACCEPTED_FAST_obs3.jpg']  folder: 120243_909_P8_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:02:43  track=P14  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1142, 478, 1305, 587) center=(1224,532) det_conf=0.7572 ring=1.0 vx=-22.7765 vy=0.6793
+  lineage=P2 -> P11 -> P2 -> P14  id_age=0.2s  since_bridge=0.2s
+  sample 1: X conf=0.8173 p_x=0.8173 p_no_x=0.1827 mode=FAST clean=False gate=WARMUP center=(1289.0, 529.5) t=12:02:43 stable=1 iou=0.4015 size=0.897
+  sample 2: X conf=0.7671 p_x=0.7671 p_no_x=0.2329 mode=FAST clean=False gate=WARMUP center=(1250.0, 531.5) t=12:02:43 stable=1 iou=None size=None
+  sample 3: X conf=0.7935 p_x=0.7935 p_no_x=0.2065 mode=FAST clean=False gate=HOLD-RECOVER center=(1223.5, 532.5) t=12:02:43 stable=2 iou=0.7098 size=0.976
+  movement=[{'px': 39.1, 'ratio_of_diagonal': 0.194, 'seconds': 0.265}, {'px': 26.5, 'ratio_of_diagonal': 0.135, 'seconds': 0.163}]  total=65.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['120243_946_P14_REJECTED_FAST_obs1.jpg', '120243_946_P14_REJECTED_FAST_obs2.jpg', '120243_946_P14_REJECTED_FAST_obs3.jpg']  folder: 120243_946_P14_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:02:44  track=P15  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-3/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(687, 491, 846, 601) center=(766,546) det_conf=0.857 ring=1.0 vx=-20.7293 vy=0.7867
+  lineage=P10 -> P12 -> P15  id_age=0.31s  since_bridge=0.31s
+  sample 1: X conf=0.9993 p_x=0.9993 p_no_x=0.0007 mode=FAST clean=True gate=CLEAN center=(889.5, 545.5) t=12:02:43 stable=6 iou=0.7547 size=0.972
+  sample 2: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=WARMUP center=(804.0, 544.0) t=12:02:44 stable=1 iou=None size=None
+  sample 3: X conf=0.9744 p_x=0.9744 p_no_x=0.0256 mode=FAST clean=False gate=STABILIZE-3/5 center=(766.5, 546.0) t=12:02:44 stable=3 iou=0.7637 size=0.9862
+  movement=[{'px': 85.5, 'ratio_of_diagonal': 0.452, 'seconds': 0.562}, {'px': 37.6, 'ratio_of_diagonal': 0.197, 'seconds': 0.257}]  total=123.0px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['120244_479_P15_REJECTED_FAST_obs1.jpg', '120244_479_P15_REJECTED_FAST_obs2.jpg', '120244_479_P15_REJECTED_FAST_obs3.jpg']  folder: 120244_479_P15_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:02:46  track=P20  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1114, 794, 1323, 951) center=(1218,872) det_conf=0.6841 ring=1.0 vx=20.1554 vy=0.2261
+  lineage=P6 -> P20  id_age=0.44s  since_bridge=0.44s
+  sample 1: NO_X conf=0.9179 p_x=0.0821 p_no_x=0.9179 mode=FAST clean=True gate=CLEAN center=(834.5, 869.5) t=12:02:44 stable=5 iou=0.7885 size=0.9614
+  sample 2: NO_X conf=0.9961 p_x=0.0039 p_no_x=0.9961 mode=CLEAN clean=True gate=CLEAN center=(1008.5, 869.5) t=12:02:45 stable=5 iou=0.7696 size=0.9383
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1218.5, 872.5) t=12:02:46 stable=5 iou=0.8201 size=0.9559
+  movement=[{'px': 174.0, 'ratio_of_diagonal': 0.719, 'seconds': 0.929}, {'px': 210.0, 'ratio_of_diagonal': 0.845, 'seconds': 1.089}]  total=384.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['120246_748_P20_ACCEPTED_CLEAN_obs1.jpg', '120246_748_P20_ACCEPTED_CLEAN_obs2.jpg', '120246_748_P20_ACCEPTED_CLEAN_obs3.jpg']  folder: 120246_748_P20_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:02:49  track=P34  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.98
+  box=(1134, 477, 1293, 586) center=(1214,532) det_conf=0.595 ring=1.0 vx=-20.4629 vy=0.2801
+  lineage=P3 -> P7 -> P3 -> P7 -> P3 -> P34  id_age=1.05s  since_bridge=1.05s
+  sample 1: NO_X conf=0.9959 p_x=0.0041 p_no_x=0.9959 mode=FAST clean=True gate=CLEAN center=(1642.5, 861.5) t=12:02:43 stable=5 iou=0.7043 size=0.9567
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1257.5, 531.0) t=12:02:49 stable=5 iou=0.7925 size=0.9532
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1213.5, 531.5) t=12:02:49 stable=7 iou=0.7522 size=0.9967
+  movement=[{'px': 507.4, 'ratio_of_diagonal': 2.147, 'seconds': 5.863}, {'px': 44.0, 'ratio_of_diagonal': 0.225, 'seconds': 0.227}]  total=541.2px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['120249_454_P34_ACCEPTED_CLEAN_obs1.jpg', '120249_454_P34_ACCEPTED_CLEAN_obs2.jpg', '120249_454_P34_ACCEPTED_CLEAN_obs3.jpg']  folder: 120249_454_P34_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:02:50  track=P30  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(891, 798, 1081, 942) center=(986,870) det_conf=0.6345 ring=1.0 vx=20.8354 vy=0.0893
+  lineage=P1 -> P18 -> P30 -> P1 -> P30  id_age=4.82s  since_bridge=0.47s
+  sample 1: NO_X conf=0.9995 p_x=0.0005 p_no_x=0.9995 mode=CLEAN clean=True gate=CLEAN center=(465.5, 867.5) t=12:02:47 stable=5 iou=0.8324 size=0.9881
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(693.5, 869.5) t=12:02:49 stable=5 iou=0.8282 size=0.9862
+  sample 3: NO_X conf=0.9825 p_x=0.0175 p_no_x=0.9825 mode=CLEAN clean=True gate=CLEAN center=(986.0, 870.0) t=12:02:50 stable=5 iou=0.8178 size=0.9879
+  movement=[{'px': 228.0, 'ratio_of_diagonal': 0.928, 'seconds': 1.297}, {'px': 292.5, 'ratio_of_diagonal': 1.211, 'seconds': 1.619}]  total=520.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['120250_694_P30_ACCEPTED_CLEAN_obs1.jpg', '120250_694_P30_ACCEPTED_CLEAN_obs2.jpg', '120250_694_P30_ACCEPTED_CLEAN_obs3.jpg']  folder: 120250_694_P30_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:03:03  track=P80  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1287, 795, 1496, 952) center=(1392,874) det_conf=0.3713 ring=1.0 vx=27.1629 vy=0.1185
+  lineage=P3 -> P7 -> P3 -> P7 -> P3 -> P34 -> P44 -> P63 -> P44 -> P80  id_age=3.41s  since_bridge=3.41s
+  sample 1: NO_X conf=0.9994 p_x=0.0006 p_no_x=0.9994 mode=MANUAL clean=True gate=MANUAL center=(1304.5, 874.0) t=12:03:02 stable=5 iou=0.7802 size=0.9876
+  sample 2: NO_X conf=0.9978 p_x=0.0022 p_no_x=0.9978 mode=MANUAL clean=True gate=MANUAL center=(1366.5, 873.0) t=12:03:02 stable=5 iou=0.6816 size=0.921
+  sample 3: NO_X conf=0.951 p_x=0.049 p_no_x=0.951 mode=MANUAL clean=True gate=MANUAL center=(1391.5, 873.5) t=12:03:03 stable=5 iou=0.7629 size=0.9589
+  movement=[{'px': 62.0, 'ratio_of_diagonal': 0.24, 'seconds': 0.26}, {'px': 25.0, 'ratio_of_diagonal': 0.097, 'seconds': 0.163}]  total=87.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120303_032_P80_ACCEPTED_FAST_obs1.jpg', '120303_032_P80_ACCEPTED_FAST_obs2.jpg', '120303_032_P80_ACCEPTED_FAST_obs3.jpg']  folder: 120303_032_P80_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:03:03  track=P84  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(700, 490, 856, 601) center=(778,546) det_conf=0.2384 ring=1.0 vx=-18.6452 vy=0.3595
+  lineage=P1 -> P18 -> P30 -> P1 -> P30 -> P1 -> P30 -> P42 -> P30 -> P57 -> P30 -> P42 -> P30 -> P57 -> P84  id_age=0.36s  since_bridge=0.36s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=MANUAL clean=True gate=MANUAL center=(837.5, 546.0) t=12:03:02 stable=5 iou=0.8015 size=0.9597
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=MANUAL clean=True gate=MANUAL center=(794.0, 545.5) t=12:03:02 stable=5 iou=0.7069 size=0.9936
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=MANUAL clean=True gate=MANUAL center=(778.0, 545.5) t=12:03:03 stable=5 iou=0.814 size=1.0
+  movement=[{'px': 43.5, 'ratio_of_diagonal': 0.229, 'seconds': 0.316}, {'px': 16.0, 'ratio_of_diagonal': 0.084, 'seconds': 0.175}]  total=59.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120303_057_P84_ACCEPTED_FAST_obs1.jpg', '120303_057_P84_ACCEPTED_FAST_obs2.jpg', '120303_057_P84_ACCEPTED_FAST_obs3.jpg']  folder: 120303_057_P84_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:03:03  track=P6  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(308, 776, 525, 936) center=(416,856) det_conf=0.6534 ring=1.0 vx=9.5655 vy=5.6798
+  lineage=P6 -> P20 -> P6 -> P20 -> P6 -> P52 -> P6 -> P76 -> P6  id_age=20.8s  since_bridge=2.73s
+  sample 1: NO_X conf=0.9921 p_x=0.0079 p_no_x=0.9921 mode=MANUAL clean=True gate=MANUAL center=(377.5, 831.5) t=12:03:02 stable=5 iou=0.8577 size=0.9934
+  sample 2: NO_X conf=0.9798 p_x=0.0202 p_no_x=0.9798 mode=MANUAL clean=True gate=MANUAL center=(393.5, 848.5) t=12:03:02 stable=5 iou=0.813 size=0.9772
+  sample 3: NO_X conf=0.9746 p_x=0.0254 p_no_x=0.9746 mode=MANUAL clean=True gate=MANUAL center=(416.5, 856.0) t=12:03:03 stable=5 iou=0.8739 size=0.8908
+  movement=[{'px': 23.3, 'ratio_of_diagonal': 0.093, 'seconds': 0.291}, {'px': 24.2, 'ratio_of_diagonal': 0.092, 'seconds': 0.341}]  total=46.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120303_169_P6_ACCEPTED_FAST_obs1.jpg', '120303_169_P6_ACCEPTED_FAST_obs2.jpg', '120303_169_P6_ACCEPTED_FAST_obs3.jpg']  folder: 120303_169_P6_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:03:03  track=P56  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(798, 792, 998, 946) center=(898,869) det_conf=0.5292 ring=1.0 vx=24.5471 vy=-0.2512
+  lineage=P8 -> P31 -> P32 -> P8 -> P31 -> P8 -> P31 -> P39 -> P31 -> P56 -> P79 -> P56  id_age=8.59s  since_bridge=0.08s
+  sample 1: NO_X conf=0.9529 p_x=0.0471 p_no_x=0.9529 mode=MANUAL clean=True gate=MANUAL center=(793.5, 869.5) t=12:03:02 stable=5 iou=0.8236 size=0.9916
+  sample 2: NO_X conf=0.9821 p_x=0.0179 p_no_x=0.9821 mode=MANUAL clean=True gate=MANUAL center=(868.5, 868.0) t=12:03:03 stable=5 iou=0.7794 size=0.9261
+  sample 3: NO_X conf=0.9668 p_x=0.0332 p_no_x=0.9668 mode=MANUAL clean=True gate=MANUAL center=(898.0, 869.0) t=12:03:03 stable=5 iou=0.0 size=0.8278
+  movement=[{'px': 75.0, 'ratio_of_diagonal': 0.31, 'seconds': 0.422}, {'px': 29.5, 'ratio_of_diagonal': 0.12, 'seconds': 0.212}]  total=104.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120303_230_P56_ACCEPTED_FAST_obs1.jpg', '120303_230_P56_ACCEPTED_FAST_obs2.jpg', '120303_230_P56_ACCEPTED_FAST_obs3.jpg']  folder: 120303_230_P56_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:03:03  track=P87  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1267, 472, 1443, 586) center=(1355,529) det_conf=0.7446 ring=1.0 vx=-27.1364 vy=0.5687
+  lineage=P2 -> P11 -> P2 -> P14 -> P26 -> P29 -> P26 -> P29 -> P26 -> P29 -> P47 -> P49 -> P47 -> P49 -> P47 -> P49 -> P77 -> P87  id_age=0.49s  since_bridge=0.49s
+  sample 1: X conf=0.9924 p_x=0.9924 p_no_x=0.0076 mode=MANUAL clean=True gate=MANUAL center=(1463.0, 525.0) t=12:03:03 stable=5 iou=None size=None
+  sample 2: X conf=0.9865 p_x=0.9865 p_no_x=0.0135 mode=MANUAL clean=True gate=MANUAL center=(1407.0, 528.5) t=12:03:03 stable=5 iou=0.7411 size=1.0
+  sample 3: X conf=0.8159 p_x=0.8159 p_no_x=0.1841 mode=MANUAL clean=True gate=MANUAL center=(1355.0, 529.0) t=12:03:03 stable=5 iou=0.7 size=0.9969
+  movement=[{'px': 56.1, 'ratio_of_diagonal': 0.261, 'seconds': 0.297}, {'px': 52.0, 'ratio_of_diagonal': 0.246, 'seconds': 0.28}]  total=108.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120303_967_P87_REJECTED_FAST_obs1.jpg', '120303_967_P87_REJECTED_FAST_obs2.jpg', '120303_967_P87_REJECTED_FAST_obs3.jpg']  folder: 120303_967_P87_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:03:04  track=P73  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=MANUAL
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(868, 489, 1020, 594) center=(944,542) det_conf=0.4148 ring=1.0 vx=-23.4777 vy=0.847
+  lineage=P10 -> P12 -> P15 -> P17 -> P15 -> P27 -> P15 -> P38 -> P15 -> P38 -> P61 -> P15 -> P61 -> P15 -> P73 -> P15 -> P73  id_age=3.08s  since_bridge=0.76s
+  sample 1: X conf=0.9984 p_x=0.9984 p_no_x=0.0016 mode=MANUAL clean=True gate=MANUAL center=(1019.5, 540.5) t=12:03:03 stable=5 iou=0.7822 size=0.9945
+  sample 2: X conf=0.9924 p_x=0.9924 p_no_x=0.0076 mode=MANUAL clean=True gate=MANUAL center=(964.0, 540.5) t=12:03:03 stable=5 iou=0.7074 size=0.9833
+  sample 3: X conf=0.8781 p_x=0.8781 p_no_x=0.1219 mode=MANUAL clean=True gate=MANUAL center=(944.0, 541.5) t=12:03:04 stable=5 iou=0.7559 size=0.987
+  movement=[{'px': 55.5, 'ratio_of_diagonal': 0.291, 'seconds': 0.281}, {'px': 20.0, 'ratio_of_diagonal': 0.108, 'seconds': 0.16}]  total=75.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['120304_081_P73_REJECTED_FAST_obs1.jpg', '120304_081_P73_REJECTED_FAST_obs2.jpg', '120304_081_P73_REJECTED_FAST_obs3.jpg']  folder: 120304_081_P73_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:11:37  track=P34  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(511, 504, 665, 605) center=(588,554) det_conf=0.861 ring=1.0 vx=-16.4223 vy=0.4573
+  lineage=P1 -> P11 -> P13 -> P1 -> P11 -> P1 -> P11 -> P20 -> P1 -> P11 -> P1 -> P20 -> P1 -> P11 -> P20 -> P23 -> P20 -> P23 -> P11 -> P20 -> P23 -> P11 -> P23 -> P11 -> P23 -> P11 -> P23 -> P11 -> P23 -> P32 -> P11 -> P32 -> P34  id_age=1.29s  since_bridge=1.29s
+  sample 1: X conf=0.9978 p_x=0.9978 p_no_x=0.0022 mode=FAST clean=False gate=WARMUP center=(843.5, 545.0) t=12:11:17 stable=0 iou=None size=None
+  sample 2: X conf=0.9938 p_x=0.9938 p_no_x=0.0062 mode=CLEAN clean=True gate=CLEAN center=(706.0, 550.0) t=12:11:36 stable=5 iou=0.8241 size=0.9718
+  sample 3: X conf=0.9975 p_x=0.9975 p_no_x=0.0025 mode=CLEAN clean=True gate=CLEAN center=(588.0, 554.5) t=12:11:37 stable=5 iou=0.7581 size=0.9406
+  movement=[{'px': 137.6, 'ratio_of_diagonal': 0.728, 'seconds': 19.232}, {'px': 118.1, 'ratio_of_diagonal': 0.635, 'seconds': 0.81}]  total=255.7px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['121137_589_P34_REJECTED_CLEAN_obs1.jpg', '121137_589_P34_REJECTED_CLEAN_obs2.jpg', '121137_589_P34_REJECTED_CLEAN_obs3.jpg']  folder: 121137_589_P34_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:38  track=P9  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1151, 787, 1352, 950) center=(1252,868) det_conf=0.6649 ring=1.0 vx=23.3255 vy=-1.0217
+  lineage=P7 -> P9 -> P7 -> P9 -> P7 -> P9 -> P7 -> P9 -> P7 -> P9 -> P7 -> P9  id_age=21.32s  since_bridge=2.65s
+  sample 1: NO_X conf=0.7104 p_x=0.2896 p_no_x=0.7104 mode=CLEAN clean=True gate=CLEAN center=(878.5, 869.5) t=12:11:36 stable=5 iou=0.7389 size=0.9533
+  sample 2: X conf=0.8348 p_x=0.8348 p_no_x=0.1652 mode=CLEAN clean=True gate=CLEAN center=(941.0, 869.0) t=12:11:37 stable=8 iou=0.8176 size=0.9947
+  sample 3: NO_X conf=0.9993 p_x=0.0007 p_no_x=0.9993 mode=CLEAN clean=True gate=CLEAN center=(1251.5, 868.5) t=12:11:38 stable=5 iou=0.7069 size=0.9046
+  movement=[{'px': 62.5, 'ratio_of_diagonal': 0.257, 'seconds': 0.338}, {'px': 310.5, 'ratio_of_diagonal': 1.244, 'seconds': 1.606}]  total=373.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['121138_838_P9_ACCEPTED_CLEAN_obs1.jpg', '121138_838_P9_ACCEPTED_CLEAN_obs2.jpg', '121138_838_P9_ACCEPTED_CLEAN_obs3.jpg']  folder: 121138_838_P9_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:39  track=P40  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 1.00
+  box=(523, 500, 681, 606) center=(602,553) det_conf=0.7965 ring=1.0 vx=-15.1562 vy=0.2834
+  lineage=P2 -> P10 -> P2 -> P10 -> P2 -> P10 -> P18 -> P2 -> P18 -> P26 -> P18 -> P26 -> P40  id_age=1.51s  since_bridge=1.51s
+  sample 1: X conf=0.9995 p_x=0.9995 p_no_x=0.0005 mode=CLEAN clean=True gate=CLEAN center=(1081.0, 537.0) t=12:11:36 stable=5 iou=0.8384 size=0.9605
+  sample 2: NO_X conf=0.9995 p_x=0.0005 p_no_x=0.9995 mode=CLEAN clean=True gate=CLEAN center=(919.5, 543.0) t=12:11:37 stable=5 iou=0.7627 size=0.9591
+  sample 3: NO_X conf=0.9966 p_x=0.0034 p_no_x=0.9966 mode=CLEAN clean=True gate=CLEAN center=(602.0, 553.0) t=12:11:39 stable=5 iou=0.8605 size=0.9753
+  movement=[{'px': 161.6, 'ratio_of_diagonal': 0.846, 'seconds': 1.025}, {'px': 317.7, 'ratio_of_diagonal': 1.69, 'seconds': 2.188}]  total=479.3px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['121139_543_P40_ACCEPTED_CLEAN_obs1.jpg', '121139_543_P40_ACCEPTED_CLEAN_obs2.jpg', '121139_543_P40_ACCEPTED_CLEAN_obs3.jpg']  folder: 121139_543_P40_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:41  track=P39  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(765, 491, 921, 600) center=(843,546) det_conf=0.8029 ring=1.0 vx=-17.6896 vy=0.5511
+  lineage=P5 -> P6 -> P39 -> P6 -> P39  id_age=3.91s  since_bridge=0.46s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1220.0, 532.5) t=12:11:38 stable=5 iou=0.8217 size=0.9909
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1068.0, 538.0) t=12:11:39 stable=5 iou=0.74 size=0.9516
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(843.0, 545.5) t=12:11:41 stable=5 iou=0.7476 size=0.9635
+  movement=[{'px': 152.1, 'ratio_of_diagonal': 0.78, 'seconds': 0.946}, {'px': 225.1, 'ratio_of_diagonal': 1.164, 'seconds': 1.45}]  total=377.2px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['121141_113_P39_ACCEPTED_CLEAN_obs1.jpg', '121141_113_P39_ACCEPTED_CLEAN_obs2.jpg', '121141_113_P39_ACCEPTED_CLEAN_obs3.jpg']  folder: 121141_113_P39_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:43  track=P50  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(982, 483, 1139, 593) center=(1060,538) det_conf=0.5736 ring=1.0 vx=-19.1581 vy=0.7021
+  lineage=P3 -> P8 -> P36 -> P3 -> P36 -> P3 -> P37 -> P3 -> P50 -> P43 -> P50  id_age=2.52s  since_bridge=0.48s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1399.0, 528.5) t=12:11:41 stable=5 iou=0.8285 size=0.9444
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1259.5, 532.5) t=12:11:42 stable=5 iou=0.7179 size=0.9585
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1060.5, 538.0) t=12:11:43 stable=5 iou=0.7982 size=0.9994
+  movement=[{'px': 139.6, 'ratio_of_diagonal': 0.698, 'seconds': 0.785}, {'px': 199.1, 'ratio_of_diagonal': 1.028, 'seconds': 1.249}]  total=338.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['121143_502_P50_ACCEPTED_CLEAN_obs1.jpg', '121143_502_P50_ACCEPTED_CLEAN_obs2.jpg', '121143_502_P50_ACCEPTED_CLEAN_obs3.jpg']  folder: 121143_502_P50_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:44  track=P4  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1303, 798, 1514, 950) center=(1408,874) det_conf=0.6026 ring=1.0 vx=21.3895 vy=0.7715
+  lineage=P4 -> P14 -> P4 -> P14 -> P4 -> P14 -> P4 -> P14 -> P4 -> P44 -> P4 -> P46 -> P4  id_age=28.32s  since_bridge=1.71s
+  sample 1: NO_X conf=0.767 p_x=0.233 p_no_x=0.767 mode=CLEAN clean=True gate=CLEAN center=(889.5, 867.0) t=12:11:42 stable=5 iou=0.7453 size=0.941
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1054.5, 871.0) t=12:11:43 stable=5 iou=0.8156 size=0.9799
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1408.5, 874.0) t=12:11:44 stable=5 iou=0.8116 size=0.9698
+  movement=[{'px': 165.0, 'ratio_of_diagonal': 0.67, 'seconds': 0.889}, {'px': 354.0, 'ratio_of_diagonal': 1.406, 'seconds': 1.805}]  total=519.0px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['121144_960_P4_ACCEPTED_CLEAN_obs1.jpg', '121144_960_P4_ACCEPTED_CLEAN_obs2.jpg', '121144_960_P4_ACCEPTED_CLEAN_obs3.jpg']  folder: 121144_960_P4_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:11:46  track=P56  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(780, 797, 979, 943) center=(880,870) det_conf=0.6135 ring=1.0 vx=22.1132 vy=-0.3307
+  lineage=P2 -> P10 -> P2 -> P10 -> P2 -> P10 -> P18 -> P2 -> P18 -> P26 -> P18 -> P26 -> P40 -> P26 -> P47 -> P26 -> P56  id_age=1.21s  since_bridge=1.21s
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(520.5, 870.0) t=12:11:44 stable=5 iou=0.8443 size=0.958
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(645.5, 871.0) t=12:11:44 stable=5 iou=0.7848 size=0.9983
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(879.5, 870.0) t=12:11:46 stable=5 iou=0.7553 size=0.995
+  movement=[{'px': 125.0, 'ratio_of_diagonal': 0.511, 'seconds': 0.689}, {'px': 234.0, 'ratio_of_diagonal': 0.963, 'seconds': 1.324}]  total=359.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['121146_309_P56_REJECTED_CLEAN_obs1.jpg', '121146_309_P56_REJECTED_CLEAN_obs2.jpg', '121146_309_P56_REJECTED_CLEAN_obs3.jpg']  folder: 121146_309_P56_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:12:20  track=P121  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(652, 498, 807, 603) center=(730,550) det_conf=0.6543 ring=1.0 vx=-17.2688 vy=1.3525
+  lineage=P2 -> P10 -> P2 -> P10 -> P2 -> P10 -> P18 -> P2 -> P18 -> P26 -> P18 -> P26 -> P40 -> P26 -> P47 -> P26 -> P56 -> P68 -> P56 -> P68 -> P80 -> P84 -> P92 -> P84 -> P92 -> P84 -> P92 -> P110 -> P92 -> P121 -> P134 -> P121 -> P160 -> P121  id_age=13.77s  since_bridge=3.63s
+  sample 1: NO_X conf=0.9985 p_x=0.0015 p_no_x=0.9985 mode=CLEAN clean=True gate=CLEAN center=(833.5, 543.5) t=12:12:19 stable=5 iou=0.7748 size=0.9367
+  sample 2: NO_X conf=0.9758 p_x=0.0242 p_no_x=0.9758 mode=CLEAN clean=True gate=CLEAN center=(779.5, 545.5) t=12:12:19 stable=8 iou=0.752 size=0.996
+  sample 3: NO_X conf=0.9387 p_x=0.0613 p_no_x=0.9387 mode=CLEAN clean=True gate=CLEAN center=(729.5, 550.5) t=12:12:20 stable=11 iou=0.7873 size=0.9777
+  movement=[{'px': 54.0, 'ratio_of_diagonal': 0.282, 'seconds': 0.353}, {'px': 50.2, 'ratio_of_diagonal': 0.266, 'seconds': 0.358}]  total=104.2px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['121220_120_P121_ACCEPTED_CLEAN_obs1.jpg', '121220_120_P121_ACCEPTED_CLEAN_obs2.jpg', '121220_120_P121_ACCEPTED_CLEAN_obs3.jpg']  folder: 121220_120_P121_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:12:27  track=P121  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(727, 799, 917, 944) center=(822,872) det_conf=0.5498 ring=1.0 vx=25.0341 vy=0.6403
+  lineage=P2 -> P10 -> P2 -> P10 -> P2 -> P10 -> P18 -> P2 -> P18 -> P26 -> P18 -> P26 -> P40 -> P26 -> P47 -> P26 -> P56 -> P68 -> P56 -> P68 -> P80 -> P84 -> P92 -> P84 -> P92 -> P84 -> P92 -> P110 -> P92 -> P121 -> P134 -> P121 -> P160 -> P121 -> P177 -> P121  id_age=21.13s  since_bridge=4.97s
+  sample 1: X conf=0.9908 p_x=0.9908 p_no_x=0.0092 mode=CLEAN clean=True gate=CLEAN center=(444.0, 594.0) t=12:12:22 stable=5 iou=0.8487 size=0.908
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(751.5, 867.5) t=12:12:27 stable=5 iou=0.6733 size=0.9498
+  sample 3: X conf=0.9978 p_x=0.9978 p_no_x=0.0022 mode=CLEAN clean=True gate=CLEAN center=(822.0, 871.5) t=12:12:27 stable=8 iou=0.7648 size=0.9744
+  movement=[{'px': 411.5, 'ratio_of_diagonal': 1.826, 'seconds': 4.736}, {'px': 70.6, 'ratio_of_diagonal': 0.292, 'seconds': 0.433}]  total=468.9px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['121227_484_P121_REJECTED_CLEAN_obs1.jpg', '121227_484_P121_REJECTED_CLEAN_obs2.jpg', '121227_484_P121_REJECTED_CLEAN_obs3.jpg']  folder: 121227_484_P121_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:12:34  track=P196  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1377, 468, 1556, 583) center=(1466,526) det_conf=0.7019 ring=1.0 vx=-25.421 vy=0.0558
+  lineage=P196 -> P213 -> P196  id_age=1.93s  since_bridge=0.65s
+  sample 1: X conf=0.9614 p_x=0.9614 p_no_x=0.0386 mode=FAST clean=False gate=HOLD-RECOVER center=(1608.5, 524.5) t=12:12:33 stable=0 iou=0.5471 size=0.6646
+  sample 2: X conf=0.9276 p_x=0.9276 p_no_x=0.0724 mode=FAST clean=False gate=WARMUP center=(1565.0, 524.0) t=12:12:33 stable=1 iou=0.1018 size=0.6398
+  sample 3: X conf=0.6597 p_x=0.6597 p_no_x=0.3403 mode=FAST clean=True gate=CLEAN center=(1466.5, 525.5) t=12:12:34 stable=5 iou=0.7042 size=0.994
+  movement=[{'px': 43.5, 'ratio_of_diagonal': 0.204, 'seconds': 0.301}, {'px': 98.5, 'ratio_of_diagonal': 0.459, 'seconds': 0.593}]  total=142.0px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['121234_328_P196_REJECTED_FAST_obs1.jpg', '121234_328_P196_REJECTED_FAST_obs2.jpg', '121234_328_P196_REJECTED_FAST_obs3.jpg']  folder: 121234_328_P196_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:34:25  track=P4  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(870, 797, 1070, 946) center=(970,872) det_conf=0.4071 ring=1.0 vx=22.2138 vy=0.5977
+  lineage=P3 -> P4 -> P3 -> P4 -> P3 -> P4 -> P3 -> P4 -> P3 -> P4 -> P3 -> P4 -> P3 -> P4 -> P3 -> P4  id_age=6.21s  since_bridge=0.83s
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-DIRECTION center=(739.5, 868.5) t=12:34:18 stable=0 iou=0.9832 size=0.9932
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(900.5, 868.5) t=12:34:24 stable=5 iou=0.8352 size=0.9316
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(970.0, 871.5) t=12:34:25 stable=8 iou=0.7632 size=0.9902
+  movement=[{'px': 161.0, 'ratio_of_diagonal': 0.649, 'seconds': 6.729}, {'px': 69.6, 'ratio_of_diagonal': 0.278, 'seconds': 0.35}]  total=230.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['123425_320_P4_REJECTED_CLEAN_obs1.jpg', '123425_320_P4_REJECTED_CLEAN_obs2.jpg', '123425_320_P4_REJECTED_CLEAN_obs3.jpg']  folder: 123425_320_P4_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:25  track=P24  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(644, 797, 838, 943) center=(741,870) det_conf=0.4322 ring=1.0 vx=20.2723 vy=0.1128
+  lineage=P8 -> P10 -> P8 -> P10 -> P8 -> P11 -> P24  id_age=0.52s  since_bridge=0.52s
+  sample 1: X conf=0.9989 p_x=0.9989 p_no_x=0.0011 mode=FAST clean=False gate=HOLD-RECOVER center=(435.5, 865.0) t=12:34:18 stable=1 iou=0.962 size=0.9803
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(539.5, 868.5) t=12:34:24 stable=5 iou=0.7742 size=0.9531
+  sample 3: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=CLEAN clean=True gate=CLEAN center=(741.0, 870.0) t=12:34:25 stable=5 iou=0.7872 size=0.9649
+  movement=[{'px': 104.1, 'ratio_of_diagonal': 0.412, 'seconds': 6.26}, {'px': 201.5, 'ratio_of_diagonal': 0.826, 'seconds': 1.173}]  total=305.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['123425_819_P24_REJECTED_CLEAN_obs1.jpg', '123425_819_P24_REJECTED_CLEAN_obs2.jpg', '123425_819_P24_REJECTED_CLEAN_obs3.jpg']  folder: 123425_819_P24_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:25  track=P6  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(683, 492, 842, 601) center=(762,546) det_conf=0.8079 ring=1.0 vx=-16.8691 vy=0.3975
+  lineage=P6 -> P14 -> P6  id_age=8.45s  since_bridge=1.77s
+  sample 1: NO_X conf=0.9922 p_x=0.0078 p_no_x=0.9922 mode=CLEAN clean=True gate=CLEAN center=(948.5, 542.0) t=12:34:24 stable=5 iou=0.7273 size=0.9533
+  sample 2: NO_X conf=0.9949 p_x=0.0051 p_no_x=0.9949 mode=CLEAN clean=True gate=CLEAN center=(901.5, 544.5) t=12:34:24 stable=8 iou=0.7962 size=0.9396
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(762.5, 546.5) t=12:34:25 stable=5 iou=0.8092 size=0.9686
+  movement=[{'px': 47.1, 'ratio_of_diagonal': 0.256, 'seconds': 0.36}, {'px': 139.0, 'ratio_of_diagonal': 0.741, 'seconds': 0.95}]  total=186.1px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['123425_936_P6_ACCEPTED_CLEAN_obs1.jpg', '123425_936_P6_ACCEPTED_CLEAN_obs2.jpg', '123425_936_P6_ACCEPTED_CLEAN_obs3.jpg']  folder: 123425_936_P6_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:26  track=P5  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1378, 797, 1595, 946) center=(1486,872) det_conf=0.4463 ring=1.0 vx=23.8457 vy=-0.1708
+  lineage=P2 -> P5 -> P2 -> P5  id_age=2.01s  since_bridge=1.22s
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=CLEAN clean=True gate=CLEAN center=(1343.0, 870.0) t=12:34:25 stable=5 iou=0.7214 size=0.888
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1411.0, 873.0) t=12:34:25 stable=8 iou=0.8428 size=0.979
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1486.5, 871.5) t=12:34:26 stable=11 iou=0.7864 size=0.989
+  movement=[{'px': 68.1, 'ratio_of_diagonal': 0.255, 'seconds': 0.336}, {'px': 75.5, 'ratio_of_diagonal': 0.288, 'seconds': 0.381}]  total=143.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['123426_061_P5_ACCEPTED_CLEAN_obs1.jpg', '123426_061_P5_ACCEPTED_CLEAN_obs2.jpg', '123426_061_P5_ACCEPTED_CLEAN_obs3.jpg']  folder: 123426_061_P5_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:27  track=P15  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1046, 482, 1211, 588) center=(1128,535) det_conf=0.7745 ring=1.0 vx=-20.2263 vy=0.2579
+  lineage=P7 -> P15  id_age=2.67s  since_bridge=2.67s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1434.0, 526.5) t=12:34:26 stable=5 iou=0.7797 size=0.9394
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1261.5, 531.0) t=12:34:27 stable=5 iou=0.7207 size=0.9707
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1128.5, 535.0) t=12:34:27 stable=5 iou=0.7147 size=0.9935
+  movement=[{'px': 172.6, 'ratio_of_diagonal': 0.84, 'seconds': 0.949}, {'px': 133.1, 'ratio_of_diagonal': 0.672, 'seconds': 0.826}]  total=305.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['123427_866_P15_ACCEPTED_CLEAN_obs1.jpg', '123427_866_P15_ACCEPTED_CLEAN_obs2.jpg', '123427_866_P15_ACCEPTED_CLEAN_obs3.jpg']  folder: 123427_866_P15_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:31  track=P44  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1008, 796, 1203, 945) center=(1106,870) det_conf=0.5088 ring=1.0 vx=23.1264 vy=0.0982
+  lineage=P1 -> P16 -> P20 -> P21 -> P20 -> P21 -> P20 -> P21 -> P20 -> P21 -> P20 -> P44  id_age=1.63s  since_bridge=1.63s
+  sample 1: NO_X conf=0.9888 p_x=0.0112 p_no_x=0.9888 mode=CLEAN clean=True gate=CLEAN center=(581.5, 868.0) t=12:34:28 stable=5 iou=0.8314 size=0.9781
+  sample 2: NO_X conf=0.9807 p_x=0.0193 p_no_x=0.9807 mode=CLEAN clean=True gate=CLEAN center=(646.5, 869.5) t=12:34:28 stable=8 iou=0.8391 size=0.9311
+  sample 3: NO_X conf=0.9906 p_x=0.0094 p_no_x=0.9906 mode=CLEAN clean=True gate=CLEAN center=(1105.5, 870.5) t=12:34:31 stable=5 iou=0.7924 size=0.9933
+  movement=[{'px': 65.0, 'ratio_of_diagonal': 0.27, 'seconds': 0.341}, {'px': 459.0, 'ratio_of_diagonal': 1.873, 'seconds': 2.518}]  total=524.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['123431_196_P44_ACCEPTED_CLEAN_obs1.jpg', '123431_196_P44_ACCEPTED_CLEAN_obs2.jpg', '123431_196_P44_ACCEPTED_CLEAN_obs3.jpg']  folder: 123431_196_P44_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:34:39  track=P49  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(642, 498, 801, 602) center=(722,550) det_conf=0.917 ring=1.0 vx=-16.086 vy=0.7977
+  lineage=P8 -> P10 -> P8 -> P10 -> P8 -> P11 -> P24 -> P11 -> P40 -> P49 -> P40 -> P49  id_age=5.05s  since_bridge=0.69s
+  sample 1: NO_X conf=0.9779 p_x=0.0221 p_no_x=0.9779 mode=CLEAN clean=True gate=CLEAN center=(923.5, 543.5) t=12:34:38 stable=5 iou=0.821 size=0.9713
+  sample 2: NO_X conf=0.8784 p_x=0.1216 p_no_x=0.8784 mode=CLEAN clean=True gate=CLEAN center=(874.0, 543.0) t=12:34:38 stable=8 iou=0.7794 size=0.9322
+  sample 3: NO_X conf=0.8059 p_x=0.1941 p_no_x=0.8059 mode=CLEAN clean=True gate=CLEAN center=(721.5, 550.0) t=12:34:39 stable=5 iou=0.8142 size=0.9655
+  movement=[{'px': 49.5, 'ratio_of_diagonal': 0.266, 'seconds': 0.347}, {'px': 152.7, 'ratio_of_diagonal': 0.808, 'seconds': 1.031}]  total=202.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['123439_756_P49_ACCEPTED_CLEAN_obs1.jpg', '123439_756_P49_ACCEPTED_CLEAN_obs2.jpg', '123439_756_P49_ACCEPTED_CLEAN_obs3.jpg']  folder: 123439_756_P49_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:35:15  track=P18  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.98
+  box=(1307, 482, 1482, 598) center=(1394,540) det_conf=0.7209 ring=1.0 vx=-21.5504 vy=1.0304
+  lineage=P8 -> P17 -> P18  id_age=0.56s  since_bridge=0.56s
+  sample 1: X conf=0.9952 p_x=0.9952 p_no_x=0.0048 mode=FAST clean=False gate=STABILIZE-3/5 center=(1533.0, 532.0) t=12:35:14 stable=3 iou=0.7877 size=0.9308
+  sample 2: X conf=0.7008 p_x=0.7008 p_no_x=0.2992 mode=FAST clean=False gate=HOLD-RECOVER center=(1437.0, 537.0) t=12:35:15 stable=3 iou=0.7995 size=0.9424
+  sample 3: X conf=0.8477 p_x=0.8477 p_no_x=0.1523 mode=FAST clean=True gate=CLEAN center=(1394.5, 540.0) t=12:35:15 stable=5 iou=0.7697 size=0.9884
+  movement=[{'px': 96.1, 'ratio_of_diagonal': 0.434, 'seconds': 0.519}, {'px': 42.6, 'ratio_of_diagonal': 0.199, 'seconds': 0.264}]  total=138.7px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['123515_360_P18_REJECTED_FAST_obs1.jpg', '123515_360_P18_REJECTED_FAST_obs2.jpg', '123515_360_P18_REJECTED_FAST_obs3.jpg']  folder: 123515_360_P18_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:35:15  track=P5  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1592, 754, 1848, 960) center=(1720,857) det_conf=0.3266 ring=1.0 vx=24.2406 vy=-4.1495
+  lineage=P5  id_age=2.2s  since_bridge=Nones
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1488.5, 882.0) t=12:35:14 stable=6 iou=0.721 size=0.9259
+  sample 2: NO_X conf=0.9928 p_x=0.0072 p_no_x=0.9928 mode=FAST clean=True gate=CLEAN center=(1674.5, 868.0) t=12:35:15 stable=5 iou=0.7296 size=0.8884
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1720.0, 857.0) t=12:35:15 stable=7 iou=0.7367 size=0.8909
+  movement=[{'px': 186.5, 'ratio_of_diagonal': 0.654, 'seconds': 0.901}, {'px': 46.8, 'ratio_of_diagonal': 0.149, 'seconds': 0.282}]  total=232.8px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['123515_872_P5_ACCEPTED_FAST_obs1.jpg', '123515_872_P5_ACCEPTED_FAST_obs2.jpg', '123515_872_P5_ACCEPTED_FAST_obs3.jpg']  folder: 123515_872_P5_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:35:16  track=P24  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(852, 498, 1011, 609) center=(932,554) det_conf=0.7047 ring=1.0 vx=-20.5393 vy=1.071
+  lineage=P4 -> P9 -> P16 -> P24  id_age=0.86s  since_bridge=0.86s
+  sample 1: NO_X conf=0.9991 p_x=0.0009 p_no_x=0.9991 mode=FAST clean=True gate=CLEAN center=(1116.5, 547.5) t=12:35:14 stable=6 iou=0.836 size=0.836
+  sample 2: NO_X conf=0.9987 p_x=0.0013 p_no_x=0.9987 mode=FAST clean=True gate=CLEAN center=(974.0, 551.5) t=12:35:15 stable=5 iou=0.7682 size=0.9904
+  sample 3: NO_X conf=0.9964 p_x=0.0036 p_no_x=0.9964 mode=FAST clean=True gate=CLEAN center=(931.5, 553.5) t=12:35:16 stable=7 iou=0.7549 size=0.956
+  movement=[{'px': 142.6, 'ratio_of_diagonal': 0.777, 'seconds': 0.945}, {'px': 42.5, 'ratio_of_diagonal': 0.228, 'seconds': 0.258}]  total=185.1px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['123516_173_P24_ACCEPTED_FAST_obs1.jpg', '123516_173_P24_ACCEPTED_FAST_obs2.jpg', '123516_173_P24_ACCEPTED_FAST_obs3.jpg']  folder: 123516_173_P24_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:35:18  track=P2  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1315, 809, 1529, 961) center=(1422,885) det_conf=0.4726 ring=1.0 vx=24.9557 vy=0.0444
+  lineage=P2 -> P11 -> P2 -> P11 -> P2  id_age=4.66s  since_bridge=1.05s
+  sample 1: NO_X conf=0.9979 p_x=0.0021 p_no_x=0.9979 mode=FAST clean=True gate=CLEAN center=(724.5, 882.0) t=12:35:14 stable=6 iou=0.7701 size=0.9187
+  sample 2: NO_X conf=0.9998 p_x=0.0002 p_no_x=0.9998 mode=CLEAN clean=True gate=CLEAN center=(1362.5, 885.0) t=12:35:18 stable=5 iou=0.8235 size=0.9721
+  sample 3: NO_X conf=0.9996 p_x=0.0004 p_no_x=0.9996 mode=CLEAN clean=True gate=CLEAN center=(1422.0, 885.0) t=12:35:18 stable=7 iou=0.7783 size=0.9516
+  movement=[{'px': 638.0, 'ratio_of_diagonal': 2.492, 'seconds': 3.412}, {'px': 59.5, 'ratio_of_diagonal': 0.228, 'seconds': 0.247}]  total=697.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['123518_336_P2_ACCEPTED_CLEAN_obs1.jpg', '123518_336_P2_ACCEPTED_CLEAN_obs2.jpg', '123518_336_P2_ACCEPTED_CLEAN_obs3.jpg']  folder: 123518_336_P2_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:35:18  track=P7  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(594, 807, 787, 960) center=(690,884) det_conf=0.6401 ring=1.0 vx=20.1103 vy=0.6379
+  lineage=P1 -> P7  id_age=2.07s  since_bridge=2.07s
+  sample 1: NO_X conf=0.9983 p_x=0.0017 p_no_x=0.9983 mode=CLEAN clean=True gate=CLEAN center=(550.5, 884.5) t=12:35:17 stable=5 iou=0.816 size=0.9093
+  sample 2: NO_X conf=0.834 p_x=0.166 p_no_x=0.834 mode=CLEAN clean=True gate=CLEAN center=(627.5, 883.5) t=12:35:18 stable=9 iou=0.7588 size=0.9312
+  sample 3: NO_X conf=0.9895 p_x=0.0105 p_no_x=0.9895 mode=CLEAN clean=True gate=CLEAN center=(690.5, 883.5) t=12:35:18 stable=12 iou=0.7743 size=0.9131
+  movement=[{'px': 77.0, 'ratio_of_diagonal': 0.325, 'seconds': 0.471}, {'px': 63.0, 'ratio_of_diagonal': 0.257, 'seconds': 0.369}]  total=140.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['123518_599_P7_ACCEPTED_CLEAN_obs1.jpg', '123518_599_P7_ACCEPTED_CLEAN_obs2.jpg', '123518_599_P7_ACCEPTED_CLEAN_obs3.jpg']  folder: 123518_599_P7_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:35:20  track=P20  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=2 NO_X=1 obs=3  object=OBJECT_PRESENT 1.00
+  box=(812, 501, 966, 612) center=(889,556) det_conf=0.819 ring=1.0 vx=-16.6095 vy=0.877
+  lineage=P3 -> P6 -> P12 -> P20  id_age=4.34s  since_bridge=4.34s
+  sample 1: X conf=0.8851 p_x=0.8851 p_no_x=0.1149 mode=FAST clean=False gate=HOLD-TURN center=(1705.5, 581.5) t=12:35:14 stable=0 iou=0.7608 size=0.7608
+  sample 2: NO_X conf=0.9877 p_x=0.0123 p_no_x=0.9877 mode=CLEAN clean=True gate=CLEAN center=(1032.0, 547.5) t=12:35:19 stable=5 iou=0.8185 size=0.9812
+  sample 3: X conf=0.7021 p_x=0.7021 p_no_x=0.2979 mode=CLEAN clean=True gate=CLEAN center=(889.0, 556.5) t=12:35:20 stable=5 iou=0.8401 size=0.9712
+  movement=[{'px': 674.4, 'ratio_of_diagonal': 3.004, 'seconds': 4.129}, {'px': 143.3, 'ratio_of_diagonal': 0.747, 'seconds': 0.948}]  total=816.9px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['123520_036_P20_REJECTED_CLEAN_obs1.jpg', '123520_036_P20_REJECTED_CLEAN_obs2.jpg', '123520_036_P20_REJECTED_CLEAN_obs3.jpg']  folder: 123520_036_P20_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:35:36  track=P104  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1315, 480, 1487, 596) center=(1401,538) det_conf=0.2199 ring=1.0 vx=-19.7712 vy=0.2087
+  lineage=P50 -> P57 -> P50 -> P104  id_age=0.52s  since_bridge=0.52s
+  sample 1: X conf=0.9351 p_x=0.9351 p_no_x=0.0649 mode=FAST clean=False gate=HOLD-RECOVER center=(1671.0, 566.5) t=12:35:34 stable=1 iou=0.6984 size=0.8531
+  sample 2: X conf=0.9922 p_x=0.9922 p_no_x=0.0078 mode=FAST clean=False gate=HOLD-RECOVER center=(1573.5, 534.0) t=12:35:34 stable=1 iou=0.7602 size=0.9792
+  sample 3: X conf=0.9669 p_x=0.9669 p_no_x=0.0331 mode=CLEAN clean=True gate=CLEAN center=(1401.0, 538.0) t=12:35:36 stable=5 iou=0.8257 size=0.9911
+  movement=[{'px': 102.8, 'ratio_of_diagonal': 0.422, 'seconds': 0.613}, {'px': 172.5, 'ratio_of_diagonal': 0.816, 'seconds': 1.106}]  total=271.5px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['123536_098_P104_REJECTED_CLEAN_obs1.jpg', '123536_098_P104_REJECTED_CLEAN_obs2.jpg', '123536_098_P104_REJECTED_CLEAN_obs3.jpg']  folder: 123536_098_P104_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:35:46  track=P135  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.98
+  box=(281, 765, 484, 947) center=(382,856) det_conf=0.5774 ring=1.0 vx=5.8508 vy=6.4745
+  lineage=P135  id_age=1.2s  since_bridge=Nones
+  sample 1: X conf=0.9952 p_x=0.9952 p_no_x=0.0048 mode=FAST clean=False gate=HOLD-TURN center=(353.5, 834.0) t=12:35:46 stable=0 iou=0.8458 size=0.8753
+  sample 2: X conf=0.9115 p_x=0.9115 p_no_x=0.0885 mode=FAST clean=False gate=HOLD-TURN center=(372.5, 845.0) t=12:35:46 stable=0 iou=0.8039 size=0.8664
+  sample 3: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=HOLD-TURN center=(382.5, 856.0) t=12:35:46 stable=0 iou=0.8884 size=0.9847
+  movement=[{'px': 22.0, 'ratio_of_diagonal': 0.087, 'seconds': 0.241}, {'px': 14.9, 'ratio_of_diagonal': 0.055, 'seconds': 0.233}]  total=36.4px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['123546_525_P135_REJECTED_FAST_obs1.jpg', '123546_525_P135_REJECTED_FAST_obs2.jpg', '123546_525_P135_REJECTED_FAST_obs3.jpg']  folder: 123546_525_P135_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:44:16  track=P3  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(728, 500, 888, 617) center=(808,558) det_conf=0.4726 ring=1.0 vx=-18.6985 vy=0.7172
+  lineage=P3  id_age=1.3s  since_bridge=Nones
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=STABILIZE-3/5 center=(889.0, 556.5) t=12:44:16 stable=3 iou=0.8332 size=0.9802
+  sample 2: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=HOLD-RECOVER center=(844.0, 557.5) t=12:44:16 stable=1 iou=0.7201 size=0.9691
+  sample 3: X conf=0.7736 p_x=0.7736 p_no_x=0.2264 mode=FAST clean=False gate=HOLD-RECOVER center=(808.0, 558.5) t=12:44:16 stable=1 iou=0.778 size=0.9784
+  movement=[{'px': 45.0, 'ratio_of_diagonal': 0.237, 'seconds': 0.264}, {'px': 36.0, 'ratio_of_diagonal': 0.185, 'seconds': 0.277}]  total=81.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['124416_962_P3_REJECTED_FAST_obs1.jpg', '124416_962_P3_REJECTED_FAST_obs2.jpg', '124416_962_P3_REJECTED_FAST_obs3.jpg']  folder: 124416_962_P3_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:44:17  track=P13  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1464, 804, 1681, 958) center=(1572,881) det_conf=0.2127 ring=1.0 vx=26.5593 vy=-0.1989
+  lineage=P2 -> P13  id_age=1.18s  since_bridge=1.18s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1459.5, 885.5) t=12:44:16 stable=5 iou=0.8427 size=0.9614
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1524.5, 881.0) t=12:44:16 stable=7 iou=0.6889 size=0.9537
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1572.5, 881.0) t=12:44:17 stable=9 iou=0.7504 size=0.9948
+  movement=[{'px': 65.2, 'ratio_of_diagonal': 0.247, 'seconds': 0.251}, {'px': 48.0, 'ratio_of_diagonal': 0.181, 'seconds': 0.299}]  total=113.1px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['124417_012_P13_ACCEPTED_FAST_obs1.jpg', '124417_012_P13_ACCEPTED_FAST_obs2.jpg', '124417_012_P13_ACCEPTED_FAST_obs3.jpg']  folder: 124417_012_P13_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:44:18  track=P5  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1042, 807, 1243, 960) center=(1142,884) det_conf=0.5815 ring=1.0 vx=23.6591 vy=-0.3495
+  lineage=P5  id_age=2.34s  since_bridge=Nones
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=FAST clean=True gate=CLEAN center=(1047.5, 884.5) t=12:44:17 stable=10 iou=0.7735 size=0.9981
+  sample 2: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=FAST clean=True gate=CLEAN center=(1094.5, 885.5) t=12:44:17 stable=12 iou=0.7703 size=0.9749
+  sample 3: NO_X conf=0.9996 p_x=0.0004 p_no_x=0.9996 mode=FAST clean=True gate=CLEAN center=(1142.5, 883.5) t=12:44:18 stable=14 iou=0.8102 size=0.9593
+  movement=[{'px': 47.0, 'ratio_of_diagonal': 0.192, 'seconds': 0.239}, {'px': 48.0, 'ratio_of_diagonal': 0.193, 'seconds': 0.246}]  total=95.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['124418_011_P5_ACCEPTED_FAST_obs1.jpg', '124418_011_P5_ACCEPTED_FAST_obs2.jpg', '124418_011_P5_ACCEPTED_FAST_obs3.jpg']  folder: 124418_011_P5_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 12:44:18  track=P14  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=WARMUP
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(721, 506, 877, 612) center=(799,559) det_conf=0.2464 ring=1.0 vx=-19.8132 vy=0.5919
+  lineage=P9 -> P14  id_age=0.03s  since_bridge=0.03s
+  sample 1: X conf=0.9952 p_x=0.9952 p_no_x=0.0048 mode=FAST clean=False gate=HOLD-RECOVER center=(972.0, 552.0) t=12:44:17 stable=0 iou=0.6211 size=0.925
+  sample 2: X conf=0.9675 p_x=0.9675 p_no_x=0.0325 mode=FAST clean=False gate=HOLD-RECOVER center=(839.0, 559.5) t=12:44:18 stable=1 iou=0.7092 size=0.9459
+  sample 3: X conf=0.9156 p_x=0.9156 p_no_x=0.0844 mode=FAST clean=False gate=WARMUP center=(799.0, 559.0) t=12:44:18 stable=1 iou=None size=None
+  movement=[{'px': 133.2, 'ratio_of_diagonal': 0.721, 'seconds': 0.868}, {'px': 40.0, 'ratio_of_diagonal': 0.211, 'seconds': 0.252}]  total=173.1px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['124418_393_P14_REJECTED_FAST_obs1.jpg', '124418_393_P14_REJECTED_FAST_obs2.jpg', '124418_393_P14_REJECTED_FAST_obs3.jpg']  folder: 124418_393_P14_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 12:44:19  track=P29  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(964, 496, 1116, 600) center=(1040,548) det_conf=0.7978 ring=1.0 vx=-18.9626 vy=0.0198
+  lineage=P15 -> P12 -> P15 -> P12 -> P29  id_age=1.14s  since_bridge=1.14s
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1151.0, 548.0) t=12:44:19 stable=5 iou=0.7926 size=0.894
+  sample 2: NO_X conf=0.9788 p_x=0.0212 p_no_x=0.9788 mode=CLEAN clean=True gate=CLEAN center=(1095.0, 548.5) t=12:44:19 stable=8 iou=0.7677 size=0.982
+  sample 3: NO_X conf=0.9972 p_x=0.0028 p_no_x=0.9972 mode=CLEAN clean=True gate=CLEAN center=(1040.0, 548.0) t=12:44:19 stable=11 iou=0.7177 size=0.941
+  movement=[{'px': 56.0, 'ratio_of_diagonal': 0.28, 'seconds': 0.343}, {'px': 55.0, 'ratio_of_diagonal': 0.29, 'seconds': 0.314}]  total=111.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['124419_732_P29_ACCEPTED_CLEAN_obs1.jpg', '124419_732_P29_ACCEPTED_CLEAN_obs2.jpg', '124419_732_P29_ACCEPTED_CLEAN_obs3.jpg']  folder: 124419_732_P29_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:44:23  track=P1  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(708, 808, 904, 957) center=(806,882) det_conf=0.3664 ring=1.0 vx=20.4496 vy=-0.0128
+  lineage=P1 -> P18 -> P1  id_age=7.51s  since_bridge=2.8s
+  sample 1: NO_X conf=0.9993 p_x=0.0007 p_no_x=0.9993 mode=CLEAN clean=True gate=CLEAN center=(663.5, 882.0) t=12:44:22 stable=5 iou=0.8462 size=0.9007
+  sample 2: NO_X conf=0.9967 p_x=0.0033 p_no_x=0.9967 mode=CLEAN clean=True gate=CLEAN center=(745.5, 881.5) t=12:44:22 stable=9 iou=0.7244 size=0.9444
+  sample 3: NO_X conf=0.9965 p_x=0.0035 p_no_x=0.9965 mode=CLEAN clean=True gate=CLEAN center=(806.0, 882.5) t=12:44:23 stable=12 iou=0.7825 size=0.9319
+  movement=[{'px': 82.0, 'ratio_of_diagonal': 0.339, 'seconds': 0.465}, {'px': 60.5, 'ratio_of_diagonal': 0.251, 'seconds': 0.344}]  total=142.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['124423_175_P1_ACCEPTED_CLEAN_obs1.jpg', '124423_175_P1_ACCEPTED_CLEAN_obs2.jpg', '124423_175_P1_ACCEPTED_CLEAN_obs3.jpg']  folder: 124423_175_P1_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 12:44:33  track=P43  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-TURN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1614, 508, 1851, 707) center=(1732,608) det_conf=0.2324 ring=0.9998 vx=-12.005 vy=-17.3542
+  lineage=P43  id_age=9.23s  since_bridge=9.23s
+  sample 1: X conf=0.7608 p_x=0.7608 p_no_x=0.2392 mode=FAST clean=False gate=HOLD-TURN center=(1789.5, 780.0) t=12:44:31 stable=0 iou=0.8421 size=0.934
+  sample 2: X conf=0.9716 p_x=0.9716 p_no_x=0.0284 mode=FAST clean=False gate=HOLD-TURN center=(1791.0, 738.0) t=12:44:32 stable=0 iou=0.7932 size=0.9462
+  sample 3: X conf=0.7693 p_x=0.7693 p_no_x=0.2307 mode=FAST clean=False gate=HOLD-TURN center=(1732.5, 607.5) t=12:44:33 stable=0 iou=0.7368 size=0.8893
+  movement=[{'px': 42.0, 'ratio_of_diagonal': 0.155, 'seconds': 0.347}, {'px': 143.0, 'ratio_of_diagonal': 0.507, 'seconds': 0.968}]  total=181.7px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['124433_094_P43_REJECTED_FAST_obs1.jpg', '124433_094_P43_REJECTED_FAST_obs2.jpg', '124433_094_P43_REJECTED_FAST_obs3.jpg']  folder: 124433_094_P43_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:36  track=P4  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(800, 802, 1002, 958) center=(901,880) det_conf=0.2654 ring=1.0 vx=25.7243 vy=-1.329
+  lineage=P4  id_age=1.41s  since_bridge=Nones
+  sample 1: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=STABILIZE-3/5 center=(762.5, 882.0) t=13:00:36 stable=3 iou=0.8086 size=0.8861
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=True gate=CLEAN center=(828.0, 882.5) t=13:00:36 stable=5 iou=0.6592 size=0.9914
+  sample 3: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=HOLD-RECOVER center=(901.0, 880.0) t=13:00:36 stable=1 iou=0.6994 size=0.9076
+  movement=[{'px': 65.5, 'ratio_of_diagonal': 0.263, 'seconds': 0.274}, {'px': 73.0, 'ratio_of_diagonal': 0.292, 'seconds': 0.39}]  total=138.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['130036_751_P4_REJECTED_FAST_obs1.jpg', '130036_751_P4_REJECTED_FAST_obs2.jpg', '130036_751_P4_REJECTED_FAST_obs3.jpg']  folder: 130036_751_P4_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:37  track=P12  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.99
+  box=(934, 498, 1095, 603) center=(1014,550) det_conf=0.5861 ring=1.0 vx=-20.9459 vy=0.9406
+  lineage=P12  id_age=1.98s  since_bridge=Nones
+  sample 1: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1097.5, 548.0) t=13:00:36 stable=5 iou=0.7533 size=0.9428
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(1054.5, 548.0) t=13:00:37 stable=7 iou=0.6857 size=0.9752
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(1014.5, 550.5) t=13:00:37 stable=9 iou=0.7539 size=0.9844
+  movement=[{'px': 43.0, 'ratio_of_diagonal': 0.226, 'seconds': 0.267}, {'px': 40.1, 'ratio_of_diagonal': 0.209, 'seconds': 0.263}]  total=83.0px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['130037_322_P12_ACCEPTED_FAST_obs1.jpg', '130037_322_P12_ACCEPTED_FAST_obs2.jpg', '130037_322_P12_ACCEPTED_FAST_obs3.jpg']  folder: 130037_322_P12_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:37  track=P5  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1189, 808, 1402, 963) center=(1296,886) det_conf=0.5588 ring=1.0 vx=21.6269 vy=-0.1532
+  lineage=P5  id_age=2.21s  since_bridge=Nones
+  sample 1: NO_X conf=0.9936 p_x=0.0064 p_no_x=0.9936 mode=FAST clean=True gate=CLEAN center=(1237.5, 885.0) t=13:00:37 stable=5 iou=0.6902 size=0.923
+  sample 2: NO_X conf=0.7267 p_x=0.2733 p_no_x=0.7267 mode=FAST clean=True gate=CLEAN center=(1278.5, 886.0) t=13:00:37 stable=7 iou=0.8134 size=0.9731
+  sample 3: NO_X conf=0.9995 p_x=0.0005 p_no_x=0.9995 mode=FAST clean=True gate=CLEAN center=(1295.5, 885.5) t=13:00:37 stable=8 iou=0.8471 size=0.9935
+  movement=[{'px': 41.0, 'ratio_of_diagonal': 0.159, 'seconds': 0.261}, {'px': 17.0, 'ratio_of_diagonal': 0.065, 'seconds': 0.253}]  total=58.0px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['130037_557_P5_ACCEPTED_FAST_obs1.jpg', '130037_557_P5_ACCEPTED_FAST_obs2.jpg', '130037_557_P5_ACCEPTED_FAST_obs3.jpg']  folder: 130037_557_P5_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:37  track=P9  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(660, 811, 858, 959) center=(759,885) det_conf=0.3421 ring=1.0 vx=22.2112 vy=0.4585
+  lineage=P9  id_age=1.38s  since_bridge=Nones
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=False gate=HOLD-RECOVER center=(670.0, 881.5) t=13:00:36 stable=1 iou=0.7978 size=0.9808
+  sample 2: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=STABILIZE-3/5 center=(715.0, 883.0) t=13:00:37 stable=3 iou=0.7642 size=0.927
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=FAST clean=True gate=CLEAN center=(759.0, 885.0) t=13:00:37 stable=5 iou=0.8203 size=0.9949
+  movement=[{'px': 45.0, 'ratio_of_diagonal': 0.184, 'seconds': 0.272}, {'px': 44.0, 'ratio_of_diagonal': 0.176, 'seconds': 0.404}]  total=89.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['130037_582_P9_REJECTED_FAST_obs1.jpg', '130037_582_P9_REJECTED_FAST_obs2.jpg', '130037_582_P9_REJECTED_FAST_obs3.jpg']  folder: 130037_582_P9_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:40  track=P3  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 1.00
+  box=(840, 804, 1033, 961) center=(936,882) det_conf=0.5126 ring=1.0 vx=22.6223 vy=-0.2038
+  lineage=P3  id_age=4.91s  since_bridge=Nones
+  sample 1: X conf=0.7185 p_x=0.7185 p_no_x=0.2815 mode=FAST clean=False gate=HOLD-RECOVER center=(529.5, 883.0) t=13:00:37 stable=2 iou=0.7534 size=0.959
+  sample 2: NO_X conf=0.9729 p_x=0.0271 p_no_x=0.9729 mode=CLEAN clean=True gate=CLEAN center=(801.5, 883.5) t=13:00:39 stable=5 iou=0.6222 size=0.9555
+  sample 3: NO_X conf=0.9956 p_x=0.0044 p_no_x=0.9956 mode=CLEAN clean=True gate=CLEAN center=(936.5, 882.5) t=13:00:40 stable=5 iou=0.7609 size=0.9934
+  movement=[{'px': 272.0, 'ratio_of_diagonal': 1.133, 'seconds': 1.608}, {'px': 135.0, 'ratio_of_diagonal': 0.54, 'seconds': 0.711}]  total=407.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['130040_253_P3_ACCEPTED_CLEAN_obs1.jpg', '130040_253_P3_ACCEPTED_CLEAN_obs2.jpg', '130040_253_P3_ACCEPTED_CLEAN_obs3.jpg']  folder: 130040_253_P3_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:00:43  track=P24  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(538, 807, 718, 954) center=(628,880) det_conf=0.3743 ring=1.0 vx=21.4451 vy=-0.4069
+  lineage=P2 -> P17 -> P2 -> P24  id_age=4.19s  since_bridge=4.19s
+  sample 1: NO_X conf=0.9998 p_x=0.0002 p_no_x=0.9998 mode=FAST clean=True gate=CLEAN center=(887.0, 557.5) t=13:00:36 stable=5 iou=0.8085 size=0.9867
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(467.0, 880.0) t=13:00:43 stable=5 iou=0.8528 size=0.9978
+  sample 3: NO_X conf=0.9909 p_x=0.0091 p_no_x=0.9909 mode=CLEAN clean=True gate=CLEAN center=(628.0, 880.5) t=13:00:43 stable=5 iou=0.7893 size=0.9626
+  movement=[{'px': 529.5, 'ratio_of_diagonal': 2.394, 'seconds': 6.406}, {'px': 161.0, 'ratio_of_diagonal': 0.666, 'seconds': 0.918}]  total=414.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['130043_964_P24_ACCEPTED_CLEAN_obs1.jpg', '130043_964_P24_ACCEPTED_CLEAN_obs2.jpg', '130043_964_P24_ACCEPTED_CLEAN_obs3.jpg']  folder: 130043_964_P24_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:00:45  track=P46  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1238, 485, 1407, 598) center=(1322,542) det_conf=0.4383 ring=1.0 vx=-22.2119 vy=0.2687
+  lineage=P4 -> P8 -> P4 -> P33 -> P46  id_age=0.88s  since_bridge=0.88s
+  sample 1: X conf=0.79 p_x=0.79 p_no_x=0.21 mode=FAST clean=False gate=HOLD-RECOVER center=(1584.0, 534.5) t=13:00:44 stable=2 iou=0.7089 size=0.9762
+  sample 2: X conf=0.9716 p_x=0.9716 p_no_x=0.0284 mode=FAST clean=False gate=STABILIZE-4/5 center=(1550.0, 533.0) t=13:00:44 stable=4 iou=0.8039 size=0.96
+  sample 3: X conf=0.7917 p_x=0.7917 p_no_x=0.2083 mode=CLEAN clean=True gate=CLEAN center=(1322.5, 541.5) t=13:00:45 stable=5 iou=0.7223 size=0.9435
+  movement=[{'px': 34.0, 'ratio_of_diagonal': 0.155, 'seconds': 0.241}, {'px': 227.7, 'ratio_of_diagonal': 1.068, 'seconds': 1.328}]  total=261.6px
+  deferred unsafe NO_X samples (not counted): 4  RULE_VIOLATION=none
+  files: ['130045_804_P46_REJECTED_CLEAN_obs1.jpg', '130045_804_P46_REJECTED_CLEAN_obs2.jpg', '130045_804_P46_REJECTED_CLEAN_obs3.jpg']  folder: 130045_804_P46_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:00:46  track=P38  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(662, 810, 857, 958) center=(760,884) det_conf=0.3696 ring=1.0 vx=20.9121 vy=0.1635
+  lineage=P39 -> P38 -> P39 -> P38  id_age=2.66s  since_bridge=1.64s
+  sample 1: NO_X conf=0.9683 p_x=0.0317 p_no_x=0.9683 mode=FAST clean=True gate=CLEAN center=(652.0, 885.0) t=13:00:45 stable=5 iou=0.7525 size=0.9074
+  sample 2: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=FAST clean=True gate=CLEAN center=(697.0, 883.5) t=13:00:45 stable=7 iou=0.7686 size=0.8983
+  sample 3: NO_X conf=0.9998 p_x=0.0002 p_no_x=0.9998 mode=CLEAN clean=True gate=CLEAN center=(759.5, 884.0) t=13:00:46 stable=10 iou=0.8136 size=0.9983
+  movement=[{'px': 45.0, 'ratio_of_diagonal': 0.182, 'seconds': 0.256}, {'px': 62.5, 'ratio_of_diagonal': 0.256, 'seconds': 0.454}]  total=107.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['130046_384_P38_ACCEPTED_CLEAN_obs1.jpg', '130046_384_P38_ACCEPTED_CLEAN_obs2.jpg', '130046_384_P38_ACCEPTED_CLEAN_obs3.jpg']  folder: 130046_384_P38_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:00:54  track=P81  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=HOLD-RECOVER
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(314, 798, 527, 957) center=(420,878) det_conf=0.6063 ring=1.0 vx=12.1553 vy=5.2108
+  lineage=P68 -> P81  id_age=0.63s  since_bridge=0.63s
+  sample 1: X conf=0.7802 p_x=0.7802 p_no_x=0.2198 mode=FAST clean=False gate=WARMUP center=(370.0, 847.5) t=13:00:54 stable=0 iou=None size=None
+  sample 2: X conf=0.9571 p_x=0.9571 p_no_x=0.0429 mode=FAST clean=False gate=HOLD-TURN center=(393.0, 869.0) t=13:00:54 stable=0 iou=0.7967 size=0.8973
+  sample 3: X conf=0.9998 p_x=0.9998 p_no_x=0.0002 mode=FAST clean=False gate=HOLD-RECOVER center=(420.5, 877.5) t=13:00:54 stable=1 iou=0.8296 size=0.9983
+  movement=[{'px': 31.5, 'ratio_of_diagonal': 0.119, 'seconds': 0.371}, {'px': 28.8, 'ratio_of_diagonal': 0.106, 'seconds': 0.226}]  total=58.7px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['130054_670_P81_REJECTED_FAST_obs1.jpg', '130054_670_P81_REJECTED_FAST_obs2.jpg', '130054_670_P81_REJECTED_FAST_obs3.jpg']  folder: 130054_670_P81_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 13:00:58  track=P76  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1372, 808, 1585, 960) center=(1478,884) det_conf=0.4163 ring=1.0 vx=25.6893 vy=-0.2258
+  lineage=P4 -> P8 -> P4 -> P33 -> P46 -> P33 -> P42 -> P33 -> P76  id_age=3.15s  since_bridge=3.15s
+  sample 1: NO_X conf=0.973 p_x=0.027 p_no_x=0.973 mode=CLEAN clean=True gate=CLEAN center=(582.5, 882.0) t=13:00:54 stable=5 iou=0.7813 size=0.9361
+  sample 2: NO_X conf=0.9992 p_x=0.0008 p_no_x=0.9992 mode=CLEAN clean=True gate=CLEAN center=(1404.5, 884.5) t=13:00:58 stable=5 iou=0.7779 size=0.9591
+  sample 3: NO_X conf=0.9991 p_x=0.0009 p_no_x=0.9991 mode=CLEAN clean=True gate=CLEAN center=(1478.5, 884.0) t=13:00:58 stable=8 iou=0.7842 size=0.9816
+  movement=[{'px': 822.0, 'ratio_of_diagonal': 3.351, 'seconds': 4.37}, {'px': 74.0, 'ratio_of_diagonal': 0.286, 'seconds': 0.372}]  total=896.0px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['130058_920_P76_ACCEPTED_CLEAN_obs1.jpg', '130058_920_P76_ACCEPTED_CLEAN_obs2.jpg', '130058_920_P76_ACCEPTED_CLEAN_obs3.jpg']  folder: 130058_920_P76_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:13  track=P7  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 1.00
+  box=(677, 807, 868, 954) center=(772,880) det_conf=0.3444 ring=1.0 vx=20.0979 vy=-0.3446
+  lineage=P7  id_age=9.21s  since_bridge=Nones
+  sample 1: NO_X conf=0.9982 p_x=0.0018 p_no_x=0.9982 mode=CLEAN clean=True gate=CLEAN center=(649.0, 883.0) t=13:42:12 stable=5 iou=0.8249 size=0.9806
+  sample 2: NO_X conf=0.9765 p_x=0.0235 p_no_x=0.9765 mode=CLEAN clean=True gate=CLEAN center=(709.0, 883.0) t=13:42:13 stable=8 iou=0.8104 size=0.9603
+  sample 3: X conf=0.8889 p_x=0.8889 p_no_x=0.1111 mode=CLEAN clean=True gate=CLEAN center=(772.5, 880.5) t=13:42:13 stable=11 iou=0.808 size=0.963
+  movement=[{'px': 60.0, 'ratio_of_diagonal': 0.246, 'seconds': 0.347}, {'px': 63.5, 'ratio_of_diagonal': 0.258, 'seconds': 0.349}]  total=123.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134213_681_P7_ACCEPTED_CLEAN_obs1.jpg', '134213_681_P7_ACCEPTED_CLEAN_obs2.jpg', '134213_681_P7_ACCEPTED_CLEAN_obs3.jpg']  folder: 134213_681_P7_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:14  track=P5  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1267, 810, 1483, 963) center=(1375,886) det_conf=0.4597 ring=1.0 vx=23.108 vy=0.278
+  lineage=P5 -> P13 -> P5 -> P13 -> P5  id_age=9.55s  since_bridge=1.2s
+  sample 1: NO_X conf=0.9948 p_x=0.0052 p_no_x=0.9948 mode=CLEAN clean=True gate=CLEAN center=(1241.5, 886.0) t=13:42:13 stable=5 iou=0.7712 size=0.9881
+  sample 2: NO_X conf=0.9996 p_x=0.0004 p_no_x=0.9996 mode=CLEAN clean=True gate=CLEAN center=(1303.0, 886.0) t=13:42:13 stable=8 iou=0.8171 size=0.9346
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1375.0, 886.5) t=13:42:14 stable=11 iou=0.7974 size=0.9889
+  movement=[{'px': 61.5, 'ratio_of_diagonal': 0.242, 'seconds': 0.349}, {'px': 72.0, 'ratio_of_diagonal': 0.276, 'seconds': 0.361}]  total=133.5px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134214_024_P5_ACCEPTED_CLEAN_obs1.jpg', '134214_024_P5_ACCEPTED_CLEAN_obs2.jpg', '134214_024_P5_ACCEPTED_CLEAN_obs3.jpg']  folder: 134214_024_P5_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:15  track=P9  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(432, 526, 593, 642) center=(512,584) det_conf=0.6509 ring=1.0 vx=-14.0664 vy=3.0808
+  lineage=P3 -> P9  id_age=0.58s  since_bridge=0.58s
+  sample 1: X conf=0.9868 p_x=0.9868 p_no_x=0.0132 mode=FAST clean=False gate=HOLD-DIRECTION center=(967.0, 552.0) t=13:42:05 stable=0 iou=0.9806 size=0.9935
+  sample 2: X conf=0.6555 p_x=0.6555 p_no_x=0.3445 mode=CLEAN clean=True gate=CLEAN center=(895.0, 553.0) t=13:42:12 stable=5 iou=0.7896 size=0.9537
+  sample 3: X conf=0.9723 p_x=0.9723 p_no_x=0.0277 mode=CLEAN clean=True gate=CLEAN center=(512.5, 584.0) t=13:42:15 stable=6 iou=0.7864 size=0.9081
+  movement=[{'px': 72.0, 'ratio_of_diagonal': 0.384, 'seconds': 7.592}, {'px': 383.8, 'ratio_of_diagonal': 1.978, 'seconds': 2.681}]  total=455.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134215_645_P9_REJECTED_CLEAN_obs1.jpg', '134215_645_P9_REJECTED_CLEAN_obs2.jpg', '134215_645_P9_REJECTED_CLEAN_obs3.jpg']  folder: 134215_645_P9_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:16  track=P24  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(799, 499, 960, 612) center=(880,556) det_conf=0.4658 ring=1.0 vx=-17.0369 vy=0.513
+  lineage=P1 -> P17 -> P24 -> P25 -> P24  id_age=3.19s  since_bridge=1.2s
+  sample 1: NO_X conf=0.9998 p_x=0.0002 p_no_x=0.9998 mode=CLEAN clean=True gate=CLEAN center=(983.0, 550.0) t=13:42:15 stable=5 iou=0.7635 size=0.9861
+  sample 2: NO_X conf=0.9919 p_x=0.0081 p_no_x=0.9919 mode=CLEAN clean=True gate=CLEAN center=(930.5, 552.0) t=13:42:16 stable=8 iou=0.7719 size=0.9804
+  sample 3: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=CLEAN clean=True gate=CLEAN center=(879.5, 555.5) t=13:42:16 stable=11 iou=0.8204 size=0.9855
+  movement=[{'px': 52.5, 'ratio_of_diagonal': 0.288, 'seconds': 0.364}, {'px': 51.1, 'ratio_of_diagonal': 0.267, 'seconds': 0.336}]  total=103.6px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134216_482_P24_ACCEPTED_CLEAN_obs1.jpg', '134216_482_P24_ACCEPTED_CLEAN_obs2.jpg', '134216_482_P24_ACCEPTED_CLEAN_obs3.jpg']  folder: 134216_482_P24_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:16  track=P4  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(541, 811, 731, 959) center=(636,885) det_conf=0.6921 ring=1.0 vx=21.8579 vy=0.8894
+  lineage=P4 -> P10 -> P4 -> P21 -> P4  id_age=12.5s  since_bridge=1.79s
+  sample 1: X conf=0.8526 p_x=0.8526 p_no_x=0.1474 mode=FAST clean=False gate=HOLD-DIRECTION center=(465.5, 595.0) t=13:42:05 stable=0 iou=0.9734 size=0.9734
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(571.0, 881.0) t=13:42:16 stable=5 iou=0.7297 size=0.8905
+  sample 3: X conf=0.9972 p_x=0.9972 p_no_x=0.0028 mode=CLEAN clean=True gate=CLEAN center=(636.0, 885.0) t=13:42:16 stable=8 iou=0.7636 size=0.976
+  movement=[{'px': 304.8, 'ratio_of_diagonal': 1.373, 'seconds': 11.384}, {'px': 65.1, 'ratio_of_diagonal': 0.275, 'seconds': 0.351}]  total=336.4px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134216_967_P4_REJECTED_CLEAN_obs1.jpg', '134216_967_P4_REJECTED_CLEAN_obs2.jpg', '134216_967_P4_REJECTED_CLEAN_obs3.jpg']  folder: 134216_967_P4_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:17  track=P27  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1223, 487, 1386, 598) center=(1304,542) det_conf=0.273 ring=1.0 vx=-19.0521 vy=0.4957
+  lineage=P2 -> P6 -> P2 -> P6 -> P2 -> P6 -> P2 -> P6 -> P27  id_age=3.07s  since_bridge=3.07s
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=CLEAN clean=True gate=CLEAN center=(1713.5, 860.0) t=13:42:12 stable=6 iou=0.7494 size=0.8579
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1439.0, 537.0) t=13:42:17 stable=5 iou=0.7345 size=0.9633
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1304.5, 542.5) t=13:42:17 stable=5 iou=0.784 size=0.9763
+  movement=[{'px': 423.9, 'ratio_of_diagonal': 1.585, 'seconds': 4.265}, {'px': 134.6, 'ratio_of_diagonal': 0.655, 'seconds': 0.801}]  total=517.8px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134217_914_P27_ACCEPTED_CLEAN_obs1.jpg', '134217_914_P27_ACCEPTED_CLEAN_obs2.jpg', '134217_914_P27_ACCEPTED_CLEAN_obs3.jpg']  folder: 134217_914_P27_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:26  track=P4  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.93
+  box=(1382, 481, 1569, 592) center=(1476,536) det_conf=0.6685 ring=1.0 vx=-19.6396 vy=0.708
+  lineage=P4 -> P10 -> P4 -> P21 -> P4 -> P21 -> P4  id_age=22.16s  since_bridge=1.51s
+  sample 1: NO_X conf=0.9574 p_x=0.0426 p_no_x=0.9574 mode=CLEAN clean=True gate=CLEAN center=(1765.0, 831.5) t=13:42:23 stable=5 iou=0.8893 size=0.897
+  sample 2: NO_X conf=0.8867 p_x=0.1133 p_no_x=0.8867 mode=CLEAN clean=True gate=CLEAN center=(1536.0, 533.5) t=13:42:26 stable=5 iou=0.7842 size=0.9847
+  sample 3: NO_X conf=0.996 p_x=0.004 p_no_x=0.996 mode=CLEAN clean=True gate=CLEAN center=(1475.5, 536.5) t=13:42:26 stable=8 iou=0.7617 size=0.9278
+  movement=[{'px': 375.8, 'ratio_of_diagonal': 1.372, 'seconds': 3.267}, {'px': 60.6, 'ratio_of_diagonal': 0.276, 'seconds': 0.343}]  total=413.3px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134226_633_P4_ACCEPTED_CLEAN_obs1.jpg', '134226_633_P4_ACCEPTED_CLEAN_obs2.jpg', '134226_633_P4_ACCEPTED_CLEAN_obs3.jpg']  folder: 134226_633_P4_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:37  track=P129  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(561, 812, 749, 955) center=(655,884) det_conf=0.2035 ring=1.0 vx=21.4209 vy=0.2038
+  lineage=P4 -> P10 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P126 -> P129  id_age=0.87s  since_bridge=0.87s
+  sample 1: X conf=0.9343 p_x=0.9343 p_no_x=0.0657 mode=CLEAN clean=True gate=CLEAN center=(477.5, 595.5) t=13:42:33 stable=5 iou=0.7377 size=0.8456
+  sample 2: X conf=0.9749 p_x=0.9749 p_no_x=0.0251 mode=CLEAN clean=True gate=CLEAN center=(591.0, 883.5) t=13:42:37 stable=5 iou=0.8009 size=0.9792
+  sample 3: X conf=0.9995 p_x=0.9995 p_no_x=0.0005 mode=CLEAN clean=True gate=CLEAN center=(655.0, 883.5) t=13:42:37 stable=8 iou=0.7844 size=0.9915
+  movement=[{'px': 309.6, 'ratio_of_diagonal': 1.369, 'seconds': 4.344}, {'px': 64.0, 'ratio_of_diagonal': 0.27, 'seconds': 0.358}]  total=338.3px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134237_865_P129_REJECTED_CLEAN_obs1.jpg', '134237_865_P129_REJECTED_CLEAN_obs2.jpg', '134237_865_P129_REJECTED_CLEAN_obs3.jpg']  folder: 134237_865_P129_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:42:54  track=P171  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(863, 497, 1019, 605) center=(941,551) det_conf=0.8143 ring=1.0 vx=-18.0671 vy=0.0141
+  lineage=P3 -> P9 -> P12 -> P47 -> P12 -> P47 -> P12 -> P47 -> P81 -> P91 -> P47 -> P81 -> P92 -> P81 -> P102 -> P104 -> P81 -> P102 -> P81 -> P102 -> P81 -> P139 -> P150 -> P171 -> P182 -> P150 -> P171  id_age=7.14s  since_bridge=0.5s
+  sample 1: NO_X conf=0.8197 p_x=0.1803 p_no_x=0.8197 mode=CLEAN clean=True gate=CLEAN center=(1255.5, 541.5) t=13:42:52 stable=5 iou=0.7948 size=0.9971
+  sample 2: NO_X conf=0.7426 p_x=0.2574 p_no_x=0.7426 mode=CLEAN clean=True gate=CLEAN center=(1197.0, 544.5) t=13:42:52 stable=8 iou=0.7703 size=0.9373
+  sample 3: NO_X conf=0.9658 p_x=0.0342 p_no_x=0.9658 mode=CLEAN clean=True gate=CLEAN center=(941.0, 551.0) t=13:42:54 stable=5 iou=0.7808 size=0.9844
+  movement=[{'px': 58.6, 'ratio_of_diagonal': 0.299, 'seconds': 0.345}, {'px': 256.1, 'ratio_of_diagonal': 1.327, 'seconds': 1.625}]  total=314.6px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134254_115_P171_ACCEPTED_CLEAN_obs1.jpg', '134254_115_P171_ACCEPTED_CLEAN_obs2.jpg', '134254_115_P171_ACCEPTED_CLEAN_obs3.jpg']  folder: 134254_115_P171_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:43:01  track=P227  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(552, 809, 742, 955) center=(647,882) det_conf=0.2267 ring=1.0 vx=19.2226 vy=-0.2407
+  lineage=P3 -> P9 -> P12 -> P47 -> P12 -> P47 -> P12 -> P47 -> P81 -> P91 -> P47 -> P81 -> P92 -> P81 -> P102 -> P104 -> P81 -> P102 -> P81 -> P102 -> P81 -> P139 -> P150 -> P171 -> P182 -> P150 -> P171 -> P150 -> P209 -> P214 -> P209 -> P227  id_age=1.52s  since_bridge=1.52s
+  sample 1: X conf=0.9994 p_x=0.9994 p_no_x=0.0006 mode=CLEAN clean=True gate=CLEAN center=(783.5, 555.5) t=13:42:55 stable=5 iou=0.7681 size=0.9951
+  sample 2: X conf=0.8416 p_x=0.8416 p_no_x=0.1584 mode=CLEAN clean=True gate=CLEAN center=(470.5, 597.0) t=13:42:57 stable=5 iou=0.6793 size=0.9094
+  sample 3: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=CLEAN clean=True gate=CLEAN center=(647.0, 882.0) t=13:43:01 stable=5 iou=0.8495 size=0.9618
+  movement=[{'px': 315.7, 'ratio_of_diagonal': 1.586, 'seconds': 2.206}, {'px': 335.2, 'ratio_of_diagonal': 1.498, 'seconds': 4.613}]  total=353.9px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134301_979_P227_REJECTED_CLEAN_obs1.jpg', '134301_979_P227_REJECTED_CLEAN_obs2.jpg', '134301_979_P227_REJECTED_CLEAN_obs3.jpg']  folder: 134301_979_P227_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:43:10  track=P259  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1075, 491, 1236, 602) center=(1156,546) det_conf=0.7428 ring=1.0 vx=-18.2846 vy=0.5305
+  lineage=P4 -> P10 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P126 -> P129 -> P134 -> P129 -> P134 -> P129 -> P134 -> P129 -> P134 -> P192 -> P196 -> P217 -> P251 -> P219 -> P259 -> P251 -> P259  id_age=2.58s  since_bridge=0.47s
+  sample 1: NO_X conf=0.997 p_x=0.003 p_no_x=0.997 mode=CLEAN clean=True gate=CLEAN center=(1486.0, 533.5) t=13:43:08 stable=6 iou=0.7813 size=0.9967
+  sample 2: NO_X conf=0.9956 p_x=0.0044 p_no_x=0.9956 mode=CLEAN clean=True gate=CLEAN center=(1422.5, 536.5) t=13:43:08 stable=9 iou=0.7408 size=0.9767
+  sample 3: NO_X conf=0.9954 p_x=0.0046 p_no_x=0.9954 mode=CLEAN clean=True gate=CLEAN center=(1155.5, 546.5) t=13:43:09 stable=5 iou=0.8204 size=0.9759
+  movement=[{'px': 63.6, 'ratio_of_diagonal': 0.301, 'seconds': 0.359}, {'px': 267.2, 'ratio_of_diagonal': 1.332, 'seconds': 1.587}]  total=330.8px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134310_009_P259_ACCEPTED_CLEAN_obs1.jpg', '134310_009_P259_ACCEPTED_CLEAN_obs2.jpg', '134310_009_P259_ACCEPTED_CLEAN_obs3.jpg']  folder: 134310_009_P259_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:43:11  track=P259  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(877, 500, 1028, 605) center=(952,552) det_conf=0.2947 ring=1.0 vx=-16.8167 vy=0.5281
+  lineage=P4 -> P10 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P21 -> P4 -> P126 -> P129 -> P134 -> P129 -> P134 -> P129 -> P134 -> P129 -> P134 -> P192 -> P196 -> P217 -> P251 -> P219 -> P259 -> P251 -> P259  id_age=3.88s  since_bridge=1.76s
+  sample 1: X conf=0.9961 p_x=0.9961 p_no_x=0.0039 mode=CLEAN clean=True gate=CLEAN center=(1042.5, 546.5) t=13:43:10 stable=11 iou=0.7351 size=0.9573
+  sample 2: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(998.5, 551.5) t=13:43:10 stable=13 iou=0.6805 size=0.8782
+  sample 3: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(952.5, 552.5) t=13:43:11 stable=16 iou=0.7944 size=0.981
+  movement=[{'px': 44.3, 'ratio_of_diagonal': 0.242, 'seconds': 0.227}, {'px': 46.0, 'ratio_of_diagonal': 0.259, 'seconds': 0.349}]  total=90.2px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134311_305_P259_REJECTED_CLEAN_obs1.jpg', '134311_305_P259_REJECTED_CLEAN_obs2.jpg', '134311_305_P259_REJECTED_CLEAN_obs3.jpg']  folder: 134311_305_P259_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:35  track=P1  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=STABILIZE-3/5
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1476, 804, 1702, 956) center=(1589,880) det_conf=0.2113 ring=1.0 vx=21.5964 vy=-0.5543
+  lineage=P1  id_age=2.37s  since_bridge=Nones
+  sample 1: X conf=0.9763 p_x=0.9763 p_no_x=0.0237 mode=FAST clean=False gate=HOLD-DIRECTION center=(1490.5, 881.0) t=13:49:34 stable=0 iou=0.9821 size=0.9821
+  sample 2: X conf=0.9999 p_x=0.9999 p_no_x=0.0001 mode=FAST clean=False gate=HOLD-RECOVER center=(1532.0, 882.5) t=13:49:35 stable=1 iou=0.7628 size=0.9709
+  sample 3: X conf=0.9977 p_x=0.9977 p_no_x=0.0023 mode=FAST clean=False gate=STABILIZE-3/5 center=(1589.0, 880.0) t=13:49:35 stable=3 iou=0.75 size=0.93
+  movement=[{'px': 41.5, 'ratio_of_diagonal': 0.155, 'seconds': 1.221}, {'px': 57.1, 'ratio_of_diagonal': 0.213, 'seconds': 0.281}]  total=98.5px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134935_672_P1_REJECTED_FAST_obs1.jpg', '134935_672_P1_REJECTED_FAST_obs2.jpg', '134935_672_P1_REJECTED_FAST_obs3.jpg']  folder: 134935_672_P1_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 13:49:36  track=P12  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=2 NO_X=1 obs=3  object=OBJECT_PRESENT 0.99
+  box=(1420, 471, 1610, 594) center=(1515,532) det_conf=0.4914 ring=1.0 vx=-19.7269 vy=-1.8325
+  lineage=P9 -> P12  id_age=1.27s  since_bridge=1.27s
+  sample 1: X conf=0.9919 p_x=0.9919 p_no_x=0.0081 mode=FAST clean=False gate=HOLD-DIRECTION center=(1724.5, 603.0) t=13:49:34 stable=0 iou=0.9752 size=0.9752
+  sample 2: X conf=0.9992 p_x=0.9992 p_no_x=0.0008 mode=FAST clean=False gate=WARMUP center=(1709.0, 590.5) t=13:49:35 stable=0 iou=None size=None
+  sample 3: NO_X conf=0.9494 p_x=0.0506 p_no_x=0.9494 mode=CLEAN clean=True gate=CLEAN center=(1515.0, 532.5) t=13:49:36 stable=5 iou=0.8 size=0.9895
+  movement=[{'px': 19.9, 'ratio_of_diagonal': 0.072, 'seconds': 1.347}, {'px': 202.5, 'ratio_of_diagonal': 0.834, 'seconds': 1.235}]  total=221.0px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134936_650_P12_REJECTED_CLEAN_obs1.jpg', '134936_650_P12_REJECTED_CLEAN_obs2.jpg', '134936_650_P12_REJECTED_CLEAN_obs3.jpg']  folder: 134936_650_P12_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:37  track=P6  FIRST
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1151, 809, 1364, 962) center=(1258,886) det_conf=0.2786 ring=1.0 vx=23.9708 vy=-0.2204
+  lineage=P2 -> P6  id_age=1.14s  since_bridge=1.14s
+  sample 1: X conf=0.9911 p_x=0.9911 p_no_x=0.0089 mode=FAST clean=False gate=HOLD-DIRECTION center=(833.5, 882.5) t=13:49:34 stable=0 iou=0.9949 size=0.9949
+  sample 2: X conf=0.7275 p_x=0.7275 p_no_x=0.2725 mode=CLEAN clean=True gate=CLEAN center=(1007.0, 884.0) t=13:49:36 stable=5 iou=0.7661 size=0.9846
+  sample 3: X conf=0.9218 p_x=0.9218 p_no_x=0.0782 mode=CLEAN clean=True gate=CLEAN center=(1257.5, 885.5) t=13:49:37 stable=5 iou=0.7888 size=0.9909
+  movement=[{'px': 173.5, 'ratio_of_diagonal': 0.713, 'seconds': 2.108}, {'px': 250.5, 'ratio_of_diagonal': 0.998, 'seconds': 1.255}]  total=424.0px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['134937_401_P6_REJECTED_CLEAN_obs1.jpg', '134937_401_P6_REJECTED_CLEAN_obs2.jpg', '134937_401_P6_REJECTED_CLEAN_obs3.jpg']  folder: 134937_401_P6_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:38  track=P12  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1173, 484, 1335, 597) center=(1254,540) det_conf=0.5399 ring=1.0 vx=-21.7091 vy=-0.2948
+  lineage=P9 -> P12  id_age=2.81s  since_bridge=2.81s
+  sample 1: NO_X conf=0.9494 p_x=0.0506 p_no_x=0.9494 mode=CLEAN clean=True gate=CLEAN center=(1515.0, 532.5) t=13:49:36 stable=5 iou=0.8 size=0.9895
+  sample 2: NO_X conf=0.8914 p_x=0.1086 p_no_x=0.8914 mode=CLEAN clean=True gate=CLEAN center=(1299.5, 541.0) t=13:49:37 stable=5 iou=0.7737 size=0.9999
+  sample 3: NO_X conf=0.9884 p_x=0.0116 p_no_x=0.9884 mode=CLEAN clean=True gate=CLEAN center=(1254.0, 540.5) t=13:49:38 stable=7 iou=0.7509 size=0.9973
+  movement=[{'px': 215.7, 'ratio_of_diagonal': 1.007, 'seconds': 1.264}, {'px': 45.5, 'ratio_of_diagonal': 0.228, 'seconds': 0.271}]  total=261.1px
+  deferred unsafe NO_X samples (not counted): 1  RULE_VIOLATION=none
+  files: ['134938_184_P12_ACCEPTED_CLEAN_obs1.jpg', '134938_184_P12_ACCEPTED_CLEAN_obs2.jpg', '134938_184_P12_ACCEPTED_CLEAN_obs3.jpg']  folder: 134938_184_P12_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:38  track=P6  CHANGE REJECTED->ACCEPTED
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1366, 810, 1579, 960) center=(1472,885) det_conf=0.5384 ring=1.0 vx=29.6697 vy=0.3304
+  lineage=P2 -> P6  id_age=2.18s  since_bridge=2.18s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1339.0, 885.0) t=13:49:37 stable=8 iou=0.7537 size=0.9245
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1408.0, 883.0) t=13:49:38 stable=11 iou=0.7931 size=0.99
+  sample 3: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1472.5, 885.0) t=13:49:38 stable=13 iou=0.6801 size=0.9861
+  movement=[{'px': 69.0, 'ratio_of_diagonal': 0.262, 'seconds': 0.391}, {'px': 64.5, 'ratio_of_diagonal': 0.248, 'seconds': 0.271}]  total=133.5px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['134938_441_P6_ACCEPTED_CLEAN_obs1.jpg', '134938_441_P6_ACCEPTED_CLEAN_obs2.jpg', '134938_441_P6_ACCEPTED_CLEAN_obs3.jpg']  folder: 134938_441_P6_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:41  track=P13  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=1 NO_X=2 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1062, 808, 1260, 961) center=(1161,884) det_conf=0.9012 ring=1.0 vx=24.6383 vy=-0.0098
+  lineage=P13 -> P14 -> P13  id_age=7.57s  since_bridge=3.89s
+  sample 1: X conf=0.8176 p_x=0.8176 p_no_x=0.1824 mode=FAST clean=False gate=STABILIZE-1/5 center=(342.5, 736.0) t=13:49:34 stable=1 iou=0.9254 size=0.9662
+  sample 2: NO_X conf=0.9855 p_x=0.0145 p_no_x=0.9855 mode=CLEAN clean=True gate=CLEAN center=(966.0, 882.0) t=13:49:40 stable=5 iou=0.797 size=0.9759
+  sample 3: NO_X conf=0.9983 p_x=0.0017 p_no_x=0.9983 mode=CLEAN clean=True gate=CLEAN center=(1161.0, 884.5) t=13:49:41 stable=5 iou=0.7588 size=0.9786
+  movement=[{'px': 640.4, 'ratio_of_diagonal': 2.813, 'seconds': 5.386}, {'px': 195.0, 'ratio_of_diagonal': 0.781, 'seconds': 1.013}]  total=831.9px
+  deferred unsafe NO_X samples (not counted): 3  RULE_VIOLATION=none
+  files: ['134941_026_P13_ACCEPTED_CLEAN_obs1.jpg', '134941_026_P13_ACCEPTED_CLEAN_obs2.jpg', '134941_026_P13_ACCEPTED_CLEAN_obs3.jpg']  folder: 134941_026_P13_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:41  track=P9  CHANGE ACCEPTED->REJECTED
+  decision=REJECTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(630, 513, 788, 619) center=(709,566) det_conf=0.6162 ring=1.0 vx=-19.4938 vy=1.7565
+  lineage=P9 -> P12 -> P9  id_age=8.38s  since_bridge=2.59s
+  sample 1: X conf=1.0 p_x=1.0 p_no_x=0.0 mode=CLEAN clean=True gate=CLEAN center=(916.5, 554.0) t=13:49:40 stable=5 iou=0.7606 size=0.9597
+  sample 2: X conf=0.991 p_x=0.991 p_no_x=0.009 mode=CLEAN clean=True gate=CLEAN center=(857.0, 553.5) t=13:49:40 stable=8 iou=0.7522 size=0.9775
+  sample 3: X conf=0.9442 p_x=0.9442 p_no_x=0.0558 mode=CLEAN clean=True gate=CLEAN center=(709.0, 566.0) t=13:49:41 stable=5 iou=0.7581 size=0.9873
+  movement=[{'px': 59.5, 'ratio_of_diagonal': 0.314, 'seconds': 0.381}, {'px': 148.5, 'ratio_of_diagonal': 0.794, 'seconds': 1.018}]  total=207.8px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['134941_675_P9_REJECTED_CLEAN_obs1.jpg', '134941_675_P9_REJECTED_CLEAN_obs2.jpg', '134941_675_P9_REJECTED_CLEAN_obs3.jpg']  folder: 134941_675_P9_REJECTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:43  track=P32  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1030, 810, 1227, 960) center=(1128,885) det_conf=0.2716 ring=1.0 vx=26.5624 vy=0.3392
+  lineage=P4 -> P7 -> P4 -> P7 -> P4 -> P7 -> P32 -> P7 -> P32  id_age=2.93s  since_bridge=0.55s
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=CLEAN clean=True gate=CLEAN center=(683.0, 885.5) t=13:49:41 stable=5 iou=0.7537 size=0.9752
+  sample 2: NO_X conf=0.994 p_x=0.006 p_no_x=0.994 mode=CLEAN clean=True gate=CLEAN center=(926.0, 884.0) t=13:49:42 stable=5 iou=0.8084 size=0.9751
+  sample 3: NO_X conf=0.9987 p_x=0.0013 p_no_x=0.9987 mode=CLEAN clean=True gate=CLEAN center=(1128.5, 885.0) t=13:49:43 stable=5 iou=0.7376 size=0.9437
+  movement=[{'px': 243.0, 'ratio_of_diagonal': 0.986, 'seconds': 1.318}, {'px': 202.5, 'ratio_of_diagonal': 0.815, 'seconds': 1.068}]  total=445.5px
+  deferred unsafe NO_X samples (not counted): 4  RULE_VIOLATION=none
+  files: ['134943_686_P32_ACCEPTED_CLEAN_obs1.jpg', '134943_686_P32_ACCEPTED_CLEAN_obs2.jpg', '134943_686_P32_ACCEPTED_CLEAN_obs3.jpg']  folder: 134943_686_P32_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 13:49:43  track=P40  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 0.99
+  box=(514, 811, 713, 957) center=(614,884) det_conf=0.2932 ring=1.0 vx=21.2685 vy=0.5807
+  lineage=P3 -> P10 -> P3 -> P21 -> P40  id_age=1.36s  since_bridge=1.36s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(617.5, 567.5) t=13:49:38 stable=5 iou=0.7505 size=0.9904
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(491.5, 589.0) t=13:49:39 stable=5 iou=0.7837 size=0.8895
+  sample 3: NO_X conf=0.9941 p_x=0.0059 p_no_x=0.9941 mode=CLEAN clean=True gate=CLEAN center=(613.5, 884.0) t=13:49:43 stable=5 iou=0.8407 size=0.8794
+  movement=[{'px': 127.8, 'ratio_of_diagonal': 0.666, 'seconds': 0.957}, {'px': 319.2, 'ratio_of_diagonal': 1.447, 'seconds': 4.599}]  total=316.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['134943_711_P40_ACCEPTED_CLEAN_obs1.jpg', '134943_711_P40_ACCEPTED_CLEAN_obs2.jpg', '134943_711_P40_ACCEPTED_CLEAN_obs3.jpg']  folder: 134943_711_P40_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 14:02:01  track=P1  FIRST
+  decision=REJECTED  mode=FAST  clean_view=False  gate=WARMUP
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 0.96
+  box=(1075, 491, 1237, 603) center=(1156,547) det_conf=0.6968 ring=1.0 vx=-25.5774 vy=1.0148
+  lineage=P1 -> P20 -> P1  id_age=1.28s  since_bridge=0.05s
+  sample 1: X conf=0.877 p_x=0.877 p_no_x=0.123 mode=FAST clean=False gate=WARMUP center=(1253.0, 543.5) t=14:02:00 stable=1 iou=None size=None
+  sample 2: X conf=0.9347 p_x=0.9347 p_no_x=0.0653 mode=FAST clean=False gate=STABILIZE-3/5 center=(1204.5, 544.0) t=14:02:00 stable=3 iou=0.7088 size=0.9911
+  sample 3: X conf=0.9976 p_x=0.9976 p_no_x=0.0024 mode=FAST clean=False gate=WARMUP center=(1156.0, 547.0) t=14:02:01 stable=1 iou=0.1676 size=0.9943
+  movement=[{'px': 48.5, 'ratio_of_diagonal': 0.249, 'seconds': 0.281}, {'px': 48.6, 'ratio_of_diagonal': 0.249, 'seconds': 0.257}]  total=97.1px
+  deferred unsafe NO_X samples (not counted): 0  RULE_VIOLATION=none
+  files: ['140201_109_P1_REJECTED_FAST_obs1.jpg', '140201_109_P1_REJECTED_FAST_obs2.jpg', '140201_109_P1_REJECTED_FAST_obs3.jpg']  folder: 140201_109_P1_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 14:02:01  track=P7  FIRST
+  decision=ACCEPTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(741, 809, 930, 955) center=(836,882) det_conf=0.3703 ring=1.0 vx=23.0774 vy=0.2304
+  lineage=P7  id_age=1.87s  since_bridge=Nones
+  sample 1: NO_X conf=0.9921 p_x=0.0079 p_no_x=0.9921 mode=FAST clean=True gate=CLEAN center=(763.5, 882.5) t=14:02:01 stable=5 iou=0.7878 size=0.8443
+  sample 2: NO_X conf=0.9953 p_x=0.0047 p_no_x=0.9953 mode=FAST clean=True gate=CLEAN center=(813.0, 881.0) t=14:02:01 stable=7 iou=0.7971 size=0.9075
+  sample 3: NO_X conf=0.9792 p_x=0.0208 p_no_x=0.9792 mode=FAST clean=True gate=CLEAN center=(835.5, 882.0) t=14:02:01 stable=8 iou=0.766 size=0.8813
+  movement=[{'px': 49.5, 'ratio_of_diagonal': 0.193, 'seconds': 0.25}, {'px': 22.5, 'ratio_of_diagonal': 0.091, 'seconds': 0.205}]  total=72.0px
+  deferred unsafe NO_X samples (not counted): 2  RULE_VIOLATION=none
+  files: ['140201_702_P7_ACCEPTED_FAST_obs1.jpg', '140201_702_P7_ACCEPTED_FAST_obs2.jpg', '140201_702_P7_ACCEPTED_FAST_obs3.jpg']  folder: 140201_702_P7_ACCEPTED_FAST
+
+DECISION COMMIT  2026-10-09 14:02:02  track=P9  FIRST
+  decision=REJECTED  mode=FAST  clean_view=True  gate=CLEAN
+  votes X=3 NO_X=0 obs=3  object=OBJECT_PRESENT 1.00
+  box=(1404, 474, 1583, 592) center=(1494,533) det_conf=0.5467 ring=1.0 vx=-22.8127 vy=-1.7152
+  lineage=P2 -> P9  id_age=0.67s  since_bridge=0.67s
+  sample 1: X conf=0.9889 p_x=0.9889 p_no_x=0.0111 mode=FAST clean=False gate=HOLD-TURN center=(1776.5, 645.5) t=14:02:00 stable=0 iou=0.8706 size=0.9947
+  sample 2: X conf=0.999 p_x=0.999 p_no_x=0.001 mode=FAST clean=False gate=STABILIZE-4/5 center=(1540.0, 533.5) t=14:02:02 stable=4 iou=0.7756 size=0.9998
+  sample 3: X conf=0.8161 p_x=0.8161 p_no_x=0.1839 mode=FAST clean=True gate=CLEAN center=(1493.5, 533.0) t=14:02:02 stable=6 iou=0.72 size=0.9358
+  movement=[{'px': 261.7, 'ratio_of_diagonal': 1.1, 'seconds': 1.723}, {'px': 46.5, 'ratio_of_diagonal': 0.211, 'seconds': 0.244}]  total=304.5px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140202_473_P9_REJECTED_FAST_obs1.jpg', '140202_473_P9_REJECTED_FAST_obs2.jpg', '140202_473_P9_REJECTED_FAST_obs3.jpg']  folder: 140202_473_P9_REJECTED_FAST
+
+DECISION COMMIT  2026-10-09 14:02:04  track=P10  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(830, 811, 1026, 960) center=(928,886) det_conf=0.7855 ring=1.0 vx=21.3232 vy=0.691
+  lineage=P3 -> P10 -> P3 -> P10  id_age=4.3s  since_bridge=1.1s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(546.0, 883.0) t=14:02:02 stable=5 iou=0.8217 size=0.9606
+  sample 2: NO_X conf=0.9964 p_x=0.0036 p_no_x=0.9964 mode=CLEAN clean=True gate=CLEAN center=(868.5, 884.0) t=14:02:04 stable=5 iou=0.6962 size=0.9966
+  sample 3: NO_X conf=0.9834 p_x=0.0166 p_no_x=0.9834 mode=CLEAN clean=True gate=CLEAN center=(928.0, 885.5) t=14:02:04 stable=8 iou=0.7985 size=0.9933
+  movement=[{'px': 322.5, 'ratio_of_diagonal': 1.297, 'seconds': 1.762}, {'px': 59.5, 'ratio_of_diagonal': 0.244, 'seconds': 0.339}]  total=382.0px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140204_956_P10_ACCEPTED_CLEAN_obs1.jpg', '140204_956_P10_ACCEPTED_CLEAN_obs2.jpg', '140204_956_P10_ACCEPTED_CLEAN_obs3.jpg']  folder: 140204_956_P10_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 14:02:06  track=P38  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(596, 810, 795, 959) center=(696,884) det_conf=0.6729 ring=1.0 vx=20.7515 vy=0.6788
+  lineage=P8 -> P5 -> P38  id_age=0.89s  since_bridge=0.89s
+  sample 1: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(567.5, 571.0) t=14:02:00 stable=5 iou=0.683 size=0.9936
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=FAST clean=True gate=CLEAN center=(527.0, 579.0) t=14:02:01 stable=7 iou=0.6907 size=0.9216
+  sample 3: NO_X conf=0.9638 p_x=0.0362 p_no_x=0.9638 mode=CLEAN clean=True gate=CLEAN center=(695.5, 884.5) t=14:02:06 stable=5 iou=0.7799 size=0.9441
+  movement=[{'px': 41.3, 'ratio_of_diagonal': 0.214, 'seconds': 0.267}, {'px': 348.9, 'ratio_of_diagonal': 1.568, 'seconds': 5.347}]  total=338.6px
+  deferred unsafe NO_X samples (not counted): 4  RULE_VIOLATION=none
+  files: ['140206_436_P38_ACCEPTED_CLEAN_obs1.jpg', '140206_436_P38_ACCEPTED_CLEAN_obs2.jpg', '140206_436_P38_ACCEPTED_CLEAN_obs3.jpg']  folder: 140206_436_P38_ACCEPTED_CLEAN
+
+DECISION COMMIT  2026-10-09 14:02:08  track=P41  FIRST
+  decision=ACCEPTED  mode=CLEAN  clean_view=True  gate=CLEAN
+  votes X=0 NO_X=3 obs=3  object=OBJECT_PRESENT 1.00
+  box=(970, 495, 1129, 602) center=(1050,548) det_conf=0.6527 ring=1.0 vx=-17.6106 vy=0.2387
+  lineage=P4 -> P13 -> P4 -> P13 -> P33 -> P41  id_age=0.87s  since_bridge=0.87s
+  sample 1: NO_X conf=0.9997 p_x=0.0003 p_no_x=0.9997 mode=FAST clean=True gate=CLEAN center=(1468.0, 884.5) t=14:02:00 stable=5 iou=0.7128 size=0.948
+  sample 2: NO_X conf=1.0 p_x=0.0 p_no_x=1.0 mode=CLEAN clean=True gate=CLEAN center=(1314.5, 541.5) t=14:02:07 stable=5 iou=0.777 size=0.9485
+  sample 3: NO_X conf=0.9999 p_x=0.0001 p_no_x=0.9999 mode=CLEAN clean=True gate=CLEAN center=(1049.5, 548.5) t=14:02:08 stable=5 iou=0.8057 size=0.9874
+  movement=[{'px': 375.8, 'ratio_of_diagonal': 1.625, 'seconds': 6.244}, {'px': 265.1, 'ratio_of_diagonal': 1.348, 'seconds': 1.616}]  total=536.7px
+  deferred unsafe NO_X samples (not counted): 5  RULE_VIOLATION=none
+  files: ['140208_670_P41_ACCEPTED_CLEAN_obs1.jpg', '140208_670_P41_ACCEPTED_CLEAN_obs2.jpg', '140208_670_P41_ACCEPTED_CLEAN_obs3.jpg']  folder: 140208_670_P41_ACCEPTED_CLEAN
