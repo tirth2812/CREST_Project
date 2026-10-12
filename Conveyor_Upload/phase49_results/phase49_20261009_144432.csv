@@ -1,0 +1,6 @@
+event,tag,read_monotonic,result,text,box_track,lane,cx,reason,boxes_seen(track/lane/cx/in_zone),verified,conflicts
+1,5,2310987.843,NO_CANDIDATE,NO_CANDIDATE,,,,no box in the read zone,,0,0
+2,6,2310992.343,MAP,MAP NEW,1,top,1373.1,one box in zone,T1/top/1373/1;T2/top/670/0;T7/bottom/738/0;T10/bottom/363/0;T3/top/1734/0;T18/bottom/1625/0;T6/top/572/0,0,0
+3,1,2310994.906,AMBIGUOUS,AMBIGUOUS,,,,2 boxes in zone,T1/top/956/0;T4/top/1350/1;T6/top/381/0;T18/top/1745/0;T20/bottom/1220/1;T24/bottom/738/0,0,0
+4,2,2310998.906,NO_CANDIDATE,NO_CANDIDATE,,,,no box in the read zone,T11/top/404/0;T17/bottom/738/0;T20/top/1729/0;T24/bottom/1521/0;T33/top/718/0;T45/top/1126/0,0,0
+5,3,2311003.375,NO_CANDIDATE,NO_CANDIDATE,,,,no box in the read zone,T17/bottom/1608/0;T19/top/468/0;T33/bottom/375/0;T36/bottom/740/0;T50/top/1565/0;T61/top/1134/0,0,0
