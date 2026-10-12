@@ -51,46 +51,42 @@ check("extrapolates forward (<=0.8 s)", abs(h.position_at(7, 100.7)[0] - (900 - 
 check("no position far outside the track's life", h.position_at(7, 105.0) is None and h.position_at(7, 90.0) is None)
 check("unknown id -> None", h.position_at(99, 100.0) is None)
 
-# ---------------------------------------------------------------- 2. replay
-CSV = HERE.parent / "RESULTS" / "45_RFID1_Timing_Calibration" / "rfid1_frames_20261009_130029.csv"
-P49.EVENT_SETTLE_SEC = 0.0           # the recording has only 2 frames per event
-events = defaultdict(lambda: {"frames": defaultdict(dict), "tag": None, "t": None})
-for row in csv.DictReader(open(CSV, encoding="utf-8-sig")):
-    e = events[int(row["event"])]
-    e["tag"] = int(row["pallet"])
-    e["t"] = float(row["read_monotonic"])
-    if row["x1"]:
-        frame_t = float(row["frame_acquired_monotonic"])
-        e["frames"][frame_t][int(row["track_id"])] = (float(row["x1"]), float(row["y1"]), float(row["x2"]), float(row["y2"]))
-
-replay = {}
-for number, data in sorted(events.items()):
-    if not data["frames"]:
-        continue
-    history = P49.TrackHistory()
-    identities = P49.PhysicalIdentities(history)
-    resolver = P49.EventResolver(history, identities, P49.ReadZone())
-    for t in sorted(data["frames"]):
-        history.update(t, [{"id": tid, "box": b} for tid, b in data["frames"][t].items()])
-    resolver.add({"type": "appear", "number": data["tag"], "time": data["t"]})
-    resolver.process(history.last_t, split_y=700.0)
-    chosen = None
-    if resolver.log_rows:
-        row = resolver.log_rows[0]
-        chosen = (row[3], row[5], row[6], row[7])
-    replay[number] = (data["tag"], chosen)
-
-unique = [n for n, (_, c) in replay.items() if c and c[0] == "MAP"]
-check("replay: every recorded read finds exactly ONE box in the zone", len(unique) == len(replay) == 11,
-      {n: c for n, (_, c) in replay.items() if not (c and c[0] == "MAP")})
-lane_by_tag = {3: "top", 4: "top", 5: "top", 6: "top", 1: "bottom", 2: "bottom"}
-check("replay: tags 3-6 land on the top lane, 1-2 on the bottom lane",
-      all(c[2] == lane_by_tag[tag] for tag, c in replay.values() if c))
-by_tag = defaultdict(list)
-for tag, c in replay.values():
-    by_tag[tag].append(float(c[3]))
-check("replay: the same tag lands at the same x one lap later (+-80 px)",
-      all(len(v) < 2 or max(v) - min(v) <= 80 for v in by_tag.values()), {k: [round(x) for x in v] for k, v in by_tag.items()})
+# ---------------------------------------------------------------- 2. replay of REAL live runs
+# 3 live runs of Phase 49 (Oct 9): every read lists the boxes that were seen
+# (track/lane/cx).  Rules checked: exactly ONE top-lane box in the read zone per read
+# (duplicates merged), and every tag lands at about the same x lap after lap.
+# NOTE: the zone was derived from these same runs - this checks logic and numbers,
+# it is not an independent test.
+RUNS = HERE.parent / "RESULTS" / "49_RFID1_Physical_Tracking"
+zone = P49.ReadZone()
+per_tag = defaultdict(list)
+checked = unique = 0
+bad = []
+for name in ("144029", "144432", "144455"):
+    for row in csv.DictReader(open(RUNS / f"phase49_20261009_{name}.csv", encoding="utf-8")):
+        boxes = []
+        for item in row["boxes_seen(track/lane/cx/in_zone)"].split(";"):
+            if item:
+                track, lane, cx, _ = item.split("/")
+                boxes.append((lane, float(cx)))
+        if len(boxes) < 4:
+            continue                      # start-up reads, no boxes tracked yet
+        top = sorted(cx for lane, cx in boxes if zone.contains(lane, cx))
+        merged = []
+        for cx in top:
+            if not merged or cx - merged[-1] > 75:   # a box is ~160 px wide: closer = same pallet
+                merged.append(cx)
+        checked += 1
+        if len(merged) == 1:
+            unique += 1
+            per_tag[int(row["tag"])].append(merged[0])
+        else:
+            bad.append((name, row["event"], row["tag"], merged))
+check("replay of 3 live runs: every read has exactly ONE box in the top-lane zone", checked >= 25 and unique == checked, (checked, bad[:3]))
+spread = {tag: round(max(v) - min(v)) for tag, v in per_tag.items()}
+check("replay: each tag is read at about the same x lap after lap (spread <= 130 px)",
+      all(s <= 130 for s in spread.values()) and len(per_tag) == 6, spread)
+check("the bottom lane is not part of the default zone (only passing pallets there)", not zone.contains("bottom", 1250.0))
 
 # ---------------------------------------------------------------- 3. simulation
 P49.EVENT_SETTLE_SEC = 0.6
@@ -123,11 +119,12 @@ def s_of_bottom(x):
     return TOP_LEN + TURN + (x - X_LEFT)
 
 
-# Pallet spacing taken from the real Phase 45 read intervals (x 170 px/s), in
-# travel order 3,4,5,6,1,2 - irregular, pallets 1.5 box widths apart at the closest.
-ORDER = [3, 4, 5, 6, 1, 2]
-GAP_BEHIND = {3: 260.0, 4: 1516.0, 5: 245.0, 6: 245.0, 1: 320.0, 2: 927.0}
-TOP_READ_X, BOT_READ_X = 1280.0, 1085.0
+# Pallet spacing taken from the newest live run (read intervals x speed), in travel
+# order 6,1,2,3,4,5 - irregular, every tag is read on the TOP lane at its own x.
+ORDER = [6, 1, 2, 3, 4, 5]
+GAP_BEHIND = {6: 417.0, 1: 663.0, 2: 737.0, 3: 386.0, 4: 450.0, 5: None}
+GAP_BEHIND[5] = LOOP - sum(v for v in GAP_BEHIND.values() if v)
+TAG_X = {3: 1145.0, 4: 1170.0, 5: 1390.0, 6: 1370.0, 1: 1330.0, 2: 1120.0}     # measured per tag
 START_S = {}
 position = 1000.0
 for tag in ORDER:
@@ -167,11 +164,8 @@ def run_simulation(seconds=150.0, miss=None, seed=3, hide=(0.3, 1.2), every=(12.
                 y += rng.uniform(-noise, noise)
             w, hgt = (160, 120) if lane == "top" else (200, 150) if lane == "bottom" else (180, 135)
 
-            # RFID read model: tag side faces the reader on ONE lane only
-            if tag in (3, 4, 5, 6):
-                inside = lane == "top" and 1040.0 <= x <= TOP_READ_X
-            else:
-                inside = lane == "bottom" and BOT_READ_X <= x <= 1325.0
+            # RFID read model: every tag is read on the top lane, from its own x until 240 px later
+            inside = lane == "top" and TAG_X[tag] - 240.0 <= x <= TAG_X[tag]
             if inside and not present[tag]:
                 app.events.put({"type": "appear", "number": tag, "time": t + 0.04})
                 present[tag] = True
@@ -402,7 +396,7 @@ for lap in range(3):
             learn_app.events.put({"type": "appear", "number": 3, "time": t})
     learn_app.ingest(t0 + 3.5, [{"id": 1, "box": box(1000, 545)}], (1.0, 1.0))
 zone, changed = learn_app.resolver.learned_zone(P49.ReadZone())
-check("learn: one pallet -> the top lane zone is measured, bottom kept", changed == ["top"] and zone.bounds["bottom"] == (1050.0, 1330.0), (changed, zone.bounds))
+check("learn: one pallet -> the top lane zone is measured, bottom stays unused", changed == ["top"] and zone.bounds["bottom"] is None, (changed, zone.bounds))
 
 invalid = P49.App(P49.queue.Queue(), P49.ReadZone(), learn=True, debug=False)
 invalid.split_y = 700.0

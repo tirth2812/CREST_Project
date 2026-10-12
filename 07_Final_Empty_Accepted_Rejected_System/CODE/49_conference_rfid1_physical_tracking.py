@@ -69,14 +69,22 @@ RFID_MAP = {
 # Camera frame the zone numbers refer to (positions are scaled if it differs).
 REF_W, REF_H = 1920.0, 1080.0
 
-# Read zone: image x range of the tagged box CENTRE at the RFID timestamp, per
-# lane.  Derived from the Phase 45 evidence (midpoints between the tagged box
-# and the nearest non-tagged boxes); replaced by the measured zone file.
+# Read zone: image x range of the tagged box CENTRE at the RFID timestamp, per lane.
+# Evidence (3 live runs, 29 reads that had box data): in EVERY read exactly one box
+# was on the TOP lane at x 1060-1420 (after merging duplicate boxes), and each tag
+# repeats its own x within ~60 px lap after lap (tag 2 ~1120, 3 ~1145, 4 ~1170,
+# 1 ~1330, 6 ~1370, 5 ~1390).  The bottom lane inside that x range is only a
+# pallet passing by (a different pallet), so the bottom lane is NOT used: None.
+# --learn measures the zone with one pallet and can replace it.
 DEFAULT_ZONE = {
-    "top": [1160.0, 1400.0],
-    "bottom": [1050.0, 1330.0],
-    "source": "default: Phase 45 evidence",
+    "top": [1060.0, 1420.0],
+    "bottom": None,
+    "source": "default: Phase 49 live runs (29 reads, top lane)",
 }
+
+# A tag keeps (about) its own x from lap to lap; a candidate far from the x where the
+# same tag was read before is not accepted (the pallet was probably not detected).
+TAG_X_TOLERANCE = 130.0
 
 # Event handling
 EVENT_SETTLE_SEC = 0.6       # wait this long after a read: a new box needs ~5 frames to be confirmed
@@ -290,8 +298,8 @@ class ReadZone:
     def __init__(self, zone=None):
         zone = zone or DEFAULT_ZONE
         self.bounds = {
-            "top": tuple(zone["top"]),
-            "bottom": tuple(zone["bottom"]),
+            lane: (tuple(zone[lane]) if zone.get(lane) else None)
+            for lane in ("top", "bottom")
         }
         self.source = zone.get("source", "?")
 
@@ -308,8 +316,8 @@ class ReadZone:
         with open(path, "w", encoding="utf-8") as handle:
             json.dump(
                 {
-                    "top": list(self.bounds["top"]),
-                    "bottom": list(self.bounds["bottom"]),
+                    "top": list(self.bounds["top"]) if self.bounds["top"] else None,
+                    "bottom": list(self.bounds["bottom"]) if self.bounds["bottom"] else None,
                     "source": self.source,
                     "saved": datetime.now().isoformat(timespec="seconds"),
                 },
@@ -318,10 +326,10 @@ class ReadZone:
             )
 
     def contains(self, lane, cx):
-        if lane not in self.bounds:
+        bounds = self.bounds.get(lane)
+        if not bounds:
             return False
-        low, high = self.bounds[lane]
-        return low <= cx <= high
+        return bounds[0] <= cx <= bounds[1]
 
 
 def lane_of(cy, split_y):
@@ -619,6 +627,7 @@ class EventResolver:
         self.event_counter = 0
         self.last_read = None   # (number, text, time)
         self.lane_memory = defaultdict(lambda: {"top": 0, "bottom": 0})
+        self.tag_x = defaultdict(list)   # tag -> x of its accepted reads (own position per tag)
 
     # ----- candidate search -------------------------------------------------------
     def candidates(self, t_event, split_y, frame_scale=(1.0, 1.0)):
@@ -712,6 +721,17 @@ class EventResolver:
         elif memory["bottom"] >= LANE_MEMORY_MIN and memory["top"] == 0:
             in_zone = [c for c in in_zone if c["lane"] == "bottom"]
 
+        # a tag is read at (about) the same x every lap
+        seen_x = self.tag_x[number]
+        if seen_x and in_zone:
+            mean_x = sum(seen_x) / len(seen_x)
+            near = [c for c in in_zone if abs(c["cx"] - mean_x) <= TAG_X_TOLERANCE]
+            if not near:
+                return {"kind": "AMBIGUOUS", "found": found, "chosen": None,
+                        "reason": (f"box at x={in_zone[0]['cx']:.0f} but tag {number} was "
+                                   f"read at x~{mean_x:.0f} before")}
+            in_zone = near
+
         if len(in_zone) == 1:
             holder = self.identities.claimed_number(in_zone[0]["id"])
             if holder is not None and holder != number:
@@ -761,6 +781,8 @@ class EventResolver:
             text = "MAP " + self.identities.assign(number, chosen["id"], event["time"])
             if not text.startswith("MAP CONFLICT"):
                 self.lane_memory[number][chosen["lane"]] += 1
+                self.tag_x[number].append(chosen["cx"])
+                del self.tag_x[number][:-6]
         elif outcome["kind"] == "LEARN":
             self.learn_rows[chosen["lane"]].append(
                 {"number": number, "cx": chosen["cx"], "w": chosen["w"], "t": event["time"],
@@ -805,7 +827,7 @@ class EventResolver:
 
     def learned_zone(self, base_zone):
         """New zone for every lane with >= LEARN_MIN_EVENTS valid reads."""
-        bounds = {k: list(v) for k, v in base_zone.bounds.items()}
+        bounds = {k: (list(v) if v else None) for k, v in base_zone.bounds.items()}
         changed = []
         for lane, rows in self.learn_rows.items():
             if len(rows) < LEARN_MIN_EVENTS:
@@ -930,7 +952,10 @@ class App:
                 cv2.polylines(image, [poly], True, color, 2)
 
         if self.debug:
-            for lane, (low, high) in self.zone.bounds.items():
+            for lane, bounds in self.zone.bounds.items():
+                if not bounds:
+                    continue
+                low, high = bounds
                 y = int(self.split_y + (-120 if lane == "top" else 120))
                 cv2.line(image, (int(low * scale[0]), y), (int(high * scale[0]), y), (255, 0, 255), 3)
 
@@ -1009,7 +1034,7 @@ def main():
     zone = ReadZone.load()
     print("RFID1 only. RFID2: NOT READ OR USED. PLC: read only.")
     print("Phase 40 detection and classification: UNCHANGED")
-    print(f"Read zone ({zone.source}): top {zone.bounds['top']}  bottom {zone.bounds['bottom']}")
+    print(f"Read zone ({zone.source}): top {zone.bounds['top']}  bottom {zone.bounds['bottom'] or 'not used'}")
     if arguments.learn:
         print("LEARN MODE: put exactly ONE pallet on the conveyor; 2+ laps; Q saves the zone.")
 
@@ -1063,7 +1088,7 @@ def main():
             if changed:
                 learned.save()
                 print("Read zone saved:", ZONE_FILE, "lanes:", changed)
-                print("  top", learned.bounds["top"], " bottom", learned.bounds["bottom"])
+                print("  top", learned.bounds["top"], " bottom", learned.bounds["bottom"] or "not used")
             else:
                 print(
                     "Read zone NOT changed: need at least "
