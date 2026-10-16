@@ -1,0 +1,13 @@
+# Local runtime products
+__pycache__/
+*.pyc
+*.cache
+*.log
+*.tmp
+.venv/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+/PROVENANCE.csv
+/08_Independent_Blind_Testing/
+/PROVENANCE.csv
