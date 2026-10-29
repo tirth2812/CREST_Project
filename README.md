@@ -1,928 +1,186 @@
-\# CREST YOLO26 Vision System
+# A Vision-Driven Digital Twin for Real-Time Conveyor Pallet Inspection in Smart Manufacturing
+
+This project develops a camera-based conveyor inspection system for smart manufacturing. It detects and tracks moving pallets, determines whether each pallet is empty or contains an object, evaluates the object's marking, and associates the inspection result with the pallet's physical RFID number. The research was conducted in the CREST laboratory; CREST is the lab name, not the project name.
+
+This repository documents the project from image annotation and model development through live testing and dual-RFID integration. It is organized by development stage so a reader can understand **what was built, which files belong to each stage, and how those stages connect**.
+
+> **Repository branch:** `conveyor-upload`  
+> **Important:** The repository is a documented project copy. Some scripts use model paths, camera settings, and PLC connections from the lab computer; cloning the repository does not automatically make the full hardware setup runnable elsewhere.
+
+## 1. How the system works
+
+```text
+RGB camera (overhead conveyor view)
+         |
+         v
+YOLO26 pallet detection
+         |
+         v
+Conveyor boundary filtering and pallet tracking
+         |
+         v
+EMPTY / OBJECT_PRESENT classification
+         |
+         +---- EMPTY ------------------------------> EMPTY
+         |
+         +---- OBJECT_PRESENT
+                    |
+                    v
+              X / NO_X classification
+                    |
+                    v
+              Multi-view voting
+                    |
+                    +---- X -----------------------> REJECTED
+                    +---- NO_X --------------------> ACCEPTED
+                    +---- Not enough evidence -----> CHECKING
 
+TOP RFID2 + BOTTOM RFID1 (read-only PLC inputs)
+         |
+         v
+Map physical RFID pallet numbers 1–6 to eligible vision tracks
+         |
+         v
+Show pallet number and inspection status; record events
+```
 
+The three machine-learning models have separate responsibilities: **finding a pallet**, **detecting whether it is occupied**, and **checking the visible marking**. Tracking and multi-view voting help the system maintain a decision while pallets move, rotate, or are briefly obscured.
 
-This folder contains the final organized version of the CREST YOLO26 vision system.
+A number such as **P3** means *physical pallet 3* when confirmed or recovered by RFID association. It is not simply the temporary ID assigned by the image tracker. If the association is uncertain, the system should not guess a physical number.
 
+## 2. Explore the project, stage by stage
 
+**Start with a stage's `README.md`**, then open its `CODE` folder to see the Python scripts and their file-specific explanations. The detailed code documentation was moved next to the related scripts so it is easy to find.
 
-The project is organized stage-by-stage so the complete development flow can be understood, reproduced, and reused later.
+| Stage | What it covers | Start here |
+|---|---|---|
+| **00 — Revised pallet detector** | Final 100-image detector dataset, training run, and checkpoint used by the conference pipeline. | [Stage 00 overview](00_Pallet_100_YOLO26_Training/README.md) |
+| **01 — Pallet annotation** | Preparing images and manually defining pallet bounding boxes. | [Stage 01 overview](01_Pallet_Annotation/README.md) · [Annotation code](01_Pallet_Annotation/CODE/pallet_annotator.py) · [Code guide](01_Pallet_Annotation/CODE/pallet_annotator.py.README.md) |
+| **02 — YOLO pallet detection** | Original pallet-detection development, training, and evaluation. | [Stage 02 overview](02_YOLO_Pallet_Detection/README.md) · [Training guide](02_YOLO_Pallet_Detection/CODE/train_yolo26_pallet_localizer.py.README.md) · [Evaluation guide](02_YOLO_Pallet_Detection/CODE/evaluate_yolo_pallet_localizer_test.py.README.md) |
+| **03 — Empty/object classifier** | Training a classifier to distinguish `EMPTY` from `OBJECT_PRESENT`. | [Stage 03 overview](03_Empty_Object_Classifier/README.md) · [Training script](03_Empty_Object_Classifier/CODE/train_yolo26_empty_object_classifier.py) · [Code guide](03_Empty_Object_Classifier/CODE/train_yolo26_empty_object_classifier.py.README.md) |
+| **04 — Live empty/object system** | Running detection and empty/object classification on camera frames. | [Stage 04 overview](04_Live_Empty_Object_System/README.md) · [Live script](04_Live_Empty_Object_System/CODE/live_empty_object_classification.py) · [Code guide](04_Live_Empty_Object_System/CODE/live_empty_object_classification.py.README.md) |
+| **05 — Dynamic pallet detection** | Following pallets through successive frames and applying conveyor-boundary filtering. | [Stage 05 overview](05_Dynamic_Pallet_Detection/README.md) · [Tracking script](05_Dynamic_Pallet_Detection/CODE/dynamic_live_pallet_detection.py) · [Code guide](05_Dynamic_Pallet_Detection/CODE/dynamic_live_pallet_detection.py.README.md) |
+| **06 — Integrated live vision** | Earlier combined live detection/empty-object workflow before the final marking/RFID system. | [Stage 06 overview](06_Live_Empty_Object_Detection_Final/README.md) · [Live script](06_Live_Empty_Object_Detection_Final/CODE/live_object_detection_on_pallet.py) · [Code guide](06_Live_Empty_Object_Detection_Final/CODE/live_object_detection_on_pallet.py.README.md) |
+| **07 — Final inspection and RFID** | Three-model inspection, temporal voting, top/bottom RFID reads, and physical pallet identification. | [Stage 07 overview](07_Final_Empty_Accepted_Rejected_System/README.md) · [Final Phase 70 runner](07_Final_Empty_Accepted_Rejected_System/CODE/70_conference_dual_rfid_bottom_calibrated.py) |
 
+### Stage 00 — Updated 100-image pallet detector
 
+The conference pipeline uses a revised pallet-localization model developed from **100 labeled conveyor images**: 80 for training, 10 for validation, and 10 for testing. Its role is to locate pallets in the full camera image before any crop-level classification takes place.
 
-\---
+- [Stage 00 documentation](00_Pallet_100_YOLO26_Training/README.md)
+- [Detector dataset](00_Pallet_100_YOLO26_Training/DATASET/100_IMAGE_DETECTOR)
+- [Detector checkpoint directory](00_Pallet_100_YOLO26_Training/pallet_yolo26_100_v2/weights)
 
+**Note:** Stage 02 documents the earlier detector development. Stage 00 holds the revised 100-image detector assets used in the later conference workflow; they are not two extra models running at the same time.
 
+### Stages 01–03 — Prepare data and train the first two models
 
-\# Project Structure
+**Stage 01** explains the image annotation process and YOLO bounding-box labels. **Stage 02** contains the detector training and test scripts. **Stage 03** develops the separate `EMPTY` / `OBJECT_PRESENT` image classifier, which receives crops of detected pallets rather than full-conveyor images.
 
+- [Stage 01 code-folder guide](01_Pallet_Annotation/CODE/README_From_DOCS.md)
+- [Stage 02 code-folder guide](02_YOLO_Pallet_Detection/CODE/README_From_DOCS.md)
+- [Stage 02 training script](02_YOLO_Pallet_Detection/CODE/train_yolo26_pallet_localizer.py) and [evaluation script](02_YOLO_Pallet_Detection/CODE/evaluate_yolo_pallet_localizer_test.py)
+- [Stage 03 code-folder guide](03_Empty_Object_Classifier/CODE/README_From_DOCS.md)
 
+### Stages 04–06 — Run and improve the live camera system
 
-\## 01\_Pallet\_Annotation
+**Stage 04** connects detection and empty/object classification to a live camera feed. **Stage 05** adds dynamic tracking and conveyor-boundary handling so pallets can be followed while moving. **Stage 06** documents the combined live workflow that preceded the final `ACCEPTED` / `REJECTED` and RFID integration.
 
+- [Stage 04 code-folder guide](04_Live_Empty_Object_System/CODE/README_From_DOCS.md)
+- [Stage 05 code-folder guide](05_Dynamic_Pallet_Detection/CODE/README_From_DOCS.md)
+- [Stage 06 code-folder guide](06_Live_Empty_Object_Detection_Final/CODE/README_From_DOCS.md)
 
+### Stage 07 — Final three-model inspection and RFID association
 
-Contains the pallet annotation tool and the pallet annotation data used to prepare the pallet localization dataset.
+This stage combines pallet detection, tracking, empty/object classification, `X` / `NO_X` classification, and multi-view decision logic. Two RFID readers provide the physical pallet identifiers used to associate decisions with pallets 1–6.
 
+| File | Role |
+|---|---|
+| [Phase 70 — dual RFID runner](07_Final_Empty_Accepted_Rejected_System/CODE/70_conference_dual_rfid_bottom_calibrated.py) | Main integrated live inspection with top and bottom RFID readers. |
+| [Phase 65 — top RFID runner](07_Final_Empty_Accepted_Rejected_System/CODE/65_conference_phase40_persistent_top_rfid.py) | Earlier version with persistent top-reader RFID association. |
+| [Phase 65 code guide](07_Final_Empty_Accepted_Rejected_System/CODE/65_conference_phase40_persistent_top_rfid.py.README.md) | Detailed explanation of the Phase 65 implementation. |
+| [Dynamic pallet tracker](07_Final_Empty_Accepted_Rejected_System/CODE/dynamic_live_pallet_detection.py) | Tracker-stage dependency loaded by the integrated runner. |
+| [Tracker code guide](07_Final_Empty_Accepted_Rejected_System/CODE/dynamic_live_pallet_detection.py.README.md) | Explanation of the tracker component. |
+| [Stage 07 code-folder guide](07_Final_Empty_Accepted_Rejected_System/CODE/README_From_DOCS.md) | Additional code-level documentation. |
 
+**Phase 70 is the primary dual-RFID reference runner.** Phase 65 is retained as the earlier top-reader implementation. The numbered development scripts that were removed during repository cleanup are not required to understand these two main entries; earlier experiments remain in Git history.
 
-Main contents:
+## 3. Model inputs and outputs
 
+| Component | Input | Output | Why it is needed |
+|---|---|---|---|
+| Pallet detector (YOLO26) | Full conveyor frame | Pallet bounding boxes | Locates the region to inspect. |
+| Empty/object classifier (YOLO26) | Pallet image crop | `EMPTY` or `OBJECT_PRESENT` | Avoids checking markings on empty pallets. |
+| Marking classifier (YOLO26) | Focused object crop | `X` or `NO_X` | Supplies evidence for rejection or acceptance. |
+| Tracking and voting | Detections across video frames | Stable track and inspection state | Reduces decisions based on one poor view. |
+| RFID association | PLC input words and eligible tracks | Physical pallet ID 1–6 | Links a visual result to a physical pallet. |
 
+`CHECKING` means there is not yet enough reliable evidence for an accepted/rejected decision. **ACCEPTED and REJECTED are system-level outcomes**, not the direct output classes of a single three-class neural network.
 
-\- CODE
+## 4. RFID identification and PLC interface
 
-&#x20; - pallet\_annotator.py
+The final system uses a shared mapping of the known RFID tags to six physical pallets. Its two read-only input groups are:
 
+| Station | Reader | PLC input words |
+|---|---|---|
+| Top station | RFID2 | `IO_Link_Master_ST1_to_ST4:I1.Data[128]` through `Data[131]` |
+| Bottom station | RFID1 | `IO_Link_Master_ST1_to_ST4:I1.Data[96]` through `Data[99]` |
 
+The application associates a fresh RFID reading only when the visual match is sufficiently clear. Its identity memory can reconnect a pallet after a temporary vision-track loss, but uncertain matches should remain unresolved rather than receiving another pallet's number.
 
-\- DATA
+**Safety and scope:** The documented Phase 65 and Phase 70 scripts **read PLC tags**. They do **not** issue PLC motor or piston commands, and they do **not** provide robot actuation control. Robot integration is a separate step.
 
-&#x20; - pallet\_annotations.json
+## 5. Where to find data and trained models
 
-&#x20; - images
+| Asset | Repository location |
+|---|---|
+| Revised 100-image pallet dataset | [`00/.../DATASET/100_IMAGE_DETECTOR`](00_Pallet_100_YOLO26_Training/DATASET/100_IMAGE_DETECTOR) |
+| Revised pallet model checkpoint | [`00/.../pallet_yolo26_100_v2/weights`](00_Pallet_100_YOLO26_Training/pallet_yolo26_100_v2/weights) |
+| Empty/object classifier dataset | [`03_Empty_Object_Classifier/DATASET`](03_Empty_Object_Classifier/DATASET) |
+| Original X/NO_X dataset | [`07/.../DATASET/CONFERENCE_X_NO_X_ORIGINAL`](07_Final_Empty_Accepted_Rejected_System/DATASET/CONFERENCE_X_NO_X_ORIGINAL) |
+| Additional focused X/NO_X training data | [`07/.../DATASET/CREST_MEDIUM_FOCUS_AUGMENTED`](07_Final_Empty_Accepted_Rejected_System/DATASET/CREST_MEDIUM_FOCUS_AUGMENTED) |
+| Final classification checkpoints | [`07/.../MODELS`](07_Final_Empty_Accepted_Rejected_System/MODELS) |
 
+These folders document the available assets. **Dataset inclusion alone does not establish the exact training provenance of a checkpoint**; use the saved training configuration and run logs when reproducing a particular experiment.
 
+## 6. Running the final system in the lab
 
-\---
+The commands below are for the configured Windows lab environment. They assume the same Python environment, camera, model weights, conveyor boundary configuration, and PLC network access used during development.
 
+**Open Command Prompt and activate the environment:**
 
+```bat
+C:\VLM_Finetune\vlm_env\Scripts\activate.bat
+cd /d "C:\Do_Not_Delete_PLC\CREST_YOLO26\07_Final_Empty_Accepted_Rejected_System\CODE"
+```
 
-\## 02\_YOLO\_Pallet\_Detection
+**Run offline RFID and integration self-tests (no live camera required):**
 
+```bat
+python 70_conference_dual_rfid_bottom_calibrated.py --self-test
+```
 
+**Run the live system:**
 
-Contains the pallet localization model training, evaluation, dataset, model weights, training results, and visual test results.
+```bat
+python 70_conference_dual_rfid_bottom_calibrated.py
+```
 
+These are the original Phase 70 entry points. A successful self-test checks programmed logic; it is **not** proof that the camera, RFID reader alignment, or physical conveyor is behaving correctly. Confirm those on the actual hardware before using live decisions.
 
+The Python files in this repository may include absolute Windows paths. Paths and dependencies must be checked before attempting to run the system from a different computer.
 
-Main contents:
+## 7. How to read this repository
 
+1. Read this root README for the overall workflow.
+2. Open the [stage list](#2-explore-the-project-stage-by-stage) and select the stage you want to understand.
+3. Read that stage's main `README.md` for its purpose, process, and outputs.
+4. Open the stage's `CODE` folder. Python files and their `<filename>.README.md` explanations are together; `README_From_DOCS.md` contains additional folder-level guidance.
+5. Use the linked datasets, checkpoints, and evaluation records to inspect the supporting artifacts.
+6. For the integrated live system, start with [Phase 70](07_Final_Empty_Accepted_Rejected_System/CODE/70_conference_dual_rfid_bottom_calibrated.py) and the [Stage 07 overview](07_Final_Empty_Accepted_Rejected_System/README.md).
 
+For a high-level record of packaged dependencies and any missing items, see [PACKAGE_AUDIT.md](PACKAGE_AUDIT.md), where included in this branch.
 
-\- CODE
+---
 
-&#x20; - train\_yolo26\_pallet\_localizer.py
-
-&#x20; - evaluate\_yolo\_pallet\_localizer\_test.py
-
-
-
-\- CONFIG\_AND\_RESULTS
-
-&#x20; - pallet\_annotations.json
-
-&#x20; - split\_used\_for\_yolo.json
-
-&#x20; - yolo26\_localizer\_config.json
-
-&#x20; - yolo26\_test\_metrics.json
-
-&#x20; - training\_output
-
-
-
-\- DATASET
-
-&#x20; - yolo\_dataset
-
-&#x20;   - train
-
-&#x20;   - val
-
-&#x20;   - test
-
-
-
-\- MODEL
-
-&#x20; - pallet\_yolo26n\_best.pt
-
-
-
-\- VISUAL\_TEST\_RESULTS
-
-
-
-\---
-
-
-
-\## 03\_Empty\_Object\_Classifier
-
-
-
-Contains the classifier used to determine whether a detected pallet is empty or contains an object.
-
-
-
-Main contents:
-
-
-
-\- CODE
-
-&#x20; - train\_yolo26\_empty\_object\_classifier.py
-
-
-
-\- DATASET
-
-&#x20; - prepared\_yolo26
-
-&#x20;   - train
-
-&#x20;   - val
-
-&#x20;   - test
-
-
-
-\- MODEL
-
-&#x20; - empty\_object\_yolo26n\_cls\_best.pt
-
-
-
-\- RESULTS
-
-&#x20; - classifier evaluation results
-
-&#x20; - held-out predictions
-
-&#x20; - training results
-
-
-
-\---
-
-
-
-\## 04\_Live\_Empty\_Object\_System
-
-
-
-Contains the live vision implementation for classifying pallets as:
-
-
-
-\- EMPTY
-
-\- OBJECT\_PRESENT
-
-
-
-Main code:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\04\_Live\_Empty\_Object\_System\\CODE\\live\_empty\_object\_classification.py
-
-
-
-\---
-
-
-
-\## 05\_Dynamic\_Pallet\_Detection
-
-
-
-Contains the dynamic pallet detection and tracking system.
-
-
-
-The tracker maintains pallet IDs while pallets move around the conveyor.
-
-
-
-Main contents:
-
-
-
-\- CODE
-
-&#x20; - dynamic\_live\_pallet\_detection.py
-
-
-
-\- CONFIG
-
-&#x20; - conveyor\_boundary.json
-
-
-
-\---
-
-
-
-\## 06\_Live\_Empty\_Object\_Detection\_Final
-
-
-
-Contains the combined live pallet detection and EMPTY / OBJECT\_PRESENT classification system.
-
-
-
-Main code:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\06\_Live\_Empty\_Object\_Detection\_Final\\CODE\\live\_object\_detection\_on\_pallet.py
-
-
-
-Configuration:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\06\_Live\_Empty\_Object\_Detection\_Final\\CONFIG\\conveyor\_boundary.json
-
-
-
-\---
-
-
-
-\# 07\_Final\_Empty\_Accepted\_Rejected\_System
-
-
-
-This is the final CREST runtime system.
-
-
-
-The final pipeline performs:
-
-
-
-1\. Pallet detection
-
-2\. Dynamic pallet tracking
-
-3\. EMPTY vs OBJECT\_PRESENT classification
-
-4\. X vs NO\_X symbol classification
-
-5\. Final pallet status decision
-
-6\. State preservation during temporary occlusions
-
-7\. State transfer when tracker IDs change
-
-8\. Live display of pallet status
-
-
-
-\---
-
-
-
-\## Final Decision Logic
-
-
-
-The final status logic is:
-
-
-
-EMPTY pallet:
-
-
-
-EMPTY
-
-
-
-Object present with X symbol:
-
-
-
-REJECTED
-
-
-
-Object present with NO\_X / tick symbol:
-
-
-
-ACCEPTED
-
-
-
-Therefore:
-
-
-
-EMPTY -> EMPTY
-
-
-
-OBJECT\_PRESENT + X -> REJECTED
-
-
-
-OBJECT\_PRESENT + NO\_X -> ACCEPTED
-
-
-
-\---
-
-
-
-\## Final Runtime Code
-
-
-
-Main runtime:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\CODE\\live\_final\_crest\_yolo26.py
-
-
-
-Dynamic pallet tracker:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\CODE\\dynamic\_live\_pallet\_detection.py
-
-
-
-\---
-
-
-
-\## Final Models
-
-
-
-Pallet localization model:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\MODELS\\pallet\_yolo26n\_best.pt
-
-
-
-EMPTY / OBJECT\_PRESENT classifier:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\MODELS\\empty\_object\_yolo26n\_cls\_best.pt
-
-
-
-X / NO\_X classifier:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\MODELS\\x\_no\_x\_yolo26n\_medium\_focus\_final\_hard\_best.pt
-
-
-
-\---
-
-
-
-\## Conveyor Configuration
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\CONFIG\\conveyor\_boundary.json
-
-
-
-This file contains the conveyor boundary information used by the live pallet tracking system.
-
-
-
-\---
-
-
-
-\## Final Results
-
-
-
-Final testing and validation evidence is stored under:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\RESULTS
-
-
-
-Important result folders include:
-
-
-
-\- External\_Validation
-
-\- Final\_Hard\_Data\_Split
-
-\- Final\_Live\_Test\_Evidence
-
-\- Final\_Model\_Training
-
-
-
-\---
-
-
-
-\# Final Runtime Environment
-
-
-
-Python environment:
-
-
-
-C:\\VLM\_Finetune\\vlm\_env
-
-
-
-Main libraries:
-
-
-
-\- Python
-
-\- OpenCV
-
-\- PyTorch
-
-\- Ultralytics
-
-\- NumPy
-
-
-
-GPU used for development and testing:
-
-
-
-NVIDIA RTX 5090
-
-
-
-\---
-
-
-
-\# Run Final CREST YOLO26 System
-
-
-
-Open Command Prompt.
-
-
-
-Run:
-
-
-
-cd /d C:\\VLM\_Finetune
-
-
-
-Activate the environment:
-
-
-
-call vlm\_env\\Scripts\\activate.bat
-
-
-
-Run the final system:
-
-
-
-python "C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System\\CODE\\live\_final\_crest\_yolo26.py"
-
-
-
-\---
-
-
-
-\# Final Runtime Files Required
-
-
-
-The final live system requires:
-
-
-
-1\. live\_final\_crest\_yolo26.py
-
-
-
-2\. dynamic\_live\_pallet\_detection.py
-
-
-
-3\. conveyor\_boundary.json
-
-
-
-4\. pallet\_yolo26n\_best.pt
-
-
-
-5\. empty\_object\_yolo26n\_cls\_best.pt
-
-
-
-6\. x\_no\_x\_yolo26n\_medium\_focus\_final\_hard\_best.pt
-
-
-
-These files are already organized inside:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\07\_Final\_Empty\_Accepted\_Rejected\_System
-
-
-
-\---
-
-
-
-\# Final Runtime Code Verification
-
-
-
-The final runtime code was copied from the latest tested Phase 27 implementation.
-
-
-
-SHA256:
-
-
-
-d43e39782cf2eda35e441e07339e109da8e995e2cb5e57bbf1f8d01bad2919f5
-
-
-
-This hash was verified to match the tested development version.
-
-
-
-\---
-
-
-
-\# Development Folder
-
-
-
-The active development and Git repository is:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\CREST\_YOLO26
-
-
-
-Development changes should be made and tested there first.
-
-
-
-After a change is fully tested and confirmed working, the corresponding finalized files can be copied into:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL
-
-
-
-The FINAL folder should remain the clean transfer and backup version of the project.
-
-
-
-\---
-
-
-
-\# 08\_Reusable\_Datasets
-
-
-
-This folder contains cleaned reusable pallet image data preserved for future machine learning and computer vision projects.
-
-
-
-It is separate from the final CREST runtime and is not required to run Stage 07.
-
-
-
-Dataset location:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\08\_Reusable\_Datasets\\Clean\_Pallet\_Dataset
-
-
-
-\---
-
-
-
-\## Dataset Structure
-
-
-
-Clean\_Pallet\_Dataset
-
-
-
-train
-
-\- ACCEPTED
-
-\- EMPTY
-
-\- REJECTED
-
-
-
-val
-
-\- ACCEPTED
-
-\- EMPTY
-
-\- REJECTED
-
-
-
-Full structure:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL\\08\_Reusable\_Datasets\\Clean\_Pallet\_Dataset
-
-|
-
-+---train
-
-|   +---ACCEPTED
-
-|   +---EMPTY
-
-|   \\---REJECTED
-
-|
-
-\\---val
-
-&#x20;   +---ACCEPTED
-
-&#x20;   +---EMPTY
-
-&#x20;   \\---REJECTED
-
-
-
-\---
-
-
-
-\## Training Dataset Counts
-
-
-
-ACCEPTED:
-
-
-
-60 images
-
-
-
-EMPTY:
-
-
-
-95 images
-
-
-
-REJECTED:
-
-
-
-60 images
-
-
-
-Training total:
-
-
-
-215 images
-
-
-
-\---
-
-
-
-\## Validation Dataset Counts
-
-
-
-ACCEPTED:
-
-
-
-18 images
-
-
-
-EMPTY:
-
-
-
-25 images
-
-
-
-REJECTED:
-
-
-
-18 images
-
-
-
-Validation total:
-
-
-
-61 images
-
-
-
-\---
-
-
-
-\## Complete Reusable Dataset
-
-
-
-ACCEPTED:
-
-
-
-78 images
-
-
-
-EMPTY:
-
-
-
-120 images
-
-
-
-REJECTED:
-
-
-
-78 images
-
-
-
-Total:
-
-
-
-276 images
-
-
-
-\---
-
-
-
-\## Dataset Sources
-
-
-
-The EMPTY images were taken from the cleaned final real-live EMPTY vs OBJECT\_PRESENT dataset:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\original images\\06\_Empty\_vs\_Object\_Classifier\\04\_Improved\_Classifier\_Training\\final\_real\_live\_classifier\_dataset
-
-
-
-The ACCEPTED and REJECTED images were taken from the balanced full-pallet dataset:
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\original images\\15\_Accepted\_vs\_Rejected\_Classifier\\balanced\_full\_pallet\_dataset
-
-
-
-The cleaned datasets were selected instead of the earlier raw close-pallet folders so problematic raw images are not carried forward into future model development.
-
-
-
-\---
-
-
-
-\## Purpose of 08\_Reusable\_Datasets
-
-
-
-This dataset is preserved so future projects can reuse clean labeled pallet images without having to search through the original development folders again.
-
-
-
-Possible future uses include:
-
-
-
-\- image classification
-
-\- machine learning experiments
-
-\- transfer learning
-
-\- ACCEPTED / REJECTED classification
-
-\- EMPTY / object classification
-
-\- three-class pallet classification
-
-\- computer vision experiments
-
-
-
-This dataset is not part of the Stage 07 runtime and can be reused independently.
-
-
-
-\---
-
-
-
-\# Final Package Location
-
-
-
-C:\\Do\_Not\_Delete\_PLC\\FINAL
-
-
-
-The FINAL folder now contains:
-
-
-
-01\_Pallet\_Annotation
-
-
-
-02\_YOLO\_Pallet\_Detection
-
-
-
-03\_Empty\_Object\_Classifier
-
-
-
-04\_Live\_Empty\_Object\_System
-
-
-
-05\_Dynamic\_Pallet\_Detection
-
-
-
-06\_Live\_Empty\_Object\_Detection\_Final
-
-
-
-07\_Final\_Empty\_Accepted\_Rejected\_System
-
-
-
-08\_Reusable\_Datasets
-
-
-
-README.md
-
-
-
-This folder is the organized final CREST YOLO26 project package intended for backup, transfer, reference, and future reuse.
-
+**Project scope:** Computer-vision-based inspection, temporal classification, and read-only RFID-based pallet identification on a conveyor. Hardware control and robot integration are not part of the documented Phase 70 runtime.

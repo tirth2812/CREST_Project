@@ -1,7 +1,0 @@
-path: C:/Do_Not_Delete_PLC/Conference/00_Pallet_100_YOLO26_Dataset
-train: images/train
-val: images/val
-test: images/test
-nc: 1
-names:
-  0: pallet
