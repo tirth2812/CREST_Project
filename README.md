@@ -1,4 +1,4 @@
-# CREST Conference — Automated Pallet Inspection and RFID Identification
+# CREST Project
 
 **CREST** is a camera-based conveyor inspection project that detects moving pallets, checks whether each pallet contains an object, evaluates the object's marking, and associates the result with the pallet's physical RFID number.
 
