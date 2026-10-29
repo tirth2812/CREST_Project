@@ -1,6 +1,6 @@
-# CREST Project
+# A Vision-Driven Digital Twin for Real-Time Conveyor Pallet Inspection in Smart Manufacturing
 
-**CREST** is a camera-based conveyor inspection project that detects moving pallets, checks whether each pallet contains an object, evaluates the object's marking, and associates the result with the pallet's physical RFID number.
+This project develops a camera-based conveyor inspection system for smart manufacturing. It detects and tracks moving pallets, determines whether each pallet is empty or contains an object, evaluates the object's marking, and associates the inspection result with the pallet's physical RFID number. The research was conducted in the CREST laboratory; CREST is the lab name, not the project name.
 
 This repository documents the project from image annotation and model development through live testing and dual-RFID integration. It is organized by development stage so a reader can understand **what was built, which files belong to each stage, and how those stages connect**.
 
